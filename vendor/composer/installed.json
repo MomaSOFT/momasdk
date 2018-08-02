@@ -1,47 +1,51 @@
 [
     {
-        "name": "monolog/monolog",
-        "version": "1.0.2",
-        "version_normalized": "1.0.2.0",
+        "name": "karriere/json-decoder",
+        "version": "v2.1.1",
+        "version_normalized": "2.1.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/Seldaek/monolog.git",
-            "reference": "b704c49a3051536f67f2d39f13568f74615b9922"
+            "url": "https://github.com/karriereat/json-decoder.git",
+            "reference": "afda5cda21c658b8e2116ba3c477530fbb5c7cbf"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Seldaek/monolog/zipball/b704c49a3051536f67f2d39f13568f74615b9922",
-            "reference": "b704c49a3051536f67f2d39f13568f74615b9922",
+            "url": "https://api.github.com/repos/karriereat/json-decoder/zipball/afda5cda21c658b8e2116ba3c477530fbb5c7cbf",
+            "reference": "afda5cda21c658b8e2116ba3c477530fbb5c7cbf",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.3.0"
+            "php": ">=7.0"
         },
-        "time": "2011-10-24T09:39:02+00:00",
+        "require-dev": {
+            "karriere/code-quality": "^3.0",
+            "sebastian/comparator": "^1.1",
+            "sebastian/exporter": "^2.0",
+            "sebastian/recursion-context": "^2.0"
+        },
+        "time": "2018-03-02T07:22:19+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
-            "psr-0": {
-                "Monolog": "src/"
+            "psr-4": {
+                "Karriere\\JsonDecoder\\": "src/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "MIT"
+            "Apache-2.0"
         ],
         "authors": [
             {
-                "name": "Jordi Boggiano",
-                "email": "j.boggiano@seld.be",
-                "homepage": "http://seld.be",
-                "role": "Developer"
+                "name": "Johannes Pichler",
+                "email": "johannes.pichler@karriere.at",
+                "role": "Maintainer"
             }
         ],
-        "description": "Logging for PHP 5.3",
-        "homepage": "http://github.com/Seldaek/monolog",
+        "description": "JsonDecoder implementation that allows you to convert your JSON data into PHP class objects",
         "keywords": [
-            "log",
-            "logging"
+            "decoder",
+            "json"
         ]
     }
 ]

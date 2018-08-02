@@ -6,20 +6,33 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit34f0b8a88ba68cab1e4241292df8f8f8
 {
-    public static $prefixesPsr0 = array (
+    public static $prefixLengthsPsr4 = array (
         'M' => 
         array (
-            'Monolog' => 
-            array (
-                0 => __DIR__ . '/..' . '/monolog/monolog/src',
-            ),
+            'MomaSDK\\' => 8,
+        ),
+        'K' => 
+        array (
+            'Karriere\\JsonDecoder\\' => 21,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'MomaSDK\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Karriere\\JsonDecoder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/karriere/json-decoder/src',
         ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixesPsr0 = ComposerStaticInit34f0b8a88ba68cab1e4241292df8f8f8::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit34f0b8a88ba68cab1e4241292df8f8f8::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit34f0b8a88ba68cab1e4241292df8f8f8::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

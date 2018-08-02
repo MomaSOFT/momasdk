@@ -1,5 +1,10 @@
 {
-    "require": {
-        "monolog/monolog": "1.0.*"
-    }
+	"require" : {
+		"karriere/json-decoder" : "^2.1"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"MomaSDK\\" : "src"
+		}
+	}
 }
