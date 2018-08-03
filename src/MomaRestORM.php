@@ -4,37 +4,61 @@ namespace MomaSDK;
 abstract class MomaRestORM
 {
     
+    // Object properties
+    protected   $links;
+    protected   $included;
+    protected   $attributes;
+    protected   $relationships;
+    
+    // Accessory variables
     protected   $request;
-    protected   static  $endpoint;
+    protected   $response;
+    protected   $endpoint;
     
-    public      static  $attributes;
-    public      static  $relationships;
-    public      static  $included;
-    public      static  $links;
+    private     $requestType =  "GET";
     
-    private     $requestType        =   "GET";
-    
-    /**
-     * Rende persistenti le modifiche ad un oggetto come un Lightbox
-     * */
-    public function __construct()
-    {
-        
-        $this->attributes     =   array ();
-        $this->relationships  =   array ();
-        $this->included       =   array ();
-        $this->links          =   array ();
+    public function __construct() {
         
     }
-    
+
+    /** Makes changes persistent */
     public function save()
     {
         
         // Mi appoggio a Request per fare le chiamate REST
-        return $this;
+        $this->request = new Request(\MomaSDK\MomaPIX::$apiURL.$this->endpoint);
+        
+        $this->request  ->  setRequestHeader(
+            array (
+                "Apikey:  ".               \MomaSDK\MomaPIX::$apiKey,
+                "Accept:  ".               \MomaSDK\MomaPIX::$acceptType,
+                "Content-Type:  ".         \MomaSDK\MomaPIX::$contentType,
+                "Authorization: Bearer ".  Session::$bearerToken
+            )
+        );
+        
+        $this->request ->  setRequestType("POST");
+        
+        $this->request ->  setPostFields(
+            json_encode(
+                array (
+                    "data" => array (
+                        "type"          => "lightbox",
+                        "attributes"    => $this->attributes,
+                        "relationships" => $this->relationships
+                    )
+                )
+            )
+        );
+        
+        $this->request ->   execute();
+        $this->response =   $this->request->getResponse();
+        
+        return $this->response;
         
     }
     
+    /*
     public static function create()
     {
         error_log("\n\nMomaRestORM::Create: endpoint: " . self::$endpoint."\n\n",3,"mylog.log");
@@ -98,10 +122,20 @@ abstract class MomaRestORM
         $request    ->  setRequestHeader($headers);
         $request    ->  execute();
         
-        $response   =   $request    ->  getResponse();
+        $response   =   $request    ->  getsResponse();
         
         error_log("\n\nRetrieve response: " . print_r($response,true)."\n\n",3,"mylog.log");
         
     }
+    
+    public static function delete($endpoint)
+    {
+        
+        
+        
+    }
+    */
+    
+    public static abstract function fixJSON($json) : String;
     
 }

@@ -14237,4 +14237,4793 @@ Create method response: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"h
 
 \ Lightbox class: MomaSDK\Lightbox
 
-json Lightbox: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/24?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":24,"attributes":{"id":24,"description":"new lightbox of 01-08-2018 18:25:00","subject_date":"2018-08-01","category":"DFL","lastpdate_date":"2018-08-01 18:25:21","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+json Lightbox: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/24?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":24,"attributes":{"id":24,"description":"new lightbox of 01-08-2018 18:25:00","subject_date":"2018-08-01","category":"DFL","lastpdate_date":"2018-08-01 18:25:21","text":null},"relationships":{"items":{"data":[]}}},"included":[]}URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 9r77ujc179d9i3ggd0c7qsku4k
+            [attributes] => Array
+                (
+                    [TokenId] => 9r77ujc179d9i3ggd0c7qsku4k
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"9r77ujc179d9i3ggd0c7qsku4k","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+
+\Creating new lightbox: 
+
+
+
+
+MomaRestORM::Create: endpoint: /rest/lightbox
+
+URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":null,"relationships":null}}
+
+Create method response: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/16?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":16,"attributes":{"id":16,"description":"new lightbox of 02-08-2018 17:19:00","subject_date":"2018-08-02","category":"DFL","lastpdate_date":"2018-08-02 17:19:28","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+
+
+Lightbox class: MomaSDK\Lightbox
+
+json Lightbox: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/16?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":16,"attributes":{"id":16,"description":"new lightbox of 02-08-2018 17:19:00","subject_date":"2018-08-02","category":"DFL","lastpdate_date":"2018-08-02 17:19:28","text":null},"relationships":{"items":{"data":[]}}},"included":[]}URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 38u6m0cn25ftqsrhlvadte9gbv
+            [attributes] => Array
+                (
+                    [TokenId] => 38u6m0cn25ftqsrhlvadte9gbv
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"38u6m0cn25ftqsrhlvadte9gbv","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+
+\Creating new lightbox: 
+
+
+
+
+MomaRestORM::Create: endpoint: /rest/lightbox
+
+URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":null,"relationships":null}}
+
+Create method response: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/17?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":17,"attributes":{"id":17,"description":"new lightbox of 02-08-2018 17:21:00","subject_date":"2018-08-02","category":"DFL","lastpdate_date":"2018-08-02 17:21:23","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+
+
+Lightbox class: MomaSDK\Lightbox
+
+json Lightbox: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/17?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":17,"attributes":{"id":17,"description":"new lightbox of 02-08-2018 17:21:00","subject_date":"2018-08-02","category":"DFL","lastpdate_date":"2018-08-02 17:21:23","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+Found lightbox: MomaSDK\Lightbox Object
+(
+    [request:protected] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+    [endpoint] => /rest/lightbox
+    [attributes] => Array
+        (
+        )
+
+    [included] => Array
+        (
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/17?page[number]=1&page[size]=100
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => shipucm7975v4fb9qh42pl08jc
+            [attributes] => Array
+                (
+                    [TokenId] => shipucm7975v4fb9qh42pl08jc
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"shipucm7975v4fb9qh42pl08jc","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+
+\Creating new lightbox: 
+
+
+
+
+MomaRestORM::Create: endpoint: /rest/lightbox
+
+URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":null,"relationships":null}}
+
+Create method response: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/18?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":18,"attributes":{"id":18,"description":"new lightbox of 02-08-2018 17:22:00","subject_date":"2018-08-02","category":"DFL","lastpdate_date":"2018-08-02 17:22:18","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+
+
+Lightbox class: MomaSDK\Lightbox
+
+json Lightbox: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/18?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":18,"attributes":{"id":18,"description":"new lightbox of 02-08-2018 17:22:00","subject_date":"2018-08-02","category":"DFL","lastpdate_date":"2018-08-02 17:22:18","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+Found lightbox: MomaSDK\Lightbox Object
+(
+    [request:protected] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+    [endpoint] => /rest/lightbox
+    [attributes] => Array
+        (
+        )
+
+    [included] => Array
+        (
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/18?page[number]=1&page[size]=100
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => fn017pdae90960upudt1bt9d96
+            [attributes] => Array
+                (
+                    [TokenId] => fn017pdae90960upudt1bt9d96
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"fn017pdae90960upudt1bt9d96","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+
+\Creating new lightbox: 
+
+
+
+
+MomaRestORM::Create: endpoint: /rest/lightbox
+
+URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":null,"relationships":null}}
+
+Create method response: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/19?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":19,"attributes":{"id":19,"description":"new lightbox of 02-08-2018 17:23:00","subject_date":"2018-08-02","category":"DFL","lastpdate_date":"2018-08-02 17:23:41","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+
+
+Lightbox class: MomaSDK\Lightbox
+
+json Lightbox: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/19?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":19,"attributes":{"id":19,"description":"new lightbox of 02-08-2018 17:23:00","subject_date":"2018-08-02","category":"DFL","lastpdate_date":"2018-08-02 17:23:41","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+Found lightbox: MomaSDK\Lightbox Object
+(
+    [request:protected] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+    [endpoint] => /rest/lightbox
+    [attributes] => Array
+        (
+        )
+
+    [included] => Array
+        (
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/19?page[number]=1&page[size]=100
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => i88niiusrodl4s40itt1ehbjo5
+            [attributes] => Array
+                (
+                    [TokenId] => i88niiusrodl4s40itt1ehbjo5
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"i88niiusrodl4s40itt1ehbjo5","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+
+\Creating new lightbox: 
+
+
+
+
+MomaRestORM::Create: endpoint: /rest/lightbox
+
+URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":null,"relationships":null}}URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => dcpivk7mdrsqjklngf5eknfp4b
+            [attributes] => Array
+                (
+                    [TokenId] => dcpivk7mdrsqjklngf5eknfp4b
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"dcpivk7mdrsqjklngf5eknfp4b","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+
+\Creating new lightbox: 
+
+
+
+
+MomaRestORM::Create: endpoint: /rest/lightbox
+
+URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":null,"relationships":null}}{"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/21?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":21,"attributes":{"id":21,"description":"new lightbox of 02-08-2018 17:34:00","subject_date":"2018-08-02","category":"DFL","lastpdate_date":"2018-08-02 17:34:02","text":null},"relationships":{"items":{"data":[]}}},"included":[]}URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => vgto9th0f13883rtpgcludv90q
+            [attributes] => Array
+                (
+                    [TokenId] => vgto9th0f13883rtpgcludv90q
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"vgto9th0f13883rtpgcludv90q","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+
+\Creating new lightbox: 
+
+
+
+
+MomaRestORM::Create: endpoint: /rest/lightbox
+
+URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":null,"relationships":null}}
+
+{"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/22?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":22,"attributes":{"id":22,"description":"new lightbox of 02-08-2018 17:34:00","subject_date":"2018-08-02","category":"DFL","lastpdate_date":"2018-08-02 17:34:51","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+
+
+Create method response: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/22?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":22,"attributes":{"id":22,"description":"new lightbox of 02-08-2018 17:34:00","subject_date":"2018-08-02","category":"DFL","lastpdate_date":"2018-08-02 17:34:51","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+
+
+json Lightbox: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/22?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":22,"attributes":{"id":22,"description":"new lightbox of 02-08-2018 17:34:00","subject_date":"2018-08-02","category":"DFL","lastpdate_date":"2018-08-02 17:34:51","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+Found lightbox: MomaSDK\Lightbox Object
+(
+    [request:protected] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+    [endpoint] => /rest/lightbox
+    [attributes] => Array
+        (
+        )
+
+    [included] => Array
+        (
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/22?page[number]=1&page[size]=100
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => m81297ibad7pa1208meidq5fkg
+            [attributes] => Array
+                (
+                    [TokenId] => m81297ibad7pa1208meidq5fkg
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"m81297ibad7pa1208meidq5fkg","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+
+\Creating new lightbox: 
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 3nqkhbfjfiq2jf371232i5tj4g
+            [attributes] => Array
+                (
+                    [TokenId] => 3nqkhbfjfiq2jf371232i5tj4g
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"3nqkhbfjfiq2jf371232i5tj4g","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+
+\Creating new lightbox: 
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => e11dlliotffrqab8uk494clhis
+            [attributes] => Array
+                (
+                    [TokenId] => e11dlliotffrqab8uk494clhis
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"e11dlliotffrqab8uk494clhis","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+
+\Creating new lightbox: 
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 2ch2u03oh7518ng6ibpr0e6npd
+            [attributes] => Array
+                (
+                    [TokenId] => 2ch2u03oh7518ng6ibpr0e6npd
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"2ch2u03oh7518ng6ibpr0e6npd","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+
+\Creating new lightbox: 
+
+
+
+
+MomaRestORM::Create: endpoint: /rest/lightbox
+
+URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":null,"relationships":null}}
+
+Create method response: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/23?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":23,"attributes":{"id":23,"description":"new lightbox of 02-08-2018 18:02:00","subject_date":"2018-08-02","category":"DFL","lastpdate_date":"2018-08-02 18:02:59","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => iaod5f0k4pf513rodj68hil03m
+            [attributes] => Array
+                (
+                    [TokenId] => iaod5f0k4pf513rodj68hil03m
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"iaod5f0k4pf513rodj68hil03m","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+
+\Creating new lightbox: 
+
+
+
+
+MomaRestORM::Create: endpoint: /rest/lightbox
+
+URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":null,"relationships":null}}
+
+Create method response: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/24?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":24,"attributes":{"id":24,"description":"new lightbox of 02-08-2018 18:03:00","subject_date":"2018-08-02","category":"DFL","lastpdate_date":"2018-08-02 18:03:37","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+
+Found lightbox: MomaSDK\Lightbox Object
+(
+    [request:protected] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+    [endpoint] => /rest/lightbox
+    [attributes] => Array
+        (
+            [id] => 24
+            [description] => new lightbox of 02-08-2018 18:03:00
+            [subject_date] => 2018-08-02
+            [category] => DFL
+            [lastpdate_date] => 2018-08-02 18:03:37
+            [text] => 
+        )
+
+    [relationships] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/24?page[number]=1&page[size]=100
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => sgjgiggvfs1psppamudikbt2bf
+            [attributes] => Array
+                (
+                    [TokenId] => sgjgiggvfs1psppamudikbt2bf
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"sgjgiggvfs1psppamudikbt2bf","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+
+\Creating new lightbox: 
+
+
+
+
+MomaRestORM::Create: endpoint: /rest/lightbox
+
+URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":null,"relationships":null}}
+
+Create method response: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/25?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":25,"attributes":{"id":25,"description":"new lightbox of 02-08-2018 18:06:00","subject_date":"2018-08-02","category":"DFL","lastpdate_date":"2018-08-02 18:06:43","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+
+
+Lightbox attributes
+
+
+Found lightbox: MomaSDK\Lightbox Object
+(
+    [request:protected] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+    [endpoint] => /rest/lightbox
+    [attributes] => Array
+        (
+            [id] => 25
+            [description] => new lightbox of 02-08-2018 18:06:00
+            [subject_date] => 2018-08-02
+            [category] => DFL
+            [lastpdate_date] => 2018-08-02 18:06:43
+            [text] => 
+        )
+
+    [relationships] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/25?page[number]=1&page[size]=100
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 4pt6nmfa0veuc5opfg9sr26gm9
+            [attributes] => Array
+                (
+                    [TokenId] => 4pt6nmfa0veuc5opfg9sr26gm9
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"4pt6nmfa0veuc5opfg9sr26gm9","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+
+\Creating new lightbox: 
+
+
+
+
+MomaRestORM::Create: endpoint: /rest/lightbox
+
+URL: http://sandbox.my.momapix.com/testme/rest/lightboxURL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 6039sgohfsl5rmpsgv36imjobp
+            [attributes] => Array
+                (
+                    [TokenId] => 6039sgohfsl5rmpsgv36imjobp
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"6039sgohfsl5rmpsgv36imjobp","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+
+\Creating new lightbox: 
+
+
+
+
+MomaRestORM::Create: endpoint: /rest/lightbox
+
+URL: http://sandbox.my.momapix.com/testme/rest/lightboxURL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => fno1no7juhvr7q056jhts2qrse
+            [attributes] => Array
+                (
+                    [TokenId] => fno1no7juhvr7q056jhts2qrse
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"fno1no7juhvr7q056jhts2qrse","type":"session","attributes":{"username":"client1","password":"client1"}}}URL: http://sandbox.my.momapix.com/testme
+Request url: http://sandbox.my.momapix.com/testme
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":[],"relationships":[]}}URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 8h4v84f35son5b65evaf1ee0su
+            [attributes] => Array
+                (
+                    [TokenId] => 8h4v84f35son5b65evaf1ee0su
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"8h4v84f35son5b65evaf1ee0su","type":"session","attributes":{"username":"client1","password":"client1"}}}URL: http://sandbox.my.momapix.com/testme
+Request url: http://sandbox.my.momapix.com/testme
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":[],"relationships":[]}}URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 74l3e2j68j5dnl8g6vek948vvk
+            [attributes] => Array
+                (
+                    [TokenId] => 74l3e2j68j5dnl8g6vek948vvk
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"74l3e2j68j5dnl8g6vek948vvk","type":"session","attributes":{"username":"client1","password":"client1"}}}URL: http://sandbox.my.momapix.com/testme
+Request url: http://sandbox.my.momapix.com/testme
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":[],"relationships":[]}}URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 6eei3vokms3jq96ockq9n6nn1e
+            [attributes] => Array
+                (
+                    [TokenId] => 6eei3vokms3jq96ockq9n6nn1e
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"6eei3vokms3jq96ockq9n6nn1e","type":"session","attributes":{"username":"client1","password":"client1"}}}URL: http://sandbox.my.momapix.com/testme
+Request url: http://sandbox.my.momapix.com/testme
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":[],"relationships":[]}}URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => hmlj05c6rgha40duuuokpcu3vv
+            [attributes] => Array
+                (
+                    [TokenId] => hmlj05c6rgha40duuuokpcu3vv
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"hmlj05c6rgha40duuuokpcu3vv","type":"session","attributes":{"username":"client1","password":"client1"}}}URL: http://sandbox.my.momapix.com/testme
+Request url: http://sandbox.my.momapix.com/testme
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":[],"relationships":[]}}URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => fc42mc8lrumf6jjv16jb6oc56a
+            [attributes] => Array
+                (
+                    [TokenId] => fc42mc8lrumf6jjv16jb6oc56a
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"fc42mc8lrumf6jjv16jb6oc56a","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+parent save::1
+
+URL: http://sandbox.my.momapix.com/testme
+Request url: http://sandbox.my.momapix.com/testme
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+
+parent save::2
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => alirpjmb5a81qgc16hu8uc5krm
+            [attributes] => Array
+                (
+                    [TokenId] => alirpjmb5a81qgc16hu8uc5krm
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"alirpjmb5a81qgc16hu8uc5krm","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+parent save::1
+
+URL: http://sandbox.my.momapix.com/testme
+Request url: http://sandbox.my.momapix.com/testme
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+
+parent save::2
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => l01lmpca37eh0ojouo5ps47jou
+            [attributes] => Array
+                (
+                    [TokenId] => l01lmpca37eh0ojouo5ps47jou
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"l01lmpca37eh0ojouo5ps47jou","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+parent save::1
+
+URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+
+parent save::2
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => kntecbq4p94mmkv4imf6kj9cg1
+            [attributes] => Array
+                (
+                    [TokenId] => kntecbq4p94mmkv4imf6kj9cg1
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"kntecbq4p94mmkv4imf6kj9cg1","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+parent save::1
+
+URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+
+----{"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/27?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":27,"attributes":{"id":27,"description":"new lightbox of 03-08-2018 15:11:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:11:26","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+----
+
+parent save::2
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => u4j393rh4vft4e7ra5lcs39uki
+            [attributes] => Array
+                (
+                    [TokenId] => u4j393rh4vft4e7ra5lcs39uki
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"u4j393rh4vft4e7ra5lcs39uki","type":"session","attributes":{"username":"client1","password":"client1"}}}
+
+parent save::1
+
+URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+
+----{"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/28?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":28,"attributes":{"id":28,"description":"new lightbox of 03-08-2018 15:12:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:12:55","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+----
+
+parent save::2
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => esfsf0cjikhtji9nm1fjje02ib
+            [attributes] => Array
+                (
+                    [TokenId] => esfsf0cjikhtji9nm1fjje02ib
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"esfsf0cjikhtji9nm1fjje02ib","type":"session","attributes":{"username":"client1","password":"client1"}}}URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+
+----{"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/29?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":29,"attributes":{"id":29,"description":"new lightbox of 03-08-2018 15:15:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:15:25","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+----URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => ie4dr73ucqo3h4838n62ieumed
+            [attributes] => Array
+                (
+                    [TokenId] => ie4dr73ucqo3h4838n62ieumed
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"ie4dr73ucqo3h4838n62ieumed","type":"session","attributes":{"username":"client1","password":"client1"}}}URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+
+----{"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/30?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":30,"attributes":{"id":30,"description":"new lightbox of 03-08-2018 15:16:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:16:14","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+----URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => hk1lng4u345akiasj4qn4gbtrk
+            [attributes] => Array
+                (
+                    [TokenId] => hk1lng4u345akiasj4qn4gbtrk
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"hk1lng4u345akiasj4qn4gbtrk","type":"session","attributes":{"username":"client1","password":"client1"}}}URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+
+----{"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/31?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":31,"attributes":{"id":31,"description":"new lightbox of 03-08-2018 15:18:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:18:10","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+----URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 9nuph0lqldd2peb6b1ic90ivtg
+            [attributes] => Array
+                (
+                    [TokenId] => 9nuph0lqldd2peb6b1ic90ivtg
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"9nuph0lqldd2peb6b1ic90ivtg","type":"session","attributes":{"username":"client1","password":"client1"}}}URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+
+----{"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/32?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":32,"attributes":{"id":32,"description":"new lightbox of 03-08-2018 15:18:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:18:54","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+----
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/32?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":32,"attributes":{"id":32,"description":"new lightbox of 03-08-2018 15:18:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:18:54","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 13:18:54 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer 9nuph0lqldd2peb6b1ic90ivtg
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/32?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":32,"attributes":{"id":32,"description":"new lightbox of 03-08-2018 15:18:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:18:54","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [links:protected] => Array
+        (
+        )
+
+    [included:protected] => Array
+        (
+        )
+
+    [attributes:protected] => Array
+        (
+        )
+
+    [relationships:protected] => Array
+        (
+        )
+
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => ilg76m0ao6t5hsoi0si92g5mc7
+            [attributes] => Array
+                (
+                    [TokenId] => ilg76m0ao6t5hsoi0si92g5mc7
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"ilg76m0ao6t5hsoi0si92g5mc7","type":"session","attributes":{"username":"client1","password":"client1"}}}URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+
+----{"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/33?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":33,"attributes":{"id":33,"description":"new lightbox of 03-08-2018 15:20:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:20:07","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+----
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/33?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":33,"attributes":{"id":33,"description":"new lightbox of 03-08-2018 15:20:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:20:07","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 13:20:07 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer ilg76m0ao6t5hsoi0si92g5mc7
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/33?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":33,"attributes":{"id":33,"description":"new lightbox of 03-08-2018 15:20:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:20:07","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [links] => Array
+        (
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+        )
+
+    [relationships] => Array
+        (
+        )
+
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => dv2pvq4mbuutp91q21iah6hngs
+            [attributes] => Array
+                (
+                    [TokenId] => dv2pvq4mbuutp91q21iah6hngs
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"dv2pvq4mbuutp91q21iah6hngs","type":"session","attributes":{"username":"client1","password":"client1"}}}URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+
+----{"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/34?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":34,"attributes":{"id":34,"description":"new lightbox of 03-08-2018 15:21:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:21:51","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+----
+
+====Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/34?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 34
+            [attributes] => Array
+                (
+                    [id] => 34
+                    [description] => new lightbox of 03-08-2018 15:21:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 15:21:51
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+====
+
+
+
+====Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/34?page[number]=1&page[size]=100
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+            [id] => 34
+            [description] => new lightbox of 03-08-2018 15:21:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 15:21:51
+            [text] => 
+        )
+
+    [relationships] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+====
+
+
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/34?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":34,"attributes":{"id":34,"description":"new lightbox of 03-08-2018 15:21:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:21:51","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 13:21:51 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer dv2pvq4mbuutp91q21iah6hngs
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/34?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":34,"attributes":{"id":34,"description":"new lightbox of 03-08-2018 15:21:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:21:51","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [links] => Array
+        (
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+        )
+
+    [relationships] => Array
+        (
+        )
+
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/session
+Request type: GET
+Request post fields: Session response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => hoou1rf2gsfv7a6r5ahk2rfc6f
+            [attributes] => Array
+                (
+                    [TokenId] => hoou1rf2gsfv7a6r5ahk2rfc6f
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/login
+Request type: PATCH
+Request post fields: {"data":{"id":"hoou1rf2gsfv7a6r5ahk2rfc6f","type":"session","attributes":{"username":"client1","password":"client1"}}}URL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request type: POST
+Request post fields: {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+
+----{"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/35?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":35,"attributes":{"id":35,"description":"new lightbox of 03-08-2018 15:26:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:26:38","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+----
+
+====Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/35?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 35
+            [attributes] => Array
+                (
+                    [id] => 35
+                    [description] => new lightbox of 03-08-2018 15:26:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 15:26:38
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+====
+
+
+
+====Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/35?page[number]=1&page[size]=100
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+            [id] => 35
+            [description] => new lightbox of 03-08-2018 15:26:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 15:26:38
+            [text] => 
+        )
+
+    [relationships] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+====
+
+
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/35?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":35,"attributes":{"id":35,"description":"new lightbox of 03-08-2018 15:26:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:26:38","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 13:26:38 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer hoou1rf2gsfv7a6r5ahk2rfc6f
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/35?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":35,"attributes":{"id":35,"description":"new lightbox of 03-08-2018 15:26:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:26:38","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [links] => Array
+        (
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+        )
+
+    [relationships] => Array
+        (
+        )
+
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => qsiqne6nsookqr2p2a9j3d4sb8
+            [attributes] => Array
+                (
+                    [TokenId] => qsiqne6nsookqr2p2a9j3d4sb8
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+====Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/36?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 36
+            [attributes] => Array
+                (
+                    [id] => 36
+                    [description] => new lightbox of 03-08-2018 15:29:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 15:29:12
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+====
+
+
+
+====Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/36?page[number]=1&page[size]=100
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+            [id] => 36
+            [description] => new lightbox of 03-08-2018 15:29:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 15:29:12
+            [text] => 
+        )
+
+    [relationships] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+====
+
+
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/36?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":36,"attributes":{"id":36,"description":"new lightbox of 03-08-2018 15:29:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:29:12","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 13:29:12 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer qsiqne6nsookqr2p2a9j3d4sb8
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/36?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":36,"attributes":{"id":36,"description":"new lightbox of 03-08-2018 15:29:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:29:12","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [links] => Array
+        (
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+        )
+
+    [relationships] => Array
+        (
+        )
+
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => pi48ol2hpou4fm88un2l65o9bh
+            [attributes] => Array
+                (
+                    [TokenId] => pi48ol2hpou4fm88un2l65o9bh
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/37?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":37,"attributes":{"id":37,"description":"new lightbox of 03-08-2018 15:30:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:30:08","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 13:30:08 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer pi48ol2hpou4fm88un2l65o9bh
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/37?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":37,"attributes":{"id":37,"description":"new lightbox of 03-08-2018 15:30:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:30:08","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [links] => Array
+        (
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+        )
+
+    [relationships] => Array
+        (
+        )
+
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => gsmj7g7ivnquuh8pqo39m4ttup
+            [attributes] => Array
+                (
+                    [TokenId] => gsmj7g7ivnquuh8pqo39m4ttup
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/38?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":38,"attributes":{"id":38,"description":"new lightbox of 03-08-2018 15:33:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:33:47","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 13:33:47 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer gsmj7g7ivnquuh8pqo39m4ttup
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/38?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":38,"attributes":{"id":38,"description":"new lightbox of 03-08-2018 15:33:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:33:47","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [links] => Array
+        (
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+        )
+
+    [relationships] => Array
+        (
+        )
+
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => n1th1339mnphhh43tgsvdamt0n
+            [attributes] => Array
+                (
+                    [TokenId] => n1th1339mnphhh43tgsvdamt0n
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/39?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":39,"attributes":{"id":39,"description":"new lightbox of 03-08-2018 15:37:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:37:49","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 13:37:49 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer n1th1339mnphhh43tgsvdamt0n
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/39?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":39,"attributes":{"id":39,"description":"new lightbox of 03-08-2018 15:37:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:37:49","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [links] => Array
+        (
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+        )
+
+    [relationships] => Array
+        (
+        )
+
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 8ldhmumciiopb9se4rkdt7mt8d
+            [attributes] => Array
+                (
+                    [TokenId] => 8ldhmumciiopb9se4rkdt7mt8d
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+====Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/40?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 40
+            [attributes] => Array
+                (
+                    [id] => 40
+                    [description] => new lightbox of 03-08-2018 15:38:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 15:38:40
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+====
+
+
+
+====Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/40?page[number]=1&page[size]=100
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+            [id] => 40
+            [description] => new lightbox of 03-08-2018 15:38:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 15:38:40
+            [text] => 
+        )
+
+    [relationships] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+====
+
+
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/40?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":40,"attributes":{"id":40,"description":"new lightbox of 03-08-2018 15:38:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:38:40","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 13:38:40 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer 8ldhmumciiopb9se4rkdt7mt8d
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/40?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":40,"attributes":{"id":40,"description":"new lightbox of 03-08-2018 15:38:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:38:40","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [links] => Array
+        (
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+        )
+
+    [relationships] => Array
+        (
+        )
+
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => mqr2ha59f7b7ltc6403gil7vq9
+            [attributes] => Array
+                (
+                    [TokenId] => mqr2ha59f7b7ltc6403gil7vq9
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+====Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/41?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 41
+            [attributes] => Array
+                (
+                    [id] => 41
+                    [description] => new lightbox of 03-08-2018 15:45:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 15:45:03
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+====
+
+
+
+====Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/41?page[number]=1&page[size]=100
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+            [id] => 41
+            [description] => new lightbox of 03-08-2018 15:45:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 15:45:03
+            [text] => 
+        )
+
+    [relationships] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+====
+
+
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":[],"relationships":[]}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/41?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":41,"attributes":{"id":41,"description":"new lightbox of 03-08-2018 15:45:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:45:03","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 13:45:03 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer mqr2ha59f7b7ltc6403gil7vq9
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/41?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":41,"attributes":{"id":41,"description":"new lightbox of 03-08-2018 15:45:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:45:03","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [links] => Array
+        (
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+        )
+
+    [relationships] => Array
+        (
+        )
+
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => jdunavj9r6mhne0i123s0uih1h
+            [attributes] => Array
+                (
+                    [TokenId] => jdunavj9r6mhne0i123s0uih1h
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+====Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/42?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 42
+            [attributes] => Array
+                (
+                    [id] => 42
+                    [description] => new lightbox of 03-08-2018 15:50:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 15:50:22
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+====
+
+
+
+====Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/42?page[number]=1&page[size]=100
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+            [id] => 42
+            [description] => new lightbox of 03-08-2018 15:50:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 15:50:22
+            [text] => 
+        )
+
+    [relationships] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+====
+
+
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":null,"relationships":null}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/42?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":42,"attributes":{"id":42,"description":"new lightbox of 03-08-2018 15:50:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:50:22","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 13:50:22 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer jdunavj9r6mhne0i123s0uih1h
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/42?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":42,"attributes":{"id":42,"description":"new lightbox of 03-08-2018 15:50:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:50:22","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [data] => Array
+        (
+            [id] => 
+            [type] => lightbox
+            [attributes] => Array
+                (
+                )
+
+            [relationships] => Array
+                (
+                )
+
+        )
+
+    [links] => Array
+        (
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => 
+    [relationships] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 2u5jo5u4hhqhj8ih0qo0mvkn3h
+            [attributes] => Array
+                (
+                    [TokenId] => 2u5jo5u4hhqhj8ih0qo0mvkn3h
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+====Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/43?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 43
+            [attributes] => Array
+                (
+                    [id] => 43
+                    [description] => new lightbox of 03-08-2018 15:52:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 15:52:48
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+====
+
+
+
+====Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/43?page[number]=1&page[size]=100
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+            [id] => 43
+            [description] => new lightbox of 03-08-2018 15:52:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 15:52:48
+            [text] => 
+        )
+
+    [relationships] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+====
+
+
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":null,"relationships":null}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/43?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":43,"attributes":{"id":43,"description":"new lightbox of 03-08-2018 15:52:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:52:48","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 13:52:48 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer 2u5jo5u4hhqhj8ih0qo0mvkn3h
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/43?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":43,"attributes":{"id":43,"description":"new lightbox of 03-08-2018 15:52:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 15:52:48","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [data] => 
+    [links] => 
+    [included] => 
+    [attributes] => 
+    [relationships] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => f79r0a5is9rpc9r2slluboncjl
+            [attributes] => Array
+                (
+                    [TokenId] => f79r0a5is9rpc9r2slluboncjl
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightboxURL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => gd4850o5lavfo31ers569cpj14
+            [attributes] => Array
+                (
+                    [TokenId] => gd4850o5lavfo31ers569cpj14
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+Json Lightbox: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/45?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":45,"attributes":{"id":45,"description":"new lightbox of 03-08-2018 16:00:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 16:00:31","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+
+
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":null,"relationships":null}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/45?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":45,"attributes":{"id":45,"description":"new lightbox of 03-08-2018 16:00:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 16:00:31","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 14:00:30 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer gd4850o5lavfo31ers569cpj14
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/45?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":45,"attributes":{"id":45,"description":"new lightbox of 03-08-2018 16:00:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 16:00:31","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [data] => 
+    [links] => 
+    [included] => 
+    [attributes] => 
+    [relationships] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => lbrrtd4i27grorjmto7jh3p05p
+            [attributes] => Array
+                (
+                    [TokenId] => lbrrtd4i27grorjmto7jh3p05p
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+Json Lightbox: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/46?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 46
+            [attributes] => Array
+                (
+                    [id] => 46
+                    [description] => new lightbox of 03-08-2018 16:01:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 16:01:59
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+
+
+
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":null,"relationships":null}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/46?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":46,"attributes":{"id":46,"description":"new lightbox of 03-08-2018 16:01:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 16:01:59","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 14:01:59 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer lbrrtd4i27grorjmto7jh3p05p
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/46?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":46,"attributes":{"id":46,"description":"new lightbox of 03-08-2018 16:01:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 16:01:59","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [data] => 
+    [links] => 
+    [included] => 
+    [attributes] => 
+    [relationships] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => l3hkr96chum8s823u9m16nq16i
+            [attributes] => Array
+                (
+                    [TokenId] => l3hkr96chum8s823u9m16nq16i
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+Json Lightbox: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/47?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 47
+            [attributes] => Array
+                (
+                    [id] => 47
+                    [description] => new lightbox of 03-08-2018 16:03:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 16:03:13
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => l0ht7dianl9j1qb6pbir6qm96n
+            [attributes] => Array
+                (
+                    [TokenId] => l0ht7dianl9j1qb6pbir6qm96n
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+Json Lightbox: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/48?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 48
+            [attributes] => Array
+                (
+                    [id] => 48
+                    [description] => new lightbox of 03-08-2018 16:03:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 16:03:52
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+
+
+
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":null,"relationships":null}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/48?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":48,"attributes":{"id":48,"description":"new lightbox of 03-08-2018 16:03:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 16:03:52","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 14:03:52 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer l0ht7dianl9j1qb6pbir6qm96n
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/48?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":48,"attributes":{"id":48,"description":"new lightbox of 03-08-2018 16:03:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 16:03:52","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [data] => 
+    [links] => 
+    [included] => 
+    [attributes] => 
+    [relationships] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 0fmllis0hi0mpo1kvdsdgbvrmt
+            [attributes] => Array
+                (
+                    [TokenId] => 0fmllis0hi0mpo1kvdsdgbvrmt
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+Json Lightbox: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/49?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 49
+            [attributes] => Array
+                (
+                    [id] => 49
+                    [description] => new lightbox of 03-08-2018 16:16:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 16:16:58
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+
+
+
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [links:protected] => 
+    [included:protected] => 
+    [attributes:protected] => 
+    [relationships:protected] => 
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":null,"relationships":null}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/49?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":49,"attributes":{"id":49,"description":"new lightbox of 03-08-2018 16:16:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 16:16:58","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 14:16:58 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer 0fmllis0hi0mpo1kvdsdgbvrmt
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/49?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":49,"attributes":{"id":49,"description":"new lightbox of 03-08-2018 16:16:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 16:16:58","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => pdiurcc12ik8fvfdql46rckb8e
+            [attributes] => Array
+                (
+                    [TokenId] => pdiurcc12ik8fvfdql46rckb8e
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+Json Lightbox: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/50?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 50
+            [attributes] => Array
+                (
+                    [id] => 50
+                    [description] => new lightbox of 03-08-2018 16:19:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 16:19:46
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+
+
+
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [links:protected] => 
+    [included:protected] => 
+    [attributes:protected] => 
+    [relationships:protected] => 
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":null,"relationships":null}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/50?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":50,"attributes":{"id":50,"description":"new lightbox of 03-08-2018 16:19:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 16:19:46","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 14:19:46 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer pdiurcc12ik8fvfdql46rckb8e
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/50?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":50,"attributes":{"id":50,"description":"new lightbox of 03-08-2018 16:19:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 16:19:46","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 6vio2ur0heu3pla5av3oo2lito
+            [attributes] => Array
+                (
+                    [TokenId] => 6vio2ur0heu3pla5av3oo2lito
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+Json Lightbox: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/51?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 51
+            [attributes] => Array
+                (
+                    [id] => 51
+                    [description] => new lightbox of 03-08-2018 16:20:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 16:20:35
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+
+
+
+
+
+Lightbox attributesMomaSDK\Lightbox Object
+(
+    [links:protected] => 
+    [included:protected] => 
+    [attributes:protected] => 
+    [relationships:protected] => 
+    [request:protected] => MomaSDK\Request Object
+        (
+            [url:MomaSDK\Request:private] => http://sandbox.my.momapix.com/testme/rest/lightbox
+            [requestType:MomaSDK\Request:private] => POST
+            [postFields:MomaSDK\Request:private] => {"data":{"type":"lightbox","attributes":null,"relationships":null}}
+            [connectTimeout:MomaSDK\Request:private] => 10
+            [timeout:MomaSDK\Request:private] => 15
+            [cookiePath:MomaSDK\Request:private] => 
+            [cookiesEnabled:MomaSDK\Request:private] => 
+            [ssl:MomaSDK\Request:private] => 
+            [responseBody:MomaSDK\Request:private] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/51?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":51,"attributes":{"id":51,"description":"new lightbox of 03-08-2018 16:20:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 16:20:35","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+            [responseHeader:MomaSDK\Request:private] => HTTP/1.1 201 Created
+Date: Fri, 03 Aug 2018 14:20:35 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization
+Vary: Authorization
+X-Powered-By: PHP/7.1.15
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 399
+Content-Type: application/vnd.api+json
+
+
+            [httpCode:MomaSDK\Request:private] => 201
+            [error:MomaSDK\Request:private] => 
+            [requestHeader:MomaSDK\Request:private] => Array
+                (
+                    [0] => Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+                    [1] => Accept:  application/vnd.api+json
+                    [2] => Content-Type:  application/vnd.api+json
+                    [3] => Authorization: Bearer 6vio2ur0heu3pla5av3oo2lito
+                )
+
+        )
+
+    [response:protected] => {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/51?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":51,"attributes":{"id":51,"description":"new lightbox of 03-08-2018 16:20:00","subject_date":"2018-08-03","category":"DFL","lastpdate_date":"2018-08-03 16:20:35","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+    [endpoint:protected] => /rest/lightbox
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 8clmfg7laoed8vno915ih2ts4v
+            [attributes] => Array
+                (
+                    [TokenId] => 8clmfg7laoed8vno915ih2ts4v
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+Json Lightbox: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/52?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 52
+            [attributes] => Array
+                (
+                    [id] => 52
+                    [description] => new lightbox of 03-08-2018 17:13:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 17:13:09
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 6grrverktuo51egaun9oedk725
+            [attributes] => Array
+                (
+                    [TokenId] => 6grrverktuo51egaun9oedk725
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+Json Lightbox: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/53?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 53
+            [attributes] => Array
+                (
+                    [id] => 53
+                    [description] => new lightbox of 03-08-2018 17:15:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 17:15:22
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+
+
+
+
+Json Lightbox after: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/53?page[number]=1&page[size]=100
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+            [id] => 53
+            [description] => new lightbox of 03-08-2018 17:15:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 17:15:22
+            [text] => 
+        )
+
+    [relationships] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 972vrn7vjqbf69mnmn627i44fp
+            [attributes] => Array
+                (
+                    [TokenId] => 972vrn7vjqbf69mnmn627i44fp
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+Json Lightbox: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/54?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 54
+            [attributes] => Array
+                (
+                    [id] => 54
+                    [description] => new lightbox of 03-08-2018 17:17:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 17:17:08
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+
+
+
+
+Json Lightbox after: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/54?page[number]=1&page[size]=100
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+            [id] => 54
+            [description] => new lightbox of 03-08-2018 17:17:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 17:17:08
+            [text] => 
+        )
+
+    [relationships] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+
+
+
+Lightbox obj: MomaSDK\Lightbox Object
+(
+    [links:protected] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/54?page[number]=1&page[size]=100
+        )
+
+    [included:protected] => Array
+        (
+        )
+
+    [attributes:protected] => Array
+        (
+            [id] => 54
+            [description] => new lightbox of 03-08-2018 17:17:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 17:17:08
+            [text] => 
+        )
+
+    [relationships:protected] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [request:protected] => 
+    [response:protected] => 
+    [endpoint:protected] => /rest/lightbox
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => sgmoi5bed62a1bf0a1viddetmq
+            [attributes] => Array
+                (
+                    [TokenId] => sgmoi5bed62a1bf0a1viddetmq
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+Json Lightbox: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/55?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 55
+            [attributes] => Array
+                (
+                    [id] => 55
+                    [description] => new lightbox of 03-08-2018 17:19:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 17:19:39
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+
+
+
+
+Json Lightbox after: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/55?page[number]=1&page[size]=100
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+            [id] => 55
+            [description] => new lightbox of 03-08-2018 17:19:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 17:19:39
+            [text] => 
+        )
+
+    [relationships] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+
+
+
+Lightbox obj: MomaSDK\Lightbox Object
+(
+    [links:protected] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/55?page[number]=1&page[size]=100
+        )
+
+    [included:protected] => Array
+        (
+        )
+
+    [attributes:protected] => Array
+        (
+            [id] => 55
+            [description] => new lightbox of 03-08-2018 17:19:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 17:19:39
+            [text] => 
+        )
+
+    [relationships:protected] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [request:protected] => 
+    [response:protected] => 
+    [endpoint:protected] => /rest/lightbox
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => uqkatvr32dqiuje93pgqol7tus
+            [attributes] => Array
+                (
+                    [TokenId] => uqkatvr32dqiuje93pgqol7tus
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+Json Lightbox: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/56?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 56
+            [attributes] => Array
+                (
+                    [id] => 56
+                    [description] => new lightbox of 03-08-2018 17:20:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 17:20:29
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+
+
+
+
+Json Lightbox after: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/56?page[number]=1&page[size]=100
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+            [id] => 56
+            [description] => new lightbox of 03-08-2018 17:20:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 17:20:29
+            [text] => 
+        )
+
+    [relationships] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+
+
+
+Lightbox obj: MomaSDK\Lightbox Object
+(
+    [links:protected] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/56?page[number]=1&page[size]=100
+        )
+
+    [included:protected] => Array
+        (
+        )
+
+    [attributes:protected] => Array
+        (
+            [id] => 56
+            [description] => new lightbox of 03-08-2018 17:20:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 17:20:29
+            [text] => 
+        )
+
+    [relationships:protected] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [request:protected] => 
+    [response:protected] => 
+    [endpoint:protected] => /rest/lightbox
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+
+
+Lightbox id0
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 0k3e8la859jn1eubl2ollof1d7
+            [attributes] => Array
+                (
+                    [TokenId] => 0k3e8la859jn1eubl2ollof1d7
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+Json Lightbox: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/57?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 57
+            [attributes] => Array
+                (
+                    [id] => 57
+                    [description] => new lightbox of 03-08-2018 17:20:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 17:20:59
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+
+
+
+
+Json Lightbox after: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/57?page[number]=1&page[size]=100
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+            [id] => 57
+            [description] => new lightbox of 03-08-2018 17:20:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 17:20:59
+            [text] => 
+        )
+
+    [relationships] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+
+
+
+Lightbox obj: MomaSDK\Lightbox Object
+(
+    [links:protected] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/57?page[number]=1&page[size]=100
+        )
+
+    [included:protected] => Array
+        (
+        )
+
+    [attributes:protected] => Array
+        (
+            [id] => 57
+            [description] => new lightbox of 03-08-2018 17:20:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 17:20:59
+            [text] => 
+        )
+
+    [relationships:protected] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [request:protected] => 
+    [response:protected] => 
+    [endpoint:protected] => /rest/lightbox
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+
+
+
+
+Lightbox id57
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => 9ucnnqpadklmtoojf9lfo65j4e
+            [attributes] => Array
+                (
+                    [TokenId] => 9ucnnqpadklmtoojf9lfo65j4e
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => bnjqcktoahs61tjhqcrvsjhsh2
+            [attributes] => Array
+                (
+                    [TokenId] => bnjqcktoahs61tjhqcrvsjhsh2
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+Json Lightbox: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/58?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 58
+            [attributes] => Array
+                (
+                    [id] => 58
+                    [description] => new lightbox of 03-08-2018 17:28:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 17:28:05
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+
+
+
+
+Json Lightbox after: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/58?page[number]=1&page[size]=100
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+            [id] => 58
+            [description] => new lightbox of 03-08-2018 17:28:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 17:28:05
+            [text] => 
+        )
+
+    [relationships] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+
+URL: http://sandbox.my.momapix.com/testme/rest/session
+Request url: http://sandbox.my.momapix.com/testme/rest/sessionSession response Array
+(
+    [data] => Array
+        (
+            [type] => session
+            [id] => qe4uj4hu1suhcadfvfr19td3gt
+            [attributes] => Array
+                (
+                    [TokenId] => qe4uj4hu1suhcadfvfr19td3gt
+                    [ExpiresIn] => 604800
+                    [InteractiveTimeout] => 604800
+                    [LoggedIn] => 
+                    [Name] => 
+                )
+
+        )
+
+)
+URL: http://sandbox.my.momapix.com/testme/rest/session/login
+Request url: http://sandbox.my.momapix.com/testme/rest/session/loginURL: http://sandbox.my.momapix.com/testme/rest/lightbox
+Request url: http://sandbox.my.momapix.com/testme/rest/lightbox
+
+Json Lightbox: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/59?page[number]=1&page[size]=100
+        )
+
+    [data] => Array
+        (
+            [type] => lightbox
+            [id] => 59
+            [attributes] => Array
+                (
+                    [id] => 59
+                    [description] => new lightbox of 03-08-2018 17:28:00
+                    [subject_date] => 2018-08-03
+                    [category] => DFL
+                    [lastpdate_date] => 2018-08-03 17:28:40
+                    [text] => 
+                )
+
+            [relationships] => Array
+                (
+                    [items] => Array
+                        (
+                            [data] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [included] => Array
+        (
+        )
+
+)
+
+
+
+
+Json Lightbox after: Array
+(
+    [meta] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/59?page[number]=1&page[size]=100
+        )
+
+    [included] => Array
+        (
+        )
+
+    [attributes] => Array
+        (
+            [id] => 59
+            [description] => new lightbox of 03-08-2018 17:28:00
+            [subject_date] => 2018-08-03
+            [category] => DFL
+            [lastpdate_date] => 2018-08-03 17:28:40
+            [text] => 
+        )
+
+    [relationships] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+
+
+
+
+Lightbox id59
+
+

@@ -46,7 +46,6 @@ class Request
     {
         
         error_log("\nRequest url: ".$this->url,3,"mylog.log");
-        error_log("\nRequest type: ".$this->requestType,3,"mylog.log");
         // Set up cURL options.
         $handler = curl_init();
         
@@ -57,8 +56,6 @@ class Request
         }
 
         // Send a custom request if set (instead of standard GET).
-        error_log("\nRequest post fields: ". print_r($this->postFields,true),3,"mylog.log");
-        
         if (isset($this->requestType)) 
         {
             curl_setopt($handler, CURLOPT_CUSTOMREQUEST, $this->requestType);

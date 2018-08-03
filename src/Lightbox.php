@@ -8,48 +8,26 @@ class Lightbox extends MomaRestORM  {
     public function __construct()
     {
      
-        // ID ???
         $this->endpoint     = "/rest/lightbox";
-        // Inizializzo solo variabili, nessuna chiamata a servizi REST
-        $this->attributes   =   array (
-            
-//             "description"   => $desc,
-//             "subject_date"  => $date,
-//             "type"          => "lightbox"
-            
-        );
+        
+        parent::__construct();
         
     }
     
-    public static function create() : Lightbox
+    public function save()
     {
-        
-        self::$endpoint = "/rest/lightbox";
-        $jsonLightbox = parent::create();
-        
-        error_log("\n\nLightbox class: ". Lightbox::class,3,"mylog.log");
-        error_log("\n\njson Lightbox: ". $jsonLightbox,3,"mylog.log");
-        
-        $jd       = new JsonDecoder();
-        $lightbox = $jd->decode($jsonLightbox->data, Lightbox::class);
-        
-        return $lightbox;
-        
-    }
+        // Actual REST call
+        $jsonLightbox   =   parent::save();
+        // Fixing returned JSON according Lightbox's needs
+        $fixedJson      =   $this->fixJSON($jsonLightbox);
+        $decoded        =   json_decode($fixedJson,true);
+        // Updating object's properties
+        $this->links            =   $decoded['links'];
+        $this->included         =   $decoded['included'];
+        $this->attributes       =   $decoded['attributes'];
+        $this->relationships    =   $decoded['relationships'];
     
-    public static function retrieve($id) :Lightbox
-    {
-        
-        error_log("=== retrieve method ===",3,"mylog.log");
-        // USO: Lightbox::getLightbox($id)
-        // GET http://sandbox.momapix.com/testme/rest/lightbox/<lightbox identifier>
-        self::$endpoint     =   "/rest/lightbox/";
-        
-        $jsonData           =   parent::retrieve($endpoint);
-        $jsonDecoder        =   new JsonDecoder();
-        $lightbox           =   $jsonDecoder->decode($jsonData, Lightbox::class);
-        
-        return $lightbox;
+        return $this;
         
     }
     
@@ -63,8 +41,8 @@ class Lightbox extends MomaRestORM  {
     public function setDescription($descr) : Lightbox
     {
         
-        $this->attributes['description']    = $descr;
-        $this->attributes['lastpdate_date'] = date('Y-m-d h:i:s');
+        $this->attributes['description']    =   $descr;
+        $this->attributes['lastpdate_date'] =   date('Y-m-d h:i:s');
         
         return $this;
         
@@ -73,8 +51,9 @@ class Lightbox extends MomaRestORM  {
     public function setSubjectDate($date) : Lightbox
     {
         
-        $this->attributes['subject_date']   = $descr;
-        $this->attributes['lastpdate_date'] = date('Y-m-d h:i:s');
+        // Verificare il formato della data ?
+        $this->attributes['subject_date']   =   $date;
+        $this->attributes['lastpdate_date'] =   date('Y-m-d h:i:s');
         
         return $this;
         
@@ -83,19 +62,10 @@ class Lightbox extends MomaRestORM  {
     public function setCategory($category) : Lightbox
     {
         
-        if (1 /** 3 uppercase letter code */)
-        {
+        // Verificare se la categoria è di 3 lettere maiuscole ?
+        $this->attributes['category']       =   $category;
+        $this->attributes['lastpdate_date'] =   date('Y-m-d h:i:s');
             
-            
-            
-        }
-        else
-        {
-            
-            $this->attributes['category']       = $category;
-            $this->attributes['lastpdate_date'] = date('Y-m-d h:i:s');
-            
-        }
         return $this;
         
     }
@@ -103,8 +73,8 @@ class Lightbox extends MomaRestORM  {
     public function setText($text) : Lightbox
     {
         
-        $this->attributes['text'] = $text;
-        $this->attributes['lastpdate_date'] = date('Y-m-d h:i:s');
+        $this->attributes['text']           =   $text;
+        $this->attributes['lastpdate_date'] =   date('Y-m-d h:i:s');
         
         return $this;
         
@@ -113,7 +83,7 @@ class Lightbox extends MomaRestORM  {
     public function addItem($itemId)
     {
         
-        $this->relationships['data']['items'][] = array(
+        $this->relationships['data']['items']['data'] = array(
             
             "type"  => "item",
             "id"    =>  $itemId
@@ -130,15 +100,42 @@ class Lightbox extends MomaRestORM  {
     {
         
 //         $this->relationships['data']['items'] = array (
-            
 //             "type"  => "item",
 //             "id"    =>  $itemId
-            
 //         );
 
+        $this->relationships['items'];
         $this->attributes['lastpdate_date'] = date('Y-m-d h:i:s');
         
         return $this;
+        
+    }
+    
+    public function getId() : int
+    {
+        
+        return (int) $this->attributes['id'];
+        
+    }
+    
+    public static function fixJSON($json) : String
+    {
+        
+        $array      =   json_decode($json,true);
+        
+        error_log("\n\nJson Lightbox: ".print_r($array,true)."\n\n",3,"mylog.log");
+        
+        $lightbox   =   array();
+        
+        $lightbox['meta']           =   $array['meta'];
+        $lightbox['links']          =   $array['links'];
+        $lightbox['included']       =   $array['included'];
+        $lightbox['attributes']     =   $array['data']['attributes'];
+        $lightbox['relationships']  =   $array['data']['relationships'];
+        
+        error_log("\n\nJson Lightbox after: ".print_r($lightbox,true)."\n\n",3,"mylog.log");
+        
+        return json_encode($lightbox);
         
     }
     
