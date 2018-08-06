@@ -1,4 +1,15 @@
 <?php
+
+/**
+ * Abstract class to implement CRUD operations using endpoints.
+ *
+ * @package    MomaSDK
+ * @subpackage
+ * @license
+ * @author     Stefano Lettica <s.lettica@momapix.com>
+ *
+ **/
+
 namespace MomaSDK;
 
 class MomaUTIL

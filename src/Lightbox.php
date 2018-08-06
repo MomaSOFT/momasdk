@@ -1,4 +1,16 @@
 <?php
+
+/**
+ * This class helps the developers in managing a lightbox collection.
+ * Using this class you can create, delete and change an existing lightbox's properties 
+ *
+ * @package    MomaSDK
+ * @subpackage
+ * @license
+ * @author     Stefano Lettica <s.lettica@momapix.com>
+ *
+ **/
+
 namespace MomaSDK;
 
 use Karriere\JsonDecoder\JsonDecoder;
@@ -14,6 +26,13 @@ class Lightbox extends MomaRestORM  {
         
     }
     
+    
+    /**
+     * Saves all changes made to a given lightbox o saves a new one if no properties are provided.
+     * 
+     * @return lightbox The lightbox itself ( with all attributes saved to the db ).
+     * 
+     **/
     public function save()
     {
         // Actual REST call
@@ -31,6 +50,14 @@ class Lightbox extends MomaRestORM  {
         
     }
     
+    /**
+     * 
+     * Deletes a lightbox with a certain id
+     *
+     * @param id. The id of the lightbox
+     * @return true | false. Tells wether the operation was successfull or not.
+     *
+     **/
     public static function delete($id)
     {
         
@@ -38,7 +65,15 @@ class Lightbox extends MomaRestORM  {
         
     }
     
-    public function setDescription($descr) : Lightbox
+    /**
+     * 
+     * Sets the lightbox description with given string. All changes to lightbox's properties need to be saved calling the save method.
+     *
+     * @param  description. The lightbox descripton
+     * @return lightbox. The lightbox itself
+     *
+     **/
+    public function setDescription($description) : Lightbox
     {
         
         $this->attributes['description']    =   $descr;
@@ -48,6 +83,14 @@ class Lightbox extends MomaRestORM  {
         
     }
     
+    /**
+     *
+     * Sets the lightbox date with given date. All changes to lightbox's properties need to be saved calling the save method.
+     *
+     * @param  date. The lightbox date
+     * @return lightbox. The lightbox itself
+     *
+     **/
     public function setSubjectDate($date) : Lightbox
     {
         
@@ -59,6 +102,14 @@ class Lightbox extends MomaRestORM  {
         
     }
     
+    /**
+     *
+     * Sets the lightbox category with the given one. All changes to lightbox's properties need to be saved calling the save method.
+     *
+     * @param  category. The lightbox date
+     * @return lightbox. The lightbox itself
+     *
+     **/
     public function setCategory($category) : Lightbox
     {
         
@@ -70,6 +121,14 @@ class Lightbox extends MomaRestORM  {
         
     }
     
+    /**
+     *
+     * Sets the lightbox text with the given one. All changes to lightbox's properties need to be saved calling the save method.
+     *
+     * @param  text. The lightbox text
+     * @return lightbox. The lightbox itself
+     *
+     **/
     public function setText($text) : Lightbox
     {
         
@@ -80,7 +139,15 @@ class Lightbox extends MomaRestORM  {
         
     }
     
-    public function addItem($itemId)
+    /**
+     *
+     * Adds given item to the lightbox. Remember to call the save method to make changes persistent.
+     *
+     * @param  item. The item id
+     * @return lightbox. The lightbox itself
+     *
+     **/
+    public function addItem($itemId) : Lightbox
     {
         
         $this->relationships['data']['items']['data'] = array(
@@ -96,7 +163,15 @@ class Lightbox extends MomaRestORM  {
         
     }
     
-    public function removeItem($itemId)
+    /**
+     *
+     * Removes given item to the lightbox. Remember to call the save method to make changes persistent.
+     *
+     * @param  item. The item id
+     * @return lightbox. The lightbox itself
+     *
+     **/
+    public function removeItem($itemId) : Lightbox
     {
         
 //         $this->relationships['data']['items'] = array (
@@ -111,19 +186,24 @@ class Lightbox extends MomaRestORM  {
         
     }
     
+    /**
+     *
+     * Returns the lightbox id. 
+     *
+     * @return lightbox id. The lightbox id.
+     *
+     **/
     public function getId() : int
     {
         
-        return (int) $this->attributes['id'];
+        return intval($this->attributes['id']);
         
     }
     
-    public static function fixJSON($json) : String
+    protected static function fixJSON($json) : String
     {
         
         $array      =   json_decode($json,true);
-        
-        error_log("\n\nJson Lightbox: ".print_r($array,true)."\n\n",3,"mylog.log");
         
         $lightbox   =   array();
         
@@ -132,8 +212,6 @@ class Lightbox extends MomaRestORM  {
         $lightbox['included']       =   $array['included'];
         $lightbox['attributes']     =   $array['data']['attributes'];
         $lightbox['relationships']  =   $array['data']['relationships'];
-        
-        error_log("\n\nJson Lightbox after: ".print_r($lightbox,true)."\n\n",3,"mylog.log");
         
         return json_encode($lightbox);
         

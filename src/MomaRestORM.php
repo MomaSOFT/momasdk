@@ -1,4 +1,15 @@
 <?php
+
+/**
+ * Abstract class to implement CRUD operations using endpoints.
+ *
+ * @package    MomaSDK
+ * @subpackage 
+ * @license    
+ * @author     Stefano Lettica <s.lettica@momapix.com>
+ * 
+ **/
+
 namespace MomaSDK;
 
 abstract class MomaRestORM
@@ -21,7 +32,11 @@ abstract class MomaRestORM
         
     }
 
-    /** Makes changes persistent */
+    /**
+     * 
+     * Makes all changes to the entity persistent to the database.
+     * 
+     * */
     public function save()
     {
         
@@ -136,6 +151,6 @@ abstract class MomaRestORM
     }
     */
     
-    public static abstract function fixJSON($json) : String;
+    protected static abstract function fixJSON($json) : String;
     
 }

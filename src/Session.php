@@ -1,4 +1,15 @@
 <?php
+
+/**
+ * Abstract class to implement CRUD operations using endpoints.
+ *
+ * @package    MomaSDK
+ * @subpackage
+ * @license
+ * @author     Stefano Lettica <s.lettica@momapix.com>
+ *
+ **/
+
 namespace MomaSDK;
 
 class Session 
@@ -38,8 +49,6 @@ class Session
         $this->response = json_decode($this->request->getResponse(),true);
         
         if (!is_array($this->response['errors'][0])) {
-            
-            error_log("Session response " . print_r($this->response,true),3,"mylog.log");
             
             self::$bearerToken = $this->response['data']['attributes']['TokenId'];
             
