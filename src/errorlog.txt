@@ -1,0 +1,25 @@
+* About to connect() to sandbox.my.momapix.com port 80 (#14)
+*   Trying 192.168.23.10...
+* Connected to sandbox.my.momapix.com (192.168.23.10) port 80 (#14)
+> DELETE /testme/rest/lightbox/16 HTTP/1.1
+Host: sandbox.my.momapix.com
+Apikey:  1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ
+Accept:  application/vnd.api+json
+Content-Type:  application/vnd.api+json
+Authorization: Bearer h55iv0cv3imbc9t3t6dinnho70
+
+< HTTP/1.1 500 Internal Error
+< Date: Tue, 21 Aug 2018 09:17:21 GMT
+< Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.15
+< Access-Control-Allow-Origin: *
+< Access-Control-Allow-Headers: authorization
+< Vary: Authorization
+< X-Powered-By: PHP/7.1.15
+< Expires: Thu, 19 Nov 1981 08:52:00 GMT
+< Cache-Control: no-store, no-cache, must-revalidate
+< Pragma: no-cache
+< Content-Length: 99
+< Connection: close
+< Content-Type: application/vnd.api+json
+< 
+* Closing connection 14

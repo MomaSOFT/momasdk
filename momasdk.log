@@ -1,0 +1,1080 @@
+
+
+
+
+
+
+
+
+
+----------
+
+----------
+
+----------
+MomaRestORM::Create: endpoint: /rest/lightbox/
+----------
+
+----------
+Create method response: {"errors":[{"status":404,"title":"Not found","detail":"Resource not found","code":1002}]}
+----------
+
+----------
+
+----------
+
+----------
+MomaRestORM::Create: endpoint: /rest/lightbox/
+----------
+
+----------
+Create method response: {"errors":[{"status":404,"title":"Not found","detail":"Resource not found","code":1002}]}
+----------
+
+----------
+
+----------
+
+----------
+MomaRestORM::Create: endpoint: /rest/lightbox/
+----------
+
+----------
+Create method response: {"errors":[{"status":404,"title":"Not found","detail":"Resource not found","code":1002}]}
+----------
+
+----------
+
+----------
+
+----------
+MomaRestORM::Create: endpoint: /rest/lightbox/
+----------
+
+----------
+Create method response: {"errors":[{"status":404,"title":"Not found","detail":"Resource not found","code":1002}]}
+----------
+
+----------
+
+----------
+
+----------
+MomaRestORM::Create: endpoint: /rest/lightbox
+----------
+
+----------
+Create method response: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/22?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":22,"attributes":{"id":22,"description":"vvv","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 11:28:53","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+
+----------
+
+----------
+MomaRestORM::Create: endpoint: /rest/lightbox
+----------
+
+----------
+Create method response: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/23?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":23,"attributes":{"id":23,"description":"new lightbox of 20-08-2018 11:29:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 11:29:39","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+
+----------
+
+----------
+MomaRestORM::Create: endpoint: /rest/lightbox
+----------
+
+----------
+Create method response: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/24?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":24,"attributes":{"id":24,"description":"new lightbox of 20-08-2018 11:47:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 11:47:43","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+Before: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/24?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":24,"attributes":{"id":24,"description":"new lightbox of 20-08-2018 11:47:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 11:47:43","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+After: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http:\/\/sandbox.my.momapix.com\/testme\/rest\/lightbox\/24?page[number]=1&page[size]=100"},"included":[],"attributes":{"id":24,"description":"new lightbox of 20-08-2018 11:47:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 11:47:43","text":null},"relationships":{"items":{"data":[]}}}
+----------
+
+----------
+MomaRestORM::Create: endpoint: /rest/lightbox
+----------
+
+----------
+Create method response: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/25?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":25,"attributes":{"id":25,"description":"new lightbox of 20-08-2018 11:50:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 11:50:05","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+Before: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/25?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":25,"attributes":{"id":25,"description":"new lightbox of 20-08-2018 11:50:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 11:50:05","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+After: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http:\/\/sandbox.my.momapix.com\/testme\/rest\/lightbox\/25?page[number]=1&page[size]=100"},"included":[],"attributes":{"id":25,"description":"new lightbox of 20-08-2018 11:50:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 11:50:05","text":null},"relationships":{"items":{"data":[]}}}
+----------
+
+----------
+MomaSDK\Lightbox Object
+(
+    [meta:protected] => 
+    [links:protected] => 
+    [included:protected] => 
+    [attributes:protected] => 
+    [relationships:protected] => 
+    [request:MomaSDK\MomaRestORM:private] => 
+    [response:MomaSDK\MomaRestORM:private] => 
+    [endpoint:MomaSDK\MomaRestORM:private] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+----------
+
+----------
+MomaRestORM::Create: endpoint: /rest/lightbox
+----------
+
+----------
+Create method response: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/26?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":26,"attributes":{"id":26,"description":"new lightbox of 20-08-2018 11:51:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 11:51:02","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+Before: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/26?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":26,"attributes":{"id":26,"description":"new lightbox of 20-08-2018 11:51:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 11:51:02","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+After: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http:\/\/sandbox.my.momapix.com\/testme\/rest\/lightbox\/26?page[number]=1&page[size]=100"},"included":[],"attributes":{"id":26,"description":"new lightbox of 20-08-2018 11:51:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 11:51:02","text":null},"relationships":{"items":{"data":[]}}}
+----------
+
+----------
+MomaSDK\Lightbox Object
+(
+    [meta:protected] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links:protected] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/26?page[number]=1&page[size]=100
+        )
+
+    [included:protected] => Array
+        (
+        )
+
+    [attributes:protected] => Array
+        (
+            [id] => 26
+            [description] => new lightbox of 20-08-2018 11:51:00
+            [subject_date] => 2018-08-20
+            [category] => DFL
+            [lastpdate_date] => 2018-08-20 11:51:02
+            [text] => 
+        )
+
+    [relationships:protected] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [request:MomaSDK\MomaRestORM:private] => 
+    [response:MomaSDK\MomaRestORM:private] => 
+    [endpoint:MomaSDK\MomaRestORM:private] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+----------
+
+----------
+MomaRestORM::Create: endpoint: /rest/lightbox
+----------
+
+----------
+Create method response: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/27?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":27,"attributes":{"id":27,"description":"new lightbox of 20-08-2018 12:14:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 12:14:34","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+ID:27
+----------
+
+----------
+After changes: MomaSDK\Lightbox Object
+(
+    [meta:protected] => 
+    [links:protected] => 
+    [included:protected] => 
+    [attributes:protected] => Array
+        (
+            [description] => Nuova descrizione
+            [lastpdate_date] => 2018-08-20 10:22:32
+        )
+
+    [relationships:protected] => 
+    [request:MomaSDK\MomaRestORM:private] => 
+    [response:MomaSDK\MomaRestORM:private] => 
+    [endpoint:MomaSDK\MomaRestORM:private] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+----------
+
+----------
+After changes: MomaSDK\Lightbox Object
+(
+    [meta:protected] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links:protected] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/30?page[number]=1&page[size]=100
+        )
+
+    [included:protected] => Array
+        (
+        )
+
+    [attributes:protected] => Array
+        (
+            [id] => 30
+            [description] => Nuova descrizione
+            [subject_date] => 2018-08-20
+            [category] => DFL
+            [lastpdate_date] => 2018-08-20 10:23:15
+            [text] => 
+        )
+
+    [relationships:protected] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [request:MomaSDK\MomaRestORM:private] => 
+    [response:MomaSDK\MomaRestORM:private] => 
+    [endpoint:MomaSDK\MomaRestORM:private] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/35?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":35,"attributes":{"id":35,"description":"new lightbox of 20-08-2018 15:28:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 15:28:11","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+Parsed retrieved lightbox: MomaSDK\Lightbox Object
+(
+    [meta:protected] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links:protected] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/35?page[number]=1&page[size]=100
+        )
+
+    [included:protected] => Array
+        (
+        )
+
+    [attributes:protected] => Array
+        (
+            [id] => 35
+            [description] => new lightbox of 20-08-2018 15:28:00
+            [subject_date] => 2018-08-20
+            [category] => DFL
+            [lastpdate_date] => 2018-08-20 15:28:11
+            [text] => 
+        )
+
+    [relationships:protected] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [request:MomaSDK\MomaRestORM:private] => 
+    [response:MomaSDK\MomaRestORM:private] => 
+    [endpoint:MomaSDK\MomaRestORM:private] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/36?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":36,"attributes":{"id":36,"description":"new lightbox of 20-08-2018 15:28:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 15:28:37","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+Parsed retrieved lightbox: MomaSDK\Lightbox Object
+(
+    [meta:protected] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links:protected] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/36?page[number]=1&page[size]=100
+        )
+
+    [included:protected] => Array
+        (
+        )
+
+    [attributes:protected] => Array
+        (
+            [id] => 36
+            [description] => new lightbox of 20-08-2018 15:28:00
+            [subject_date] => 2018-08-20
+            [category] => DFL
+            [lastpdate_date] => 2018-08-20 15:28:37
+            [text] => 
+        )
+
+    [relationships:protected] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [request:MomaSDK\MomaRestORM:private] => 
+    [response:MomaSDK\MomaRestORM:private] => 
+    [endpoint:MomaSDK\MomaRestORM:private] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+----------
+
+----------
+ID: 37
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/37?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":37,"attributes":{"id":37,"description":"new lightbox of 20-08-2018 15:29:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 15:29:57","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+Parsed retrieved lightbox: MomaSDK\Lightbox Object
+(
+    [meta:protected] => Array
+        (
+            [hit] => 0
+            [page] => 1
+            [show] => 100
+        )
+
+    [links:protected] => Array
+        (
+            [self] => http://sandbox.my.momapix.com/testme/rest/lightbox/37?page[number]=1&page[size]=100
+        )
+
+    [included:protected] => Array
+        (
+        )
+
+    [attributes:protected] => Array
+        (
+            [id] => 37
+            [description] => new lightbox of 20-08-2018 15:29:00
+            [subject_date] => 2018-08-20
+            [category] => DFL
+            [lastpdate_date] => 2018-08-20 15:29:57
+            [text] => 
+        )
+
+    [relationships:protected] => Array
+        (
+            [items] => Array
+                (
+                    [data] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [request:MomaSDK\MomaRestORM:private] => 
+    [response:MomaSDK\MomaRestORM:private] => 
+    [endpoint:MomaSDK\MomaRestORM:private] => 
+    [requestType:MomaSDK\MomaRestORM:private] => GET
+)
+
+----------
+
+----------
+Retrieved: {"errors":[{"status":404,"title":"Not found","detail":"Resource not found","code":1002}]}
+----------
+
+----------
+Retrieved: {"errors":[{"status":404,"title":"Not found","detail":"Resource not found","code":1002}]}
+----------
+
+----------
+Retrieved: {"errors":[{"status":404,"title":"Not found","detail":"Resource not found","code":1002}]}
+----------
+
+----------
+Retrieved: {"errors":[{"status":404,"title":"Not found","detail":"Resource not found","code":1002}]}
+----------
+
+----------
+{"errors":[{"status":404,"title":"Not found","detail":"Resource not found","code":1002}]}
+----------
+
+----------
+ID: 38
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/38?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":38,"attributes":{"id":38,"description":"new lightbox of 20-08-2018 16:26:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 16:26:33","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/38?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":38,"attributes":{"id":38,"description":"new lightbox of 20-08-2018 16:26:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 16:26:33","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+{"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/39?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":39,"attributes":{"id":39,"description":"Nuova descrizione","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 16:26:34","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+ID: 40
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/40?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":40,"attributes":{"id":40,"description":"new lightbox of 20-08-2018 16:45:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 16:45:29","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/40?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":40,"attributes":{"id":40,"description":"new lightbox of 20-08-2018 16:45:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 16:45:29","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+The id one more time:40
+----------
+
+----------
+{"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/41?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":41,"attributes":{"id":41,"description":"Nuova descrizione","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 16:45:30","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+ID: 42
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/42?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":42,"attributes":{"id":42,"description":"new lightbox of 20-08-2018 16:49:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 16:49:25","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/42?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":42,"attributes":{"id":42,"description":"new lightbox of 20-08-2018 16:49:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 16:49:25","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+The id one more time:42
+----------
+
+----------
+{"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/43?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":43,"attributes":{"id":43,"description":"Nuova descrizione","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 16:49:26","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+ID: 44
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/44?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":44,"attributes":{"id":44,"description":"new lightbox of 20-08-2018 16:50:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 16:50:44","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/44?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":44,"attributes":{"id":44,"description":"new lightbox of 20-08-2018 16:50:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 16:50:44","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+The id one more time:44
+----------
+
+----------
+{"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/45?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":45,"attributes":{"id":45,"description":"Nuova descrizione","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 16:50:45","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+ID: 46
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/46?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":46,"attributes":{"id":46,"description":"new lightbox of 20-08-2018 17:23:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 17:23:46","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/46?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":46,"attributes":{"id":46,"description":"new lightbox of 20-08-2018 17:23:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 17:23:46","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+The id one more time:46
+----------
+
+----------
+This attributes: Array
+(
+    [id] => 46
+    [description] => Nuova descrizione
+    [subject_date] => 2018-08-20
+    [category] => DFL
+    [lastpdate_date] => 2018-08-20 03:23:47
+    [text] => 
+)
+
+----------
+
+----------
+{"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/47?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":47,"attributes":{"id":47,"description":"Nuova descrizione","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 17:23:47","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+ID: 48
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/48?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":48,"attributes":{"id":48,"description":"new lightbox of 20-08-2018 17:24:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 17:24:41","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/48?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":48,"attributes":{"id":48,"description":"new lightbox of 20-08-2018 17:24:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 17:24:41","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+The id one more time:48
+----------
+
+----------
+This attributes: Array
+(
+    [id] => 48
+    [description] => Nuova descrizione
+    [subject_date] => 2018-08-20
+    [category] => DFL
+    [lastpdate_date] => 2018-08-20 03:24:42
+    [text] => 
+)
+
+----------
+
+----------
+{"errors":[{"status":404,"title":"Not found","detail":"Resource not found","code":1002}]}
+----------
+
+----------
+ID: 49
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/49?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":49,"attributes":{"id":49,"description":"new lightbox of 20-08-2018 17:25:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 17:25:14","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/49?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":49,"attributes":{"id":49,"description":"new lightbox of 20-08-2018 17:25:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 17:25:14","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+The id one more time:49
+----------
+
+----------
+This attributes: Array
+(
+    [id] => 49
+    [description] => Nuova descrizione
+    [subject_date] => 2018-08-20
+    [category] => DFL
+    [lastpdate_date] => 2018-08-20 03:25:15
+    [text] => 
+)
+
+----------
+
+----------
+
+----------
+
+----------
+ID: 50
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/50?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":50,"attributes":{"id":50,"description":"new lightbox of 20-08-2018 17:38:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 17:38:14","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/50?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":50,"attributes":{"id":50,"description":"new lightbox of 20-08-2018 17:38:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 17:38:14","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+This attributes: Array
+(
+    [id] => 50
+    [description] => Nuova descrizione
+    [subject_date] => 2018-08-20
+    [category] => DFL
+    [lastpdate_date] => 2018-08-20 03:38:15
+    [text] => 
+)
+
+----------
+
+----------
+
+----------
+
+----------
+ID: 51
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/51?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":51,"attributes":{"id":51,"description":"new lightbox of 20-08-2018 17:40:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 17:40:28","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/51?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":51,"attributes":{"id":51,"description":"new lightbox of 20-08-2018 17:40:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 17:40:28","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+This attributes: Array
+(
+    [id] => 51
+    [description] => Nuova descrizione
+    [subject_date] => 2018-08-20
+    [category] => DFL
+    [lastpdate_date] => 2018-08-20 03:40:29
+    [text] => 
+)
+
+----------
+
+----------
+
+----------
+
+----------
+ID: 52
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/52?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":52,"attributes":{"id":52,"description":"new lightbox of 20-08-2018 17:42:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 17:42:04","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+Retrieved: {"meta":{"hit":0,"page":1,"show":100},"links":{"self":"http://sandbox.my.momapix.com/testme/rest/lightbox/52?page[number]=1&page[size]=100"},"data":{"type":"lightbox","id":52,"attributes":{"id":52,"description":"new lightbox of 20-08-2018 17:42:00","subject_date":"2018-08-20","category":"DFL","lastpdate_date":"2018-08-20 17:42:04","text":null},"relationships":{"items":{"data":[]}}},"included":[]}
+----------
+
+----------
+This attributes: Array
+(
+    [id] => 52
+    [description] => Nuova descrizione
+    [subject_date] => 2018-08-20
+    [category] => DFL
+    [lastpdate_date] => 2018-08-20 03:42:05
+    [text] => 
+)
+
+----------
+
+----------
+
+----------
+
+----------
+ID: 11
+----------
+
+----------
+
+----------
+
+----------
+Delete response: {"errors":[{"status":500,"title":"Internal Error","detail":"Error removing resource","code":1014}]}
+----------
+
+----------
+ID: 12
+----------
+
+----------
+
+----------
+
+----------
+Deleting lightbox #12 -> response: {"errors":[{"status":500,"title":"Internal Error","detail":"Error removing resource","code":1014}]}
+----------
+
+----------
+ID: 14
+----------
+
+----------
+Deleting lightbox #14 -> response: {"errors":[{"status":500,"title":"Internal Error","detail":"Error removing resource","code":1014}]}
+----------
+
+----------
+ID: 15
+----------
+
+----------
+Endpoint: http://sandbox.my.momapix.com/testme/rest/lightbox/15
+----------
+
+----------
+Deleting lightbox #15 -> response: {"errors":[{"status":500,"title":"Internal Error","detail":"Error removing resource","code":1014}]}
+----------
+
+----------
+ID: 16
+----------
+
+----------
+Endpoint: http://sandbox.my.momapix.com/testme/rest/lightbox/16
+----------
+
+----------
+Deleting lightbox #16 -> response: {"errors":[{"status":500,"title":"Internal Error","detail":"Error removing resource","code":1014}]}
+----------
+
+----------
+ID: 17
+----------
+
+----------
+Endpoint: http://sandbox.my.momapix.com/testme/rest/lightbox/17
+----------
+
+----------
+Deleting lightbox #17 -> response: {"errors":[{"status":500,"title":"Internal Error","detail":"Error removing resource","code":1014}]}
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Request type: POST
+----------
+
+----------
+ID: 18
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Endpoint: http://sandbox.my.momapix.com/testme/rest/lightbox/18
+----------
+
+----------
+Request type: DELETE
+----------
+
+----------
+Deleting lightbox #18 -> response: {"errors":[{"status":500,"title":"Internal Error","detail":"Error removing resource","code":1014}]}
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Request type: POST
+----------
+
+----------
+ID: 19
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Endpoint: http://sandbox.my.momapix.com/testme/rest/lightbox/19
+----------
+
+----------
+Request type: DELETE
+----------
+
+----------
+Deleting lightbox #19 -> response: {"errors":[{"status":500,"title":"Internal Error","detail":"Error removing resource","code":1014}]}
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Request type: POST
+----------
+
+----------
+ID: 20
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Endpoint: http://sandbox.my.momapix.com/testme/rest/lightbox/20
+----------
+
+----------
+Request type: DELETE
+----------
+
+----------
+Deleting lightbox #20 -> response: {"errors":[{"status":500,"title":"Internal Error","detail":"Error removing resource","code":1014}]}
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Request type: POST
+----------
+
+----------
+ID: 21
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: GET
+----------
+
+----------
+Request type: PATCH
+----------
+
+----------
+Endpoint: http://sandbox.my.momapix.com/testme/rest/lightbox/21
+----------
+
+----------
+Request type: DELETE
+----------
+
+----------
+Deleting lightbox #21 -> response: {"errors":[{"status":500,"title":"Internal Error","detail":"Error removing resource","code":1014}]}
+----------

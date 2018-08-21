@@ -15,6 +15,13 @@ namespace MomaSDK;
 class MomaUTIL
 {
     
+    public static function log($message)
+    {
+        
+        error_log("\n----------\n". $message . "\n----------\n",3,"momasdk.log");
+        
+    }
+    
     public static function removeElementWithValue($array, $key, $value){
         
         foreach($array as $subKey => $subArray){

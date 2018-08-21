@@ -44,8 +44,6 @@ class Request
     public function __construct($url)
     {
      
-        error_log("URL: $url",3,"mylog.log");
-        
         if (!isset($url)) {
             throw new Exception("Error: Address not provided.");
         }
@@ -56,7 +54,8 @@ class Request
     public function execute() 
     {
         
-        error_log("\nRequest url: ".$this->url,3,"mylog.log");
+        MomaUTIL::log("Request type: " . $this->requestType);
+        
         // Set up cURL options.
         $handler = curl_init();
         
@@ -83,13 +82,13 @@ class Request
         curl_setopt($handler, CURLOPT_TIMEOUT,          $this->timeout);
         
         // Follow redirects (maximum of 5).
-        curl_setopt($handler, CURLOPT_FOLLOWLOCATION,true);
+        curl_setopt($handler, CURLOPT_FOLLOWLOCATION,   true);
         
         // Set a custom UA string so people can identify our requests.
-        curl_setopt($handler, CURLOPT_USERAGENT,$this->userAgent);
+        curl_setopt($handler, CURLOPT_USERAGENT,        $this->userAgent);
         
         // Output the header in the response.
-        curl_setopt($handler,   CURLOPT_HEADER, true);
+        curl_setopt($handler,   CURLOPT_HEADER,         true);
         if (isset($this->requestHeader))    curl_setopt($handler,    CURLOPT_HTTPHEADER,        $this->requestHeader);
         
         $response               = curl_exec     ($handler);

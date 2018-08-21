@@ -2,12 +2,13 @@
 use PHPUnit\Framework\TestCase;
 use MomaSDK\MomaPIX;
 use MomaSDK\Session;
+use MomaSDK\MomaUTIL;
 
 require 'vendor/autoload.php';
 
 class SessionTest extends TestCase
 {
-    /*
+
     public function testSessionTestInvalidApiKey()
     {
         
@@ -29,7 +30,7 @@ class SessionTest extends TestCase
         
         $session = new Session();
         
-        error_log("BToken: ".$session->getBearerToken(),3,"mylog.log");
+        MomaUTIL::log("BToken: ".$session->getBearerToken());
         
         $this->assertNotEmpty($session->getBearerToken());
         
@@ -66,6 +67,6 @@ class SessionTest extends TestCase
         $this->assertTrue($session::isLoggedIn());
         
     }
-    */
+    
 }
     

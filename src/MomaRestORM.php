@@ -16,69 +16,18 @@ abstract class MomaRestORM
 {
     
     // Object properties
+    protected   $meta;
     protected   $links;
     protected   $included;
     protected   $attributes;
     protected   $relationships;
     
-    // Accessory variables
-    protected   $request;
-    protected   $response;
-    protected   $endpoint;
+    private     $requestType    =   "GET";
     
-    private     $requestType =  "GET";
-    
-    public function __construct() {
-        
-    }
-
-    /**
-     * 
-     * Makes all changes to the entity persistent to the database.
-     * 
-     * */
-    public function save()
+    public static function create($endpoint)
     {
         
-        // Mi appoggio a Request per fare le chiamate REST
-        $this->request = new Request(\MomaSDK\MomaPIX::$apiURL.$this->endpoint);
-        
-        $this->request  ->  setRequestHeader(
-            array (
-                "Apikey:  ".               \MomaSDK\MomaPIX::$apiKey,
-                "Accept:  ".               \MomaSDK\MomaPIX::$acceptType,
-                "Content-Type:  ".         \MomaSDK\MomaPIX::$contentType,
-                "Authorization: Bearer ".  Session::$bearerToken
-            )
-        );
-        
-        $this->request ->  setRequestType("POST");
-        
-        $this->request ->  setPostFields(
-            json_encode(
-                array (
-                    "data" => array (
-                        "type"          => "lightbox",
-                        "attributes"    => $this->attributes,
-                        "relationships" => $this->relationships
-                    )
-                )
-            )
-        );
-        
-        $this->request ->   execute();
-        $this->response =   $this->request->getResponse();
-        
-        return $this->response;
-        
-    }
-    
-    /*
-    public static function create()
-    {
-        error_log("\n\nMomaRestORM::Create: endpoint: " . self::$endpoint."\n\n",3,"mylog.log");
-        
-        $request =  new Request(\MomaSDK\MomaPIX::$apiURL.self::$endpoint);
+        $request =  new Request(\MomaSDK\MomaPIX::$apiURL.$endpoint);
         
         $headers    =   array (
             
@@ -98,8 +47,8 @@ abstract class MomaRestORM
                 array (
                     "data" => array (
                         "type"          => "lightbox",
-                        "attributes"    => self::$attributes,
-                        "relationships" => self::$relationships
+                        "attributes"    => null,
+                        "relationships" => null
                     )
                 )
             )
@@ -109,47 +58,148 @@ abstract class MomaRestORM
         $request ->  execute();
         $response = $request->getResponse();
         
-        error_log("\n\nCreate method response: " . print_r($response,true)."\n\n",3,"mylog.log");
+        if (!is_array($response['errors'][0])) {
+            
+            return $response;
+            
+        } else {
         
-        return $response;
-        
+            switch ($response['errors'][0]['code']) {
+                
+                default:
+                    
+                    MomaUTIL::log(print_r($response['errors']));
+                
+            }
+            
+        }
         
     }
     
-    public static function retrieve($endpoint)
+    public static function retrieve($id,$endpoint)
     {
         
-        self::$endpoint = \MomaSDK\MomaPIX::$apiURL.$endpoint;
+        $request =  new Request(\MomaSDK\MomaPIX::$apiURL.$endpoint.$id);
         
-        error_log("\n\nEndpoint: " . self::$endpoint."\n\n",3,"mylog.log");
-
         $headers    =   array (
             
-            "Apikey:        ".\MomaSDK\MomaPIX::$apiKey,
-            "Accept:        ".\MomaSDK\MomaPIX::$acceptType,
-            "Content-Type:  ".\MomaSDK\MomaPIX::$contentType
+            "Apikey:  ".               \MomaSDK\MomaPIX::$apiKey,
+            "Accept:  ".               \MomaSDK\MomaPIX::$acceptType,
+            "Content-Type:  ".         \MomaSDK\MomaPIX::$contentType,
+            "Authorization: Bearer ".  Session::$bearerToken
             
         );
         
-        $request    =   new Request(self::$endpoint);
+        $request ->  setRequestHeader($headers);
         
-        $request    ->  setRequestType("GET");
-        $request    ->  setRequestHeader($headers);
-        $request    ->  execute();
+        $request ->  setRequestType("GET");
         
-        $response   =   $request    ->  getsResponse();
+        $request ->  execute();
+        $response = $request->getResponse();
         
-        error_log("\n\nRetrieve response: " . print_r($response,true)."\n\n",3,"mylog.log");
+        if (!is_array($response['errors'][0])) {
+            
+            return $response;
+            
+        } else {
+            
+            switch ($response['errors'][0]['code']) {
+                
+                default:
+                    
+                    MomaUTIL::log(print_r($response['errors']));
+                    
+            }
+            
+        }
         
     }
     
-    public static function delete($endpoint)
-    {
+    public function update($id,$endpoint) {
         
+        $request = new Request(\MomaSDK\MomaPIX::$apiURL.$endpoint.$id);
         
+        $request  ->  setRequestHeader(
+            array (
+                "Apikey:  ".               \MomaSDK\MomaPIX::$apiKey,
+                "Accept:  ".               \MomaSDK\MomaPIX::$acceptType,
+                "Content-Type:  ".         \MomaSDK\MomaPIX::$contentType,
+                "Authorization: Bearer ".  Session::$bearerToken
+            )
+        );
+
+        $request ->  setRequestType("PATCH");
+
+        $request ->  setPostFields(
+                json_encode(
+                        array (
+                                "data" => array (
+                                    "type"          => "lightbox",
+                                    "id"            =>  $id,
+                                    "attributes"    =>  $this->attributes,
+                                )
+                    )
+                )
+        );
+
+        $request ->   execute();
+        $response =   $request->getResponse();
+        
+        if (!is_array($response['errors'][0])) {
+            
+            return $response;
+            
+        } else {
+            
+            switch ($response['errors'][0]['code']) {
+                
+                default:
+                    
+                    MomaUTIL::log(print_r($response['errors']));
+                    
+            }
+            
+        }
         
     }
-    */
+    
+    public static function delete($id,$endpoint)
+    {
+        
+        MomaUTIL::log("Endpoint: " . \MomaSDK\MomaPIX::$apiURL.$endpoint.$id);
+        
+        $request = new Request(\MomaSDK\MomaPIX::$apiURL.$endpoint.$id);
+        
+        $request  ->  setRequestHeader(
+            array (
+                "Apikey:  ".               \MomaSDK\MomaPIX::$apiKey,
+                "Accept:  ".               \MomaSDK\MomaPIX::$acceptType,
+                "Content-Type:  ".         \MomaSDK\MomaPIX::$contentType,
+                "Authorization: Bearer ".  Session::$bearerToken
+            )
+        );
+        
+        $request ->   setRequestType("DELETE");
+        $request ->   execute();
+        $response =   $request->getResponse();
+        
+        if (!is_array($response['errors'][0])) {
+            
+            return $response;
+            
+        } else {
+            
+            switch ($response['errors'][0]['code']) {
+                
+                default:
+                    
+                    MomaUTIL::log(print_r($response['errors']));
+                    
+            }
+            
+        }
+        
+    }
     
     protected static abstract function fixJSON($json) : String;
     

@@ -17,54 +17,6 @@ use Karriere\JsonDecoder\JsonDecoder;
 
 class Lightbox extends MomaRestORM  {
     
-    public function __construct()
-    {
-     
-        $this->endpoint     = "/rest/lightbox";
-        
-        parent::__construct();
-        
-    }
-    
-    
-    /**
-     * Saves all changes made to a given lightbox o saves a new one if no properties are provided.
-     * 
-     * @return lightbox The lightbox itself ( with all attributes saved to the db ).
-     * 
-     **/
-    public function save()
-    {
-        // Actual REST call
-        $jsonLightbox   =   parent::save();
-        // Fixing returned JSON according Lightbox's needs
-        $fixedJson      =   $this->fixJSON($jsonLightbox);
-        $decoded        =   json_decode($fixedJson,true);
-        // Updating object's properties
-        $this->links            =   $decoded['links'];
-        $this->included         =   $decoded['included'];
-        $this->attributes       =   $decoded['attributes'];
-        $this->relationships    =   $decoded['relationships'];
-    
-        return $this;
-        
-    }
-    
-    /**
-     * 
-     * Deletes a lightbox with a certain id
-     *
-     * @param id. The id of the lightbox
-     * @return true | false. Tells wether the operation was successfull or not.
-     *
-     **/
-    public static function delete($id)
-    {
-        
-        $this->endpoint     = "/rest/lightbox/$id";
-        
-    }
-    
     /**
      * 
      * Sets the lightbox description with given string. All changes to lightbox's properties need to be saved calling the save method.
@@ -76,10 +28,24 @@ class Lightbox extends MomaRestORM  {
     public function setDescription($description) : Lightbox
     {
         
-        $this->attributes['description']    =   $descr;
+        $this->attributes['description']    =   $description;
         $this->attributes['lastpdate_date'] =   date('Y-m-d h:i:s');
         
         return $this;
+        
+    }
+    
+    /**
+     * 
+     * Return lightbox's current description
+     * 
+     * @return description. The lightbox description
+     * 
+     * */
+    public function getDescription() : String
+    {
+        
+        return $this->attributes['description'];
         
     }
     
@@ -104,6 +70,20 @@ class Lightbox extends MomaRestORM  {
     
     /**
      *
+     * Returns the lightbox date.
+     *
+     * @return date. The lightbox date
+     *
+     **/
+    public function getSubjectDate($date) : Lightbox
+    {
+        
+        return $this->attributes['subject_date'];
+        
+    }
+    
+    /**
+     *
      * Sets the lightbox category with the given one. All changes to lightbox's properties need to be saved calling the save method.
      *
      * @param  category. The lightbox date
@@ -123,6 +103,20 @@ class Lightbox extends MomaRestORM  {
     
     /**
      *
+     * Returns the lightbox category.
+     *
+     * @return category. The lightbox category
+     *
+     **/
+    public function getCategory($category) : Lightbox
+    {
+        
+        return $this->attributes['category'];
+        
+    }
+    
+    /**
+     *
      * Sets the lightbox text with the given one. All changes to lightbox's properties need to be saved calling the save method.
      *
      * @param  text. The lightbox text
@@ -136,6 +130,20 @@ class Lightbox extends MomaRestORM  {
         $this->attributes['lastpdate_date'] =   date('Y-m-d h:i:s');
         
         return $this;
+        
+    }
+    
+    /**
+     *
+     * Returns the lightbox text.
+     *
+     * @return text. The lightbox text
+     *
+     **/
+    public function getText($text) : Lightbox
+    {
+        
+        return $this->attributes['text'];
         
     }
     
@@ -214,6 +222,69 @@ class Lightbox extends MomaRestORM  {
         $lightbox['relationships']  =   $array['data']['relationships'];
         
         return json_encode($lightbox);
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    public static function create($endpoint = "/rest/lightbox") : Lightbox
+    {
+        
+        $json        =  self::fixJSON(parent::create($endpoint));
+        
+        $jsonDecoder =  new JsonDecoder(false,true);
+        
+        return $jsonDecoder->decode($json, Lightbox::class);
+        
+    }
+    
+    public static function retrieve($id,$endpoint = '/rest/lightbox/') : Lightbox
+    {
+        
+        $json        =  self::fixJSON(parent::retrieve($id,$endpoint));
+        
+        $jsonDecoder =  new JsonDecoder(false,true);
+        
+        return $jsonDecoder->decode($json, Lightbox::class);
+        
+    }
+    
+    /**
+     * Saves all changes made to a given lightbox o saves a new one if no properties are provided.
+     *
+     * @return lightbox The lightbox itself ( with all attributes saved to the db ).
+     *
+     **/
+    public function update($id = null,$endpoint = "/rest/lightbox/") : bool
+    {
+        
+        if ($id == null) $id = $this->attributes['id'];
+        
+        $jsonLightbox   =   parent::update($id,$endpoint);
+        
+        return true;
+        
+    }
+    
+    /**
+     *
+     * Deletes a lightbox with a certain id
+     *
+     * @param id. The id of the lightbox
+     * @return true | false. Tells wether the operation was successfull or not.
+     *
+     **/
+    public static function delete($id,$endpoint = "/rest/lightbox/") : bool
+    {
+        
+        parent::delete($id, $endpoint);
+        
+        return true;
         
     }
     

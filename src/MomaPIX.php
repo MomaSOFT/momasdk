@@ -17,6 +17,7 @@ class MomaPIX
     
     public static $apiKey;
     public static $apiURL;
+    public static $ormAutoSave  =   false;
     public static $acceptType   =   "application/vnd.api+json";
     public static $contentType  =   "application/vnd.api+json";
     
@@ -38,6 +39,13 @@ class MomaPIX
     public static function getApiURL()
     {
         return self::$apiURL;
+    }
+    
+    public static function setOrmAutoSave()
+    {
+        
+        self::$ormAutoSave = $ormas;
+        
     }
     
 }
