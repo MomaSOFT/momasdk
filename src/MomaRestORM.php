@@ -1,7 +1,8 @@
 <?php
 
 /**
- * Abstract class to implement CRUD operations using endpoints.
+ * Abstract class to implement CRUD operations using REST endpoints.
+ * It allows to handle MomaPIX resources such as Lightboxes, and so on...
  *
  * @package    MomaSDK
  * @subpackage 
@@ -15,7 +16,12 @@ namespace MomaSDK;
 abstract class MomaRestORM
 {
     
-    // Object properties
+    /**
+     * 
+     * These variables won't never used directly by this class. 
+     * Their purpose is to provide a fixed entity structure when converting the into object of a specific class.
+     * 
+     * */
     protected   $meta;
     protected   $links;
     protected   $included;
@@ -24,10 +30,19 @@ abstract class MomaRestORM
     
     private     $requestType    =   "GET";
     
-    public static function create($endpoint)
+    /**
+     * 
+     * Enable children classes to create their own entity, such as Lightboxes.
+     * 
+     * @param   endpoint. The complete endpoint url to be contacted
+     * 
+     * @return  response. The response from server in JSON format
+     * 
+     **/
+    protected static function create($endpoint)
     {
         
-        $request =  new Request(\MomaSDK\MomaPIX::$apiURL.$endpoint);
+        $request    =  new Request(\MomaSDK\MomaPIX::$apiURL.$endpoint);
         
         $headers    =   array (
             
@@ -58,24 +73,20 @@ abstract class MomaRestORM
         $request ->  execute();
         $response = $request->getResponse();
         
-        if (!is_array($response['errors'][0])) {
+        return $response;
             
-            return $response;
-            
-        } else {
-        
-            switch ($response['errors'][0]['code']) {
-                
-                default:
-                    
-                    MomaUTIL::log(print_r($response['errors']));
-                
-            }
-            
-        }
-        
     }
     
+    /**
+     *
+     * Enable children classes to retrieve a certain entity of their own, such as lightbox with a given id.
+     *
+     * @param   id.       The entity id 
+     * @param   endpoint. The complete endpoint url to be contacted
+     * 
+     * @return  response. The response from server in JSON format
+     *
+     **/
     public static function retrieve($id,$endpoint)
     {
         
@@ -95,26 +106,50 @@ abstract class MomaRestORM
         $request ->  setRequestType("GET");
         
         $request ->  execute();
-        $response = $request->getResponse();
+        $response =  $request->getResponse();
         
-        if (!is_array($response['errors'][0])) {
+        $decodedResponse  = json_decode($response,true);
+        
+        if (!isset($decodedResponse['errors'][0])) {
             
             return $response;
             
         } else {
             
-            switch ($response['errors'][0]['code']) {
+            switch ($decodedResponse['errors'][0]['code']) {
                 
+                case "1002":
+                    
+                    MomaUTIL::log("*** ResourceNotFoundException ***");
+                    throw new \MomaSDK\ResourceNotFoundException();
+                    
+                    break;
+                           
                 default:
                     
-                    MomaUTIL::log(print_r($response['errors']));
-                    
+                    MomaUTIL::log("*** GenericException ***");
+                    throw new \Exception();
+                
             }
             
         }
         
+        MomaUTIL::log("Retrieving: " . print_r($response,true));
+        
+        return $response;
+        
     }
     
+    /**
+     *
+     * Enable children classes to update a certain entity with all changed properties, such as a lightbox description or content.
+     *
+     * @param   id.       The entity id
+     * @param   endpoint. The endpoint url to be contacted
+     *
+     * @return  response. The response from server in JSON format
+     *
+     **/
     public function update($id,$endpoint) {
         
         $request = new Request(\MomaSDK\MomaPIX::$apiURL.$endpoint.$id);
@@ -138,31 +173,27 @@ abstract class MomaRestORM
                                     "id"            =>  $id,
                                     "attributes"    =>  $this->attributes,
                                 )
-                    )
+                        )
                 )
         );
 
         $request ->   execute();
         $response =   $request->getResponse();
         
-        if (!is_array($response['errors'][0])) {
-            
-            return $response;
-            
-        } else {
-            
-            switch ($response['errors'][0]['code']) {
-                
-                default:
-                    
-                    MomaUTIL::log(print_r($response['errors']));
-                    
-            }
-            
-        }
+        return $response;
         
     }
     
+    /**
+     *
+     * Enable children classes to delete an entity of their own identifying it by an id.
+     *
+     * @param   id.       The entity id
+     * @param   endpoint. The endpoint url to be contacted
+     *
+     * @return  response. The response from server in JSON format
+     *
+     **/
     public static function delete($id,$endpoint)
     {
         
@@ -183,24 +214,16 @@ abstract class MomaRestORM
         $request ->   execute();
         $response =   $request->getResponse();
         
-        if (!is_array($response['errors'][0])) {
-            
-            return $response;
-            
-        } else {
-            
-            switch ($response['errors'][0]['code']) {
-                
-                default:
-                    
-                    MomaUTIL::log(print_r($response['errors']));
-                    
-            }
-            
-        }
+        return $response;
         
     }
     
+    /**
+     * Abstract function whose aim is to make children classes able to adjust returned json according to their specific needs.
+     * 
+     * @param json. A JSON string representing the entity as it comes back from REST services.
+     * @return json. A manipulated JSON string that fits children classes specific needs.
+     * */
     protected static abstract function fixJSON($json) : String;
     
 }

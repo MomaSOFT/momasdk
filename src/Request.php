@@ -51,7 +51,12 @@ class Request
         
     }
     
-    public function execute() 
+    /**
+     * 
+     * Exectues a cURL call according to previous settings
+     * 
+     * */    
+    public function execute() : void
     {
         
         MomaUTIL::log("Request type: " . $this->requestType);
@@ -106,34 +111,69 @@ class Request
         
     }
     
-    public function setURL($url)
+    /**
+     * 
+     * Sets the URL for the cURL request represented by the Request itself.
+     * 
+     * @param string the request URL.
+     * 
+     * */
+    public function setURL($url) : void
     {
         $this->url = $url;
         
     }
     
-    public function setRequestType($type)
+    /**
+     *
+     * Sets the request type ( GET | POST | PATCH | DELETE ) for the cURL request represented by the Request itself.
+     * 
+     * @param string the request type. A value among: GET | POST | PATCH | DELETE
+     *
+     **/
+    public function setRequestType($type) : void
     {
         
         $this->requestType = $type;
         
     }
     
-    public function setRequestHeader($headers)
+    /**
+     *
+     * Sets the request type ( GET | POST | PATCH | DELETE ) for the cURL request represented by the Request itself.
+     *
+     * @param array An array containing all request headers needed for the call.
+     * 
+     **/
+    public function setRequestHeader($headers) : void
     {
         
         $this->requestHeader = $headers;
         
     }
     
-    public function getRequestType() :string
+    /**
+     *
+     * Returns the current request type ( GET | POST | PATCH | DELETE ) for the request.
+     *
+     * @return string The current request type for the Request
+     *
+     **/
+    public function getRequestType() : string
     {
         
         return $this->requestType;
         
     }
         
-    public function enableCookies($cookie_path) :void
+    /**
+     *
+     * Enables the use of cookies for the current cURL call. 
+     *
+     * @param string The cookie path.
+     *
+     **/
+    public function enableCookies($cookie_path) : void
     {
         
         $this->cookiesEnabled  =   true;
@@ -141,7 +181,13 @@ class Request
         
     }
     
-    public function disableCookies()
+    /**
+     *
+     * Disables the use of cookies for the current cURL call.
+     *
+     *
+     **/
+    public function disableCookies() : void
     {
     
         $this->cookiesEnabled  =   false;
@@ -149,26 +195,54 @@ class Request
         
     }
     
+    /**
+     *
+     * Enables SSL certificate for the current cURL call.
+     *
+     * @param string The cookie path.
+     *
+     **/
     public function enableSSL()
     {
+        
         $this->ssl = true;
+        
     }
     
-    public function disableSSL()
+    /**
+     *
+     * Disables SSL certificate for the current cURL call.
+     *
+     **/
+    public function disableSSL() : void
     {
         
         $this->ssl = false;
         
     }
     
-    public function setTimeout($timeout = 15)
+    /**
+     * 
+     * Sets the timeout for the current cURL call.
+     * 
+     * @param int The timeout to be set ( expressed in seconds ).
+     * 
+     **/
+    public function setTimeout($timeout = 15) : void
     {
         
         $this->timeout = $timeout;
         
     }
 
-    public function getTimeout()
+    /**
+     *
+     * Returns the timeout for the current cURL call.
+     *
+     * @return int The timeout for the current cURL call
+     *
+     **/
+    public function getTimeout() : int
     {
         
         return $this->timeout;

@@ -1,11 +1,12 @@
 <?php
 
 /**
- * Abstract class to implement CRUD operations using endpoints.
+ * Class implementing MomaPIX Sessions.
+ * 
+ * Instantiating a Session object will contact MomaPIX's REST services in order to get a bearer token 
+ * useful to keep track of the session.
  *
  * @package    MomaSDK
- * @subpackage
- * @license
  * @author     Stefano Lettica <s.lettica@momapix.com>
  *
  **/
@@ -23,7 +24,7 @@ class Session
     
     /**
      * 
-     * Uses apiKey to get a bearer token
+     * Uses apiKey set using the MomaPIX class to get a bearer token.
      * 
      * */
     public function __construct()
@@ -79,6 +80,9 @@ class Session
         
     }
     
+    /**
+     * Returns the bearer token received by the server
+     * */
     public function getBearerToken()
     {
         
@@ -86,6 +90,14 @@ class Session
         
     }
     
+    /**
+     * 
+     * Allows to connect to a MomaPIX site using username and password
+     * 
+     * @param string Username
+     * @param string Password
+     * 
+     * */
     public function connect($usr,$pwd)
     {
         
@@ -130,14 +142,9 @@ class Session
             
             switch ($this->response['errors'][0]['code']) {
                 
-                case 2002:
-                    
-                    // Authentication failure. Username or password wrong.
-                    
-                    break;
-                    
                 default:
                     
+                    self::$isLoggedIn = false;
                     throw new \Exception($this->response['errors'][0]['detail'],$this->response['errors'][0]['code']);
                 
             }
@@ -146,14 +153,21 @@ class Session
         
     }
     
-    public static function isLoggedIn()
+    /**
+     * 
+     * Checks wether the user is logged in or not.
+     * 
+     * @return bool true|false The log-in status
+     * 
+     * */
+    public static function isLoggedIn() : bool
     {
         
         return self::$isLoggedIn;
         
     }
     
-    public function getRequest()
+    public function getRequest() : Request
     {
         
         return $this->request;
@@ -166,6 +180,5 @@ class Session
         return $this->response;
         
     }
-    
     
 }

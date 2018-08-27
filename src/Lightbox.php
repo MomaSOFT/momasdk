@@ -19,6 +19,76 @@ class Lightbox extends MomaRestORM  {
     
     /**
      * 
+     * Creates a new empty lightbox with default parameters. The lightbox will belong to logged in user.
+     * 
+     * @return Lightbox The lightbox itself
+     * 
+     * */
+    public static function create($endpoint = "/rest/lightbox") : Lightbox
+    {
+        
+        $json        =  self::fixJSON(parent::create($endpoint));
+        
+        $jsonDecoder =  new JsonDecoder(false,true);
+        
+        return $jsonDecoder->decode($json, Lightbox::class);
+        
+    }
+    
+    /**
+     *
+     * Retrieves a lightbox with a certain id.
+     *
+     * @return Lightbox. The lightbox with that specific id
+     *
+     * */
+    public static function retrieve($id,$endpoint = '/rest/lightbox/') : Lightbox
+    {
+        
+        $json        =  self::fixJSON(parent::retrieve($id,$endpoint));
+        
+        $jsonDecoder =  new JsonDecoder(false,true);
+        
+        return $jsonDecoder->decode($json, Lightbox::class);
+        
+    }
+    
+    /**
+     * Saves all changes made to a given lightbox ( made by the use of setters methods ) or saves a new one if no properties are provided.
+     *
+     * @return Lightbox. The lightbox itself ( with all attributes saved to the db ).
+     *
+     **/
+    public function update($id = null,$endpoint = "/rest/lightbox/") : bool
+    {
+        
+        if ($id == null) $id = $this->attributes['id'];
+        
+        $jsonLightbox   =   parent::update($id,$endpoint);
+        
+        return true;
+        
+    }
+    
+    /**
+     *
+     * Deletes a lightbox with a certain id
+     *
+     * @param id. The id of the lightbox
+     * @return true | false. Tells wether the operation was successfull or not.
+     *
+     **/
+    public static function delete($id,$endpoint = "/rest/lightbox/") : bool
+    {
+        
+        parent::delete($id, $endpoint);
+        
+        return true;
+        
+    }
+    
+    /**
+     * 
      * Sets the lightbox description with given string. All changes to lightbox's properties need to be saved calling the save method.
      *
      * @param  description. The lightbox descripton
@@ -42,7 +112,7 @@ class Lightbox extends MomaRestORM  {
      * @return description. The lightbox description
      * 
      * */
-    public function getDescription() : String
+    public function getDescription() : string
     {
         
         return $this->attributes['description'];
@@ -75,7 +145,7 @@ class Lightbox extends MomaRestORM  {
      * @return date. The lightbox date
      *
      **/
-    public function getSubjectDate($date) : Lightbox
+    public function getSubjectDate() : string
     {
         
         return $this->attributes['subject_date'];
@@ -108,7 +178,7 @@ class Lightbox extends MomaRestORM  {
      * @return category. The lightbox category
      *
      **/
-    public function getCategory($category) : Lightbox
+    public function getCategory() : string
     {
         
         return $this->attributes['category'];
@@ -135,12 +205,12 @@ class Lightbox extends MomaRestORM  {
     
     /**
      *
-     * Returns the lightbox text.
+     * Returns the text linked to current lightbox.
      *
      * @return text. The lightbox text
      *
      **/
-    public function getText($text) : Lightbox
+    public function getText() : string
     {
         
         return $this->attributes['text'];
@@ -158,12 +228,16 @@ class Lightbox extends MomaRestORM  {
     public function addItem($itemId) : Lightbox
     {
         
-        $this->relationships['data']['items']['data'] = array(
+        MomaUTIL::log("BEFORE: " . print_r($this->relationships['items']['data'],true));
+        
+        $this->relationships['items']['data'][] = array(
             
             "type"  => "item",
             "id"    =>  $itemId
             
         );
+        
+        MomaUTIL::log("BEFORE: " . print_r($this->relationships['items']['data'],true));
         
         $this->attributes['lastpdate_date'] = date('Y-m-d h:i:s');
         
@@ -182,15 +256,35 @@ class Lightbox extends MomaRestORM  {
     public function removeItem($itemId) : Lightbox
     {
         
-//         $this->relationships['data']['items'] = array (
-//             "type"  => "item",
-//             "id"    =>  $itemId
-//         );
-
-        $this->relationships['items'];
+        MomaUTIL::log("BEFORE: " . print_r($this->relationships['items']['data'],true));
+        
+        $this->relationships['items']['data'] = MomaUTIL::removeElementWithValue($this->relationships['items']['data'], "id", $itemId);
         $this->attributes['lastpdate_date'] = date('Y-m-d h:i:s');
         
+        MomaUTIL::log("AFTER: " . print_r($this->relationships['items']['data'],true));
+        
         return $this;
+        
+    }
+    
+    public function hasItem($itemId) : bool
+    {
+        
+        return MomaUTIL::searchElementWithValue($this->relationships['items']['data'], "id", $itemId);
+        
+    }
+    
+    /**
+     * 
+     * Returns an array listing all items in the current lightbox.
+     * 
+     * @return array The array containing all items in the current lightbox
+     * 
+     * */
+    public function getItems()
+    {
+        
+        return $this->relationships['items']['data'];
         
     }
     
@@ -208,6 +302,14 @@ class Lightbox extends MomaRestORM  {
         
     }
     
+    /**
+     * 
+     * Adjust the JSON representation of the entity according to Lightbox class neeeds.
+     * 
+     * @param String $json.  An entity representation in JSON format.
+     * @return String $json. A fixed entity representation in JSON format.
+     * 
+     * */
     protected static function fixJSON($json) : String
     {
         
@@ -222,69 +324,6 @@ class Lightbox extends MomaRestORM  {
         $lightbox['relationships']  =   $array['data']['relationships'];
         
         return json_encode($lightbox);
-        
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    public static function create($endpoint = "/rest/lightbox") : Lightbox
-    {
-        
-        $json        =  self::fixJSON(parent::create($endpoint));
-        
-        $jsonDecoder =  new JsonDecoder(false,true);
-        
-        return $jsonDecoder->decode($json, Lightbox::class);
-        
-    }
-    
-    public static function retrieve($id,$endpoint = '/rest/lightbox/') : Lightbox
-    {
-        
-        $json        =  self::fixJSON(parent::retrieve($id,$endpoint));
-        
-        $jsonDecoder =  new JsonDecoder(false,true);
-        
-        return $jsonDecoder->decode($json, Lightbox::class);
-        
-    }
-    
-    /**
-     * Saves all changes made to a given lightbox o saves a new one if no properties are provided.
-     *
-     * @return lightbox The lightbox itself ( with all attributes saved to the db ).
-     *
-     **/
-    public function update($id = null,$endpoint = "/rest/lightbox/") : bool
-    {
-        
-        if ($id == null) $id = $this->attributes['id'];
-        
-        $jsonLightbox   =   parent::update($id,$endpoint);
-        
-        return true;
-        
-    }
-    
-    /**
-     *
-     * Deletes a lightbox with a certain id
-     *
-     * @param id. The id of the lightbox
-     * @return true | false. Tells wether the operation was successfull or not.
-     *
-     **/
-    public static function delete($id,$endpoint = "/rest/lightbox/") : bool
-    {
-        
-        parent::delete($id, $endpoint);
-        
-        return true;
         
     }
     

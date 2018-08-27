@@ -15,14 +15,21 @@ namespace MomaSDK;
 class MomaUTIL
 {
     
-    public static function log($message)
+    /**
+     * 
+     * Logs messages 
+     * 
+     * @param String $message
+     * 
+     **/    
+    public static function log($message) : void
     {
         
         error_log("\n----------\n". $message . "\n----------\n",3,"momasdk.log");
         
     }
     
-    public static function removeElementWithValue($array, $key, $value){
+    public static function removeElementWithValue($array, $key, $value) {
         
         foreach($array as $subKey => $subArray){
             if($subArray[$key] == $value){
@@ -30,6 +37,17 @@ class MomaUTIL
             }
         }
         return $array;
+    }
+    
+    public static function searchElementWithValue($array, $key, $value) {
+        
+        foreach($array as $subKey => $subArray){
+            if($subArray[$key] == $value){
+                return true;
+            }
+        }
+        return false;
+        
     }
     
 }

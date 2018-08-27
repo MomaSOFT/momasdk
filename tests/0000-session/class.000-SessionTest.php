@@ -44,9 +44,16 @@ class SessionTest extends TestCase
         
         $session    =   new Session();
         
-        $session    ->  connect("client1", "*****");
+        try {
         
-        $response   =   $session->getResponse();
+            $session    ->  connect("client1", "*****");
+            $response   =   $session->getResponse();
+            
+        } catch (Exception $e) {
+            
+            MomaUTIL::log($e->getMessage());
+            
+        }
         
         $this->assertFalse($session::isLoggedIn());
         

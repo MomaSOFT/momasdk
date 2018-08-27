@@ -12,6 +12,11 @@
 
 namespace MomaSDK;
 
+/**
+ * 
+ * Class that allows to store environment main variables such as API KEY and site URL.
+ * 
+ * */
 class MomaPIX
 {
     
@@ -21,25 +26,53 @@ class MomaPIX
     public static $acceptType   =   "application/vnd.api+json";
     public static $contentType  =   "application/vnd.api+json";
     
-    public static function setApiKey($apiKey)
+    /**
+     * 
+     * Sets Api Key needed for authentication
+     * 
+     * @param string The api key needed to connect to a MomaPIX site.
+     * 
+     * */
+    public static function setApiKey($apiKey) : void
     {
         self::$apiKey = $apiKey;
     }
     
-    public static function getApiKey()
+    /**
+     * 
+     * Returns the api key string.
+     * 
+     * @return string the api key
+     * 
+     * */
+    public static function getApiKey() : string
     {
         return self::$apiKey;
     }
     
-    public static function setApiURL($url)
+    /**
+     * 
+     * Sets the MomaPIX site url linked to the api key.
+     * 
+     * @param string the api url
+     * 
+     * */
+    public static function setApiURL($url) : void
     {
         self::$apiURL = $url;
     }
     
+    /**
+     * 
+     * Returns the MomaPIX site URL
+     * 
+     * @return string the MomaPIX site URL
+     * */    
     public static function getApiURL()
     {
         return self::$apiURL;
     }
+    
     
     public static function setOrmAutoSave()
     {

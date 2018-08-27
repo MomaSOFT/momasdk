@@ -6,6 +6,7 @@ use MomaSDK\Session;
 use MomaSDK\MomaUTIL;
 
 use PHPUnit\Framework\TestCase;
+use MomaSDK\ResourceNotFoundException;
 
 require 'vendor/autoload.php';
 
@@ -50,6 +51,34 @@ class LightboxTest extends TestCase
        
    }
    
+   public function testRetrieveNonExistingLightbox()
+   {
+       
+       /** Setting environment variables */
+       MomaPIX::setApiKey("1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ");
+       MomaPIX::setApiURL("http://sandbox.my.momapix.com/testme");
+       
+       /** Logging in as a test client */
+       $session    =   new Session();
+       $session    ->  connect("client1", "client1");
+       
+       /** Creating a new lightbox*/
+       try {
+           
+           $lightbox   =   Lightbox::retrieve("1000");
+            
+       } catch (Exception $e) {
+           
+           $e->getMessage();
+           
+       }
+       
+       MomaUTIL::log("Non existing: " . print_r($lightbox,true));
+       
+       $this->expectException(\MomaSDK\ResourceNotFoundException::class);
+       
+   }
+   
    public function testSetLightboxDescription()
    {
        
@@ -67,6 +96,106 @@ class LightboxTest extends TestCase
        $lightbox   ->  update();
        
        $this->assertEquals($lightbox->getDescription(),"Nuova descrizione");
+       
+   }
+   
+   public function testSetLightboxSubjectDate()
+   {
+       
+       /** Setting environment variables */
+       MomaPIX::setApiKey("1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ");
+       MomaPIX::setApiURL("http://sandbox.my.momapix.com/testme");
+       
+       /** Logging in as a test client */
+       $session    =   new Session();
+       $session    ->  connect("client1", "client1");
+       
+       /** Creating a new lightbox*/
+       $lightbox   =   Lightbox::retrieve(self::$_id);
+       $lightbox   ->  setSubjectDate("2020-02-02");
+       $lightbox   ->  update();
+       
+       $this->assertEquals($lightbox->getSubjectDate(),"2020-02-02");
+       
+   }
+   
+   public function testSetLightboxCategory()
+   {
+       
+       /** Setting environment variables */
+       MomaPIX::setApiKey("1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ");
+       MomaPIX::setApiURL("http://sandbox.my.momapix.com/testme");
+       
+       /** Logging in as a test client */
+       $session    =   new Session();
+       $session    ->  connect("client1", "client1");
+       
+       /** Creating a new lightbox*/
+       $lightbox   =   Lightbox::retrieve(self::$_id);
+       $lightbox   ->  setCategory("CRO");
+       $lightbox   ->  update();
+       
+       $this->assertEquals($lightbox->getCategory(),"CRO");
+       
+   }
+   
+   public function testSetLightboxText()
+   {
+       
+       /** Setting environment variables */
+       MomaPIX::setApiKey("1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ");
+       MomaPIX::setApiURL("http://sandbox.my.momapix.com/testme");
+       
+       /** Logging in as a test client */
+       $session    =   new Session();
+       $session    ->  connect("client1", "client1");
+       
+       /** Creating a new lightbox*/
+       $lightbox   =   Lightbox::retrieve(self::$_id);
+       $lightbox   ->  setText("This is a test text");
+       $lightbox   ->  update();
+       
+       $this->assertEquals($lightbox->getText(),"This is a test text");
+       
+   }
+   
+   public function testSetLightboxAddItem()
+   {
+       
+       /** Setting environment variables */
+       MomaPIX::setApiKey("1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ");
+       MomaPIX::setApiURL("http://sandbox.my.momapix.com/testme");
+       
+       /** Logging in as a test client */
+       $session    =   new Session();
+       $session    ->  connect("client1", "client1");
+       
+       /** Creating a new lightbox*/
+       $lightbox   =   Lightbox::retrieve(self::$_id);
+       $lightbox   ->  addItem(2241028);
+       $lightbox   ->  update();
+       
+       $this->assertTrue($lightbox->hasItem(2241028));
+       
+   }
+   
+   public function testSetLightboxRemoveItem()
+   {
+       
+       /** Setting environment variables */
+       MomaPIX::setApiKey("1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ");
+       MomaPIX::setApiURL("http://sandbox.my.momapix.com/testme");
+       
+       /** Logging in as a test client */
+       $session    =   new Session();
+       $session    ->  connect("client1", "client1");
+       
+       /** Creating a new lightbox*/
+       $lightbox   =   Lightbox::retrieve(self::$_id);
+       $lightbox   ->  removeItem(2241028);
+       $lightbox   ->  update();
+       
+       $this->assertFalse($lightbox->hasItem(2241028));
        
    }
     
