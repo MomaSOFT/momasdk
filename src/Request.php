@@ -34,16 +34,16 @@ class Request
     
     private $responseBody;
     private $responseHeader;
-
+    
     private $httpCode;
-
+    
     private $error;
     
     private $requestHeader;
     
     public function __construct($url)
     {
-     
+        
         if (!isset($url)) {
             throw new Exception("Error: Address not provided.");
         }
@@ -52,14 +52,14 @@ class Request
     }
     
     /**
-     * 
+     *
      * Exectues a cURL call according to previous settings
-     * 
-     * */    
+     *
+     * */
     public function execute() : void
     {
         
-        MomaUTIL::log("Request type: " . $this->requestType);
+        MomaUTIL::log($this->requestType . " call at url: " .  $this->url);
         
         // Set up cURL options.
         $handler = curl_init();
@@ -69,13 +69,14 @@ class Request
             curl_setopt($handler, CURLOPT_COOKIEJAR,    $this->cookiePath);
             curl_setopt($handler, CURLOPT_COOKIEFILE,   $this->cookiePath);
         }
-
+        
         // Send a custom request if set (instead of standard GET).
-        if (isset($this->requestType)) 
+        if (isset($this->requestType))
         {
             curl_setopt($handler, CURLOPT_CUSTOMREQUEST, $this->requestType);
             // If POST fields are given, and this is a POST request, add fields.
             if (($this->requestType == 'POST' or $this->requestType == 'PATCH') && isset($this->postFields) ) {
+                MomaUTIL::log("POST ARRAY: " . print_r($this->postFields,true));
                 curl_setopt($handler, CURLOPT_POSTFIELDS, $this->postFields);
             }
         }
@@ -112,11 +113,11 @@ class Request
     }
     
     /**
-     * 
+     *
      * Sets the URL for the cURL request represented by the Request itself.
-     * 
+     *
      * @param string the request URL.
-     * 
+     *
      * */
     public function setURL($url) : void
     {
@@ -127,7 +128,7 @@ class Request
     /**
      *
      * Sets the request type ( GET | POST | PATCH | DELETE ) for the cURL request represented by the Request itself.
-     * 
+     *
      * @param string the request type. A value among: GET | POST | PATCH | DELETE
      *
      **/
@@ -143,7 +144,7 @@ class Request
      * Sets the request type ( GET | POST | PATCH | DELETE ) for the cURL request represented by the Request itself.
      *
      * @param array An array containing all request headers needed for the call.
-     * 
+     *
      **/
     public function setRequestHeader($headers) : void
     {
@@ -165,10 +166,10 @@ class Request
         return $this->requestType;
         
     }
-        
+    
     /**
      *
-     * Enables the use of cookies for the current cURL call. 
+     * Enables the use of cookies for the current cURL call.
      *
      * @param string The cookie path.
      *
@@ -189,7 +190,7 @@ class Request
      **/
     public function disableCookies() : void
     {
-    
+        
         $this->cookiesEnabled  =   false;
         $this->cookiePath      =   '';
         
@@ -222,11 +223,11 @@ class Request
     }
     
     /**
-     * 
+     *
      * Sets the timeout for the current cURL call.
-     * 
+     *
      * @param int The timeout to be set ( expressed in seconds ).
-     * 
+     *
      **/
     public function setTimeout($timeout = 15) : void
     {
@@ -234,7 +235,7 @@ class Request
         $this->timeout = $timeout;
         
     }
-
+    
     /**
      *
      * Returns the timeout for the current cURL call.

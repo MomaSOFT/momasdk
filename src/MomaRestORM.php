@@ -5,10 +5,10 @@
  * It allows to handle MomaPIX resources such as Lightboxes, and so on...
  *
  * @package    MomaSDK
- * @subpackage 
- * @license    
+ * @subpackage
+ * @license
  * @author     Stefano Lettica <s.lettica@momapix.com>
- * 
+ *
  **/
 
 namespace MomaSDK;
@@ -17,10 +17,10 @@ abstract class MomaRestORM
 {
     
     /**
-     * 
-     * These variables won't never used directly by this class. 
+     *
+     * These variables won't never used directly by this class.
      * Their purpose is to provide a fixed entity structure when converting the into object of a specific class.
-     * 
+     *
      * */
     protected   $meta;
     protected   $links;
@@ -31,16 +31,18 @@ abstract class MomaRestORM
     private     $requestType    =   "GET";
     
     /**
-     * 
+     *
      * Enable children classes to create their own entity, such as Lightboxes.
-     * 
+     *
      * @param   endpoint. The complete endpoint url to be contacted
-     * 
+     *
      * @return  response. The response from server in JSON format
-     * 
+     *
      **/
     protected static function create($endpoint)
     {
+        
+        $type       =   preg_replace("/\/rest\//","",$endpoint);
         
         $request    =  new Request(\MomaSDK\MomaPIX::$apiURL.$endpoint);
         
@@ -61,29 +63,29 @@ abstract class MomaRestORM
             json_encode(
                 array (
                     "data" => array (
-                        "type"          => "lightbox",
+                        "type"          => $type,
                         "attributes"    => null,
                         "relationships" => null
                     )
                 )
-            )
-        );
+                )
+            );
         
         // Provo a fare una POST senza parametri
         $request ->  execute();
         $response = $request->getResponse();
         
         return $response;
-            
+        
     }
     
     /**
      *
      * Enable children classes to retrieve a certain entity of their own, such as lightbox with a given id.
      *
-     * @param   id.       The entity id 
+     * @param   id.       The entity id
      * @param   endpoint. The complete endpoint url to be contacted
-     * 
+     *
      * @return  response. The response from server in JSON format
      *
      **/
@@ -124,12 +126,12 @@ abstract class MomaRestORM
                     throw new \MomaSDK\ResourceNotFoundException();
                     
                     break;
-                           
+                    
                 default:
                     
                     MomaUTIL::log("*** GenericException ***");
                     throw new \Exception();
-                
+                    
             }
             
         }
@@ -152,6 +154,8 @@ abstract class MomaRestORM
      **/
     public function update($id,$endpoint) {
         
+        $type       =   preg_replace("/\/rest\//","",$endpoint);
+        
         $request = new Request(\MomaSDK\MomaPIX::$apiURL.$endpoint.$id);
         
         $request  ->  setRequestHeader(
@@ -161,22 +165,27 @@ abstract class MomaRestORM
                 "Content-Type:  ".         \MomaSDK\MomaPIX::$contentType,
                 "Authorization: Bearer ".  Session::$bearerToken
             )
-        );
-
+            );
+        
         $request ->  setRequestType("PATCH");
-
+        
+        MomaUTIL::log("relationships: " . print_r($this->relationships,true));
+        
         $request ->  setPostFields(
-                json_encode(
-                        array (
-                                "data" => array (
-                                    "type"          => "lightbox",
-                                    "id"            =>  $id,
-                                    "attributes"    =>  $this->attributes,
-                                )
-                        )
+            json_encode(
+                array (
+                    "data" => array (
+                        
+                        "type"          =>  $type,
+                        "id"            =>  $id,
+                        "attributes"    =>  $this->attributes,
+                        "relationships" =>  $this->relationships
+                        
+                    )
                 )
-        );
-
+                )
+            );
+        
         $request ->   execute();
         $response =   $request->getResponse();
         
@@ -208,7 +217,7 @@ abstract class MomaRestORM
                 "Content-Type:  ".         \MomaSDK\MomaPIX::$contentType,
                 "Authorization: Bearer ".  Session::$bearerToken
             )
-        );
+            );
         
         $request ->   setRequestType("DELETE");
         $request ->   execute();
@@ -220,7 +229,7 @@ abstract class MomaRestORM
     
     /**
      * Abstract function whose aim is to make children classes able to adjust returned json according to their specific needs.
-     * 
+     *
      * @param json. A JSON string representing the entity as it comes back from REST services.
      * @return json. A manipulated JSON string that fits children classes specific needs.
      * */
