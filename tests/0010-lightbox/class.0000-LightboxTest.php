@@ -51,6 +51,10 @@ class LightboxTest extends TestCase
        
    }
    
+   /**
+     * @expectedException   \MomaSDK\ResourceNotFoundException
+     * 
+     */
    public function testRetrieveNonExistingLightbox()
    {
        
@@ -63,19 +67,7 @@ class LightboxTest extends TestCase
        $session    ->  connect("client1", "client1");
        
        /** Creating a new lightbox*/
-       try {
-           
-           $lightbox   =   Lightbox::retrieve("1000");
-            
-       } catch (Exception $e) {
-           
-           $e->getMessage();
-           
-       }
-       
-       MomaUTIL::log("Non existing: " . print_r($lightbox,true));
-       
-       $this->expectException(\MomaSDK\ResourceNotFoundException::class);
+       $lightbox   =   Lightbox::retrieve("1000");
        
    }
    
@@ -159,7 +151,7 @@ class LightboxTest extends TestCase
        
    }
    
-   public function testSetLightboxAddItem()
+   public function testLightboxAddItem()
    {
        
        /** Setting environment variables */
@@ -179,7 +171,7 @@ class LightboxTest extends TestCase
        
    }
    
-   public function testSetLightboxRemoveItem()
+   public function testLightboxRemoveItem()
    {
        
        /** Setting environment variables */
@@ -198,7 +190,73 @@ class LightboxTest extends TestCase
        $this->assertFalse($lightbox->hasItem(2241028));
        
    }
-    
+   
+   public function testLightboxAddMultipleItems()
+   {
+       
+       /** Setting environment variables */
+       MomaPIX::setApiKey("1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ");
+       MomaPIX::setApiURL("http://sandbox.my.momapix.com/testme");
+       
+       /** Logging in as a test client */
+       $session    =   new Session();
+       $session    ->  connect("client1", "client1");
+       
+       /** Creating a new lightbox*/
+       $lightbox   =   Lightbox::retrieve(self::$_id);
+       $lightbox   ->  addItems(array(2192360,2241028,2239674,2239642,2239566,2239457));
+       $lightbox   ->  update();
+       
+       $this->assertTrue($lightbox->hasItem(2239674));
+       
+   }
+   
+   public function testLightboxRemoveMultipleItems()
+   {
+       
+       /** Setting environment variables */
+       MomaPIX::setApiKey("1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ");
+       MomaPIX::setApiURL("http://sandbox.my.momapix.com/testme");
+       
+       /** Logging in as a test client */
+       $session    =   new Session();
+       $session    ->  connect("client1", "client1");
+       
+       /** Creating a new lightbox*/
+       $lightbox   =   Lightbox::retrieve(self::$_id);
+       $lightbox   ->  removeItems(array(2192360,2241028,2239674,2239642,2239566,2239457));
+       $lightbox   ->  update();
+       
+       $this->assertFalse($lightbox->hasItem(2239674));
+       
+   }
+   
+   public function testEmptyLightbox()
+   {
+       
+       /** Setting environment variables */
+       MomaPIX::setApiKey("1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ");
+       MomaPIX::setApiURL("http://sandbox.my.momapix.com/testme");
+       
+       /** Logging in as a test client */
+       $session    =   new Session();
+       $session    ->  connect("client1", "client1");
+       
+       /** Creating a new lightbox*/
+       $lightbox   =   Lightbox::retrieve(self::$_id);
+       $lightbox   ->  addItems(array(2192360,2241028,2239674,2239642,2239566,2239457));
+       $lightbox   ->  empty();
+       $lightbox   ->  update();
+       
+       $this->assertTrue($lightbox->isEmpty());
+       
+   }
+   
+   /**
+    * 
+    * @expectedException   \MomaSDK\ResourceNotFoundException
+    * 
+    * */
    public function testDeleteLightbox()
    {
        
@@ -212,6 +270,8 @@ class LightboxTest extends TestCase
        
        /** Creating a new lightbox*/
        Lightbox::delete(self::$_id);
+       
+       Lightbox::retrieve(self::$_id);
        
    }
    

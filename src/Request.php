@@ -76,7 +76,6 @@ class Request
             curl_setopt($handler, CURLOPT_CUSTOMREQUEST, $this->requestType);
             // If POST fields are given, and this is a POST request, add fields.
             if (($this->requestType == 'POST' or $this->requestType == 'PATCH') && isset($this->postFields) ) {
-                MomaUTIL::log("POST ARRAY: " . print_r($this->postFields,true));
                 curl_setopt($handler, CURLOPT_POSTFIELDS, $this->postFields);
             }
         }

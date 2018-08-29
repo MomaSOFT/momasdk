@@ -59,14 +59,12 @@ class Lightbox extends MomaRestORM  {
      * @return Lightbox. The lightbox itself ( with all attributes saved to the db ).
      *
      **/
-    public function update($id = null,$endpoint = "/rest/lightbox/") : bool
+    public function update($endpoint = "/rest/lightbox") : bool
     {
         
-        MomaUTIL::log($this->attributes['id']);
+        // if ($id == null) $id = $this->attributes['id'];
         
-        if ($id == null) $id = $this->attributes['id'];
-        
-        $jsonLightbox   =   parent::update($id,$endpoint);
+        $jsonLightbox   =   parent::update($endpoint);
         
         return true;
         
@@ -80,7 +78,7 @@ class Lightbox extends MomaRestORM  {
      * @return true | false. Tells wether the operation was successfull or not.
      *
      **/
-    public static function delete($id,$endpoint = "/rest/lightbox/") : bool
+    public static function delete($id,$endpoint = "/rest/lightbox") : bool
     {
         
         parent::delete($id, $endpoint);
@@ -102,6 +100,8 @@ class Lightbox extends MomaRestORM  {
         
         $this->attributes['description']    =   $description;
         $this->attributes['lastpdate_date'] =   date('Y-m-d h:i:s');
+        
+        if (!in_array("attributes", $this->changedProperties))  $this->changedProperties[]  =   "attributes";
         
         return $this;
         
@@ -136,6 +136,8 @@ class Lightbox extends MomaRestORM  {
         $this->attributes['subject_date']   =   $date;
         $this->attributes['lastpdate_date'] =   date('Y-m-d h:i:s');
         
+        if (!in_array("attributes", $this->changedProperties))  $this->changedProperties[]  =   "attributes";
+        
         return $this;
         
     }
@@ -169,6 +171,8 @@ class Lightbox extends MomaRestORM  {
         $this->attributes['category']       =   $category;
         $this->attributes['lastpdate_date'] =   date('Y-m-d h:i:s');
         
+        if (!in_array("attributes", $this->changedProperties))  $this->changedProperties[]  =   "attributes";
+        
         return $this;
         
     }
@@ -201,6 +205,8 @@ class Lightbox extends MomaRestORM  {
         $this->attributes['text']           =   $text;
         $this->attributes['lastpdate_date'] =   date('Y-m-d h:i:s');
         
+        if (!in_array("attributes", $this->changedProperties))  $this->changedProperties[]  =   "attributes";
+        
         return $this;
         
     }
@@ -232,7 +238,8 @@ class Lightbox extends MomaRestORM  {
         
         array_push($this->relationships['items']['data'],array("type"  => "item", "id"    =>  $itemId));
         
-        $this->attributes['lastpdate_date'] = date('Y-m-d h:i:s');
+        // $this->attributes['lastpdate_date'] = date('Y-m-d h:i:s');
+        if (!in_array("relationships", $this->changedProperties))  $this->changedProperties[]  =   "relationships";
         
         return $this;
         
@@ -240,7 +247,31 @@ class Lightbox extends MomaRestORM  {
     
     /**
      *
-     * Removes given item to the lightbox. Remember to call the save method to make changes persistent.
+     * Adds a set of items to the lightbox. Remember to call the save method to make changes persistent.
+     *
+     * @param  array . An array containing a list of items to be added.
+     * @return lightbox. The lightbox itself
+     *
+     **/
+    public function addItems($itemsToBeAdded) : Lightbox
+    {
+        
+        foreach ( $itemsToBeAdded as $item )
+        {
+            
+            array_push($this->relationships['items']['data'], array("type"  => "item", "id"    =>  $item));
+            
+        }
+        
+        if (!in_array("relationships", $this->changedProperties))  $this->changedProperties[]  =   "relationships";
+        
+        return $this;
+        
+    }
+    
+    /**
+     *
+     * Removes given item from the lightbox. Remember to call the save method to make changes persistent.
      *
      * @param  item. The item id
      * @return lightbox. The lightbox itself
@@ -250,7 +281,28 @@ class Lightbox extends MomaRestORM  {
     {
         
         $this->relationships['items']['data'] = MomaUTIL::removeElementWithValue($this->relationships['items']['data'], "id", $itemId);
-        $this->attributes['lastpdate_date'] = date('Y-m-d h:i:s');
+        if (!in_array("relationships", $this->changedProperties))  $this->changedProperties[]  =   "relationships";
+        
+        return $this;
+        
+    }
+    
+    /**
+     * 
+     * Removes given items set from the lightbox. Remember to call the save method to make changes persistent.
+     * 
+     * */
+    public function removeItems($itemsToBeRemoved) : Lightbox
+    {
+        
+        foreach ( $itemsToBeRemoved as $item )
+        {
+            
+            $this->relationships['items']['data'] = MomaUTIL::removeElementWithValue($this->relationships['items']['data'], "id", $item);
+            
+        }
+        
+        if (!in_array("relationships", $this->changedProperties))  $this->changedProperties[]  =   "relationships";
         
         return $this;
         
@@ -292,6 +344,36 @@ class Lightbox extends MomaRestORM  {
     }
     
     /**
+     * 
+     * Empties a lightbox
+     * 
+     * */
+    public function empty() : Lightbox
+    {
+        
+        $this->relationships['items']['data']   =   array();
+        $this->attributes['lastpdate_date']     =   date('Y-m-d h:i:s');
+        
+        if (!in_array("relationships", $this->changedProperties))  $this->changedProperties[]  =   "relationships";
+        
+        return $this;
+        
+    }
+    
+    /**
+     *
+     * Returns wether a lightbox has no items in it or not.
+     *
+     * */
+    public function isEmpty() : bool
+    {
+        
+        return (count($this->relationships['items']['data']) == 0) ? true : false;
+        
+    }
+    
+    
+    /**
      *
      * Adjust the JSON representation of the entity according to Lightbox class neeeds.
      *
@@ -306,11 +388,12 @@ class Lightbox extends MomaRestORM  {
         
         $lightbox   =   array();
         
-        $lightbox['meta']           =   $array['meta'];
-        $lightbox['links']          =   $array['links'];
-        $lightbox['included']       =   $array['included'];
-        $lightbox['attributes']     =   $array['data']['attributes'];
-        $lightbox['relationships']  =   $array['data']['relationships'];
+        $lightbox['meta']               =   $array['meta'];
+        $lightbox['links']              =   $array['links'];
+        $lightbox['included']           =   $array['included'];
+        $lightbox['attributes']         =   $array['data']['attributes'];
+        $lightbox['relationships']      =   $array['data']['relationships'];
+        $lightbox['changedProperties']  =   array();
         
         return json_encode($lightbox);
         

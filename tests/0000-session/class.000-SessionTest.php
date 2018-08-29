@@ -30,8 +30,6 @@ class SessionTest extends TestCase
         
         $session = new Session();
         
-        MomaUTIL::log("BToken: ".$session->getBearerToken());
-        
         $this->assertNotEmpty($session->getBearerToken());
         
     }

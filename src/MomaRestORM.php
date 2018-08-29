@@ -27,6 +27,7 @@ abstract class MomaRestORM
     protected   $included;
     protected   $attributes;
     protected   $relationships;
+    protected   $changedProperties;
     
     private     $requestType    =   "GET";
     
@@ -56,9 +57,7 @@ abstract class MomaRestORM
         );
         
         $request ->  setRequestHeader($headers);
-        
         $request ->  setRequestType("POST");
-        
         $request ->  setPostFields(
             json_encode(
                 array (
@@ -104,10 +103,9 @@ abstract class MomaRestORM
         );
         
         $request ->  setRequestHeader($headers);
-        
         $request ->  setRequestType("GET");
-        
         $request ->  execute();
+        
         $response =  $request->getResponse();
         
         $decodedResponse  = json_decode($response,true);
@@ -122,21 +120,17 @@ abstract class MomaRestORM
                 
                 case "1002":
                     
-                    MomaUTIL::log("*** ResourceNotFoundException ***");
                     throw new \MomaSDK\ResourceNotFoundException();
                     
                     break;
                     
                 default:
                     
-                    MomaUTIL::log("*** GenericException ***");
                     throw new \Exception();
                     
             }
             
         }
-        
-        MomaUTIL::log("Retrieving: " . print_r($response,true));
         
         return $response;
         
@@ -152,11 +146,53 @@ abstract class MomaRestORM
      * @return  response. The response from server in JSON format
      *
      **/
-    public function update($id,$endpoint) {
+    public function update($endpoint) {
         
         $type       =   preg_replace("/\/rest\//","",$endpoint);
         
-        $request = new Request(\MomaSDK\MomaPIX::$apiURL.$endpoint.$id);
+        if (is_array($this->changedProperties) and count($this->changedProperties) == 1 and in_array("relationships",$this->changedProperties))
+        {
+            
+            /**
+             * Aggiorno solo le relationships dell'entità:
+             * 
+             * - Setto POST FIELDS
+             * - Setto endpoint specifico
+             * 
+             **/
+            $finalEndpoint  =   \MomaSDK\MomaPIX::$apiURL.$endpoint."/".$this->attributes['id']."/relationships/items";
+            
+            $postFields     =   $this->relationships['items'];
+            
+            
+        } 
+        else if (is_array($this->changedProperties) and count($this->changedProperties) > 0)
+        {
+            
+            /**
+             * Rimpiazzo l'intera entità:
+             *
+             * - Setto POST FIELDS
+             * - Setto endpoint generico
+             *
+             **/
+            $finalEndpoint  =   \MomaSDK\MomaPIX::$apiURL.$endpoint."/".$this->attributes['id'];
+            
+            $postFields     =   array (
+                
+                "data" => array (
+                    
+                    "type"          =>  $type,
+                    "id"            =>  $this->attributes['id'],
+                    "attributes"    =>  $this->attributes,
+                    "relationships" =>  $this->relationships
+                    
+                )
+            );
+            
+        }
+        
+        $request = new Request($finalEndpoint);
         
         $request  ->  setRequestHeader(
             array (
@@ -165,28 +201,12 @@ abstract class MomaRestORM
                 "Content-Type:  ".         \MomaSDK\MomaPIX::$contentType,
                 "Authorization: Bearer ".  Session::$bearerToken
             )
-            );
+        );
         
         $request ->  setRequestType("PATCH");
+        $request ->  setPostFields(json_encode($postFields));
+        $request ->  execute();
         
-        MomaUTIL::log("relationships: " . print_r($this->relationships,true));
-        
-        $request ->  setPostFields(
-            json_encode(
-                array (
-                    "data" => array (
-                        
-                        "type"          =>  $type,
-                        "id"            =>  $id,
-                        "attributes"    =>  $this->attributes,
-                        "relationships" =>  $this->relationships
-                        
-                    )
-                )
-                )
-            );
-        
-        $request ->   execute();
         $response =   $request->getResponse();
         
         return $response;
@@ -206,9 +226,7 @@ abstract class MomaRestORM
     public static function delete($id,$endpoint)
     {
         
-        MomaUTIL::log("Endpoint: " . \MomaSDK\MomaPIX::$apiURL.$endpoint.$id);
-        
-        $request = new Request(\MomaSDK\MomaPIX::$apiURL.$endpoint.$id);
+        $request = new Request(\MomaSDK\MomaPIX::$apiURL.$endpoint."/".$id);
         
         $request  ->  setRequestHeader(
             array (
@@ -217,13 +235,21 @@ abstract class MomaRestORM
                 "Content-Type:  ".         \MomaSDK\MomaPIX::$contentType,
                 "Authorization: Bearer ".  Session::$bearerToken
             )
-            );
+        );
         
         $request ->   setRequestType("DELETE");
         $request ->   execute();
+        
         $response =   $request->getResponse();
         
         return $response;
+        
+    }
+    
+    public function empty()
+    {
+        
+        
         
     }
     

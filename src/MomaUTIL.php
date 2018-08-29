@@ -41,8 +41,10 @@ class MomaUTIL
     
     public static function searchElementWithValue($array, $key, $value) {
         
-        foreach($array as $subKey => $subArray){
+        foreach ($array as $subKey => $subArray) {
+            
             if($subArray[$key] == $value){
+                
                 return true;
             }
         }
