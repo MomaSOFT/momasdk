@@ -9,6 +9,11 @@ require 'vendor/autoload.php';
 class SessionTest extends TestCase
 {
 
+    /**
+     *
+     * @expectedException   \MomaSDK\Exceptions\InvalidApiKeyException
+     *
+     * */
     public function testSessionTestInvalidApiKey()
     {
         
@@ -18,7 +23,7 @@ class SessionTest extends TestCase
         $session = new Session();
         
         // Inserire asserzioni su codici errore
-        $this->assertEquals('',$session->getBearerToken());
+        //$this->assertEquals('',$session->getBearerToken());
         
     }
     

@@ -1,6 +1,6 @@
 <?php
 
-namespace MomaSDK;
+namespace MomaSDK\Exceptions;
 
 class ResourceNotFoundException extends \Exception
 {

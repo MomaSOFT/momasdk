@@ -62,8 +62,6 @@ class Lightbox extends MomaRestORM  {
     public function update($endpoint = "/rest/lightbox") : bool
     {
         
-        // if ($id == null) $id = $this->attributes['id'];
-        
         $jsonLightbox   =   parent::update($endpoint);
         
         return true;
@@ -238,7 +236,6 @@ class Lightbox extends MomaRestORM  {
         
         array_push($this->relationships['items']['data'],array("type"  => "item", "id"    =>  $itemId));
         
-        // $this->attributes['lastpdate_date'] = date('Y-m-d h:i:s');
         if (!in_array("relationships", $this->changedProperties))  $this->changedProperties[]  =   "relationships";
         
         return $this;
@@ -352,7 +349,6 @@ class Lightbox extends MomaRestORM  {
     {
         
         $this->relationships['items']['data']   =   array();
-        $this->attributes['lastpdate_date']     =   date('Y-m-d h:i:s');
         
         if (!in_array("relationships", $this->changedProperties))  $this->changedProperties[]  =   "relationships";
         

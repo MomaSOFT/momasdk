@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'MomaSDK\\Exceptions\\' => array($baseDir . '/src/Exceptions'),
     'MomaSDK\\' => array($baseDir . '/src'),
     'Karriere\\JsonDecoder\\' => array($vendorDir . '/karriere/json-decoder/src'),
 );

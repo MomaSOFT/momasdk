@@ -6,7 +6,7 @@ use MomaSDK\Session;
 use MomaSDK\MomaUTIL;
 
 use PHPUnit\Framework\TestCase;
-use MomaSDK\ResourceNotFoundException;
+use MomaSDK\Exceptions\ResourceNotFoundException;
 
 require 'vendor/autoload.php';
 
@@ -52,7 +52,7 @@ class LightboxTest extends TestCase
    }
    
    /**
-     * @expectedException   \MomaSDK\ResourceNotFoundException
+     * @expectedException   \MomaSDK\Exceptions\ResourceNotFoundException
      * 
      */
    public function testRetrieveNonExistingLightbox()
@@ -254,7 +254,7 @@ class LightboxTest extends TestCase
    
    /**
     * 
-    * @expectedException   \MomaSDK\ResourceNotFoundException
+    * @expectedException   \MomaSDK\Exceptions\ResourceNotFoundException
     * 
     * */
    public function testDeleteLightbox()

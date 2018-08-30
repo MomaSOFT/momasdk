@@ -74,7 +74,28 @@ abstract class MomaRestORM
         $request ->  execute();
         $response = $request->getResponse();
         
-        return $response;
+        $decodedResponse  = json_decode($response,true);
+        
+        if (!isset($decodedResponse['errors'][0])) {
+            
+            return $response;
+            
+        } else {
+            
+            switch ($decodedResponse['errors'][0]['code']) {
+                
+                case 1012:
+                    
+                    throw new \MomaSDK\Exceptions\ResourceCreationErrorException();
+                    
+                    break;
+                default:
+                    
+                    throw new \Exception();
+                
+            }
+            
+        }
         
     }
     
@@ -120,13 +141,13 @@ abstract class MomaRestORM
                 
                 case "1002":
                     
-                    throw new \MomaSDK\ResourceNotFoundException();
+                    throw new \MomaSDK\Exceptions\ResourceNotFoundException();
                     
                     break;
                     
                 default:
                     
-                    throw new \Exception();
+                    throw new \Exception($decodedResponse['errors'][0]['title']);
                     
             }
             

@@ -9,6 +9,7 @@ class ComposerStaticInit34f0b8a88ba68cab1e4241292df8f8f8
     public static $prefixLengthsPsr4 = array (
         'M' => 
         array (
+            'MomaSDK\\Exceptions\\' => 19,
             'MomaSDK\\' => 8,
         ),
         'K' => 
@@ -18,6 +19,10 @@ class ComposerStaticInit34f0b8a88ba68cab1e4241292df8f8f8
     );
 
     public static $prefixDirsPsr4 = array (
+        'MomaSDK\\Exceptions\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Exceptions',
+        ),
         'MomaSDK\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',

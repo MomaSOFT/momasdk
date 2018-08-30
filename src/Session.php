@@ -61,12 +61,7 @@ class Session
                 case 1007:
                     
                     // Check your API Key
-                    
-                    break;
-                    
-                case 1004:
-                    
-                    // Resource not found
+                    throw new \MomaSDK\Exceptions\InvalidApiKeyException();
                     
                     break;
                     
@@ -140,15 +135,22 @@ class Session
             
         } else {
             
+            self::$isLoggedIn = false;
+            
             switch ($this->response['errors'][0]['code']) {
+                
+                case '1006':
+                    
+                    throw new \MomaSDK\Exceptions\InvalidBearerTokenException();
+                    
+                    break;
                 
                 default:
                     
-                    self::$isLoggedIn = false;
                     throw new \Exception($this->response['errors'][0]['detail'],$this->response['errors'][0]['code']);
                 
             }
-            
+           
         }
         
     }
