@@ -9,7 +9,7 @@
 		}
 	},
 	"name" : "momasoft/momasdk",
-	"minimum-stability" : "dev",
+	"minimum-stability" : "stable",
 	"homepage" : "https://github.com/MomaSOFT/momasdk",
 	"support" : {
 		"email" : "tech@momapix.com"
