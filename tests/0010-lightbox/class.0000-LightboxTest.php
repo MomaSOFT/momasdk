@@ -7,6 +7,7 @@ use MomaSDK\MomaUTIL;
 
 use PHPUnit\Framework\TestCase;
 use MomaSDK\Exceptions\ResourceNotFoundException;
+use MomaSDK\Lightboxes;
 
 require 'vendor/autoload.php';
 
@@ -272,6 +273,24 @@ class LightboxTest extends TestCase
        Lightbox::delete(self::$_id);
        
        Lightbox::retrieve(self::$_id);
+       
+   }
+   
+   public function testGetAllLightboxes()
+   {
+       
+       /** Setting environment variables */
+       MomaPIX::setApiKey("1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ");
+       MomaPIX::setApiURL("http://sandbox.my.momapix.com/testme");
+       
+       /** Logging in as a test client */
+       $session    =   new Session();
+       $session    ->  connect("client1", "client1");
+       
+       /** Creating a new lightbox*/
+       $lightboxes = Lightboxes::getAllLightboxes();
+       
+       $this->assertEquals(count($lightboxes),11);
        
    }
    
