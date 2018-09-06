@@ -27,47 +27,59 @@ class Session
      * Uses apiKey set using the MomaPIX class to get a bearer token.
      * 
      * */
-    public function __construct()
+    public function __construct($sessid = null)
     {
         
-        $this::$isLoggedIn = false;
-        
-        $this->request =  new Request(MomaPIX::getApiURL(). "/rest/session");
-        $this->request -> setRequestType("GET");
-        $this->request -> setRequestHeader(
+        if ($sessid != null) {
             
-            array (
-                
-                "Apikey:        ". \MomaSDK\MomaPIX::$apiKey,
-                "Accept:        ". \MomaSDK\MomaPIX::$acceptType,
-                "Content-Type:  ". \MomaSDK\MomaPIX::$contentType,
-                
-            )
+            self::$bearerToken = $sessid;
             
-        );
-        
-        $this->request->execute();
-        $this->response = json_decode($this->request->getResponse(),true);
-        
-        if (!is_array($this->response['errors'][0])) {
+            /** Da rivedere in altri contesti diversi dai lightbox **/
+            // self::$isLoggedIn  = true;
             
-            self::$bearerToken = $this->response['data']['attributes']['TokenId'];
             
         } else {
             
-            self::$bearerToken = "";
-            switch ($this->response['errors'][0]['code']) {
+            self::$isLoggedIn = false;
+        
+            $this->request =  new Request(MomaPIX::getApiURL(). "/rest/session");
+            $this->request -> setRequestType("GET");
+            $this->request -> setRequestHeader(
                 
-                case 1007:
+                array (
                     
-                    // Check your API Key
-                    throw new \MomaSDK\Exceptions\InvalidApiKeyException();
+                    "Apikey:        ". \MomaSDK\MomaPIX::$apiKey,
+                    "Accept:        ". \MomaSDK\MomaPIX::$acceptType,
+                    "Content-Type:  ". \MomaSDK\MomaPIX::$contentType,
                     
-                    break;
+                )
+                
+            );
+            
+            $this->request->execute();
+            $this->response = json_decode($this->request->getResponse(),true);
+            
+            if (!is_array($this->response['errors'][0])) {
+                
+                self::$bearerToken = $this->response['data']['attributes']['TokenId'];
+                
+            } else {
+                
+                self::$bearerToken = "";
+                switch ($this->response['errors'][0]['code']) {
                     
-                default:
+                    case 1007:
+                        
+                        // Check your API Key
+                        throw new \MomaSDK\Exceptions\InvalidApiKeyException();
+                        
+                        break;
+                        
+                    default:
+                        
+                        throw new \Exception($this->response['errors'][0]['detail'],$this->response['errors'][0]['code']);
                     
-                    throw new \Exception($this->response['errors'][0]['detail'],$this->response['errors'][0]['code']);
+                }
                 
             }
             

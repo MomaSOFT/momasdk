@@ -319,7 +319,7 @@ class Lightbox extends MomaRestORM  {
      * @return array The array containing all items in the current lightbox
      *
      * */
-    public function getItems()
+    public function getItems() : array
     {
         
         return $this->relationships['items']['data'];

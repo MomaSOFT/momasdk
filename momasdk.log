@@ -682,3 +682,687 @@ PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
 ----------
 GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox
 ----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+Authentication failure. Username or password wrong.
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+POST call at url: http://sandbox.my.momapix.com/testme/rest/lightbox
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/1000
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43/relationships/items
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43/relationships/items
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43/relationships/items
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43/relationships/items
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43/relationships/items
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+DELETE call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/43
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+Authentication failure. Username or password wrong.
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+POST call at url: http://sandbox.my.momapix.com/testme/rest/lightbox
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/44
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/1000
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/44
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/44
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/44
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/44
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/44
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/44
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/44
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/44
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/44
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/44/relationships/items
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+Authentication failure. Username or password wrong.
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+POST call at url: http://sandbox.my.momapix.com/testme/rest/lightbox
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/45
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/1000
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/45
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/45
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/45
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/45
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/45
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/45
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/45
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/45
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/45
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/45/relationships/items
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+Authentication failure. Username or password wrong.
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+POST call at url: http://sandbox.my.momapix.com/testme/rest/lightbox
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/46
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/1000
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/46
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/46
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/46
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/46
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/46
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/46
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/46
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/46
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/46
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/46/relationships/items
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/session
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/session/login
+----------
+
+----------
+GET call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/46
+----------
+
+----------
+PATCH call at url: http://sandbox.my.momapix.com/testme/rest/lightbox/46/relationships/items
+----------
