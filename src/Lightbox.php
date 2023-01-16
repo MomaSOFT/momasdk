@@ -19,6 +19,11 @@ class Lightbox extends MomaRestORM
 {
     protected static $_endpoint = '/rest/lightbox';
 
+    public function __construct($api_response, $session = null)
+    {
+        $api_response = self::fixJSON($api_response);
+        parent::__construct($api_response, $session);
+    }
     /**
      *
      * Creates a new empty lightbox with default parameters. The lightbox will belong to logged in user.
@@ -26,7 +31,7 @@ class Lightbox extends MomaRestORM
      * @return Lightbox The lightbox itself
      *
      * */
-    public static function create($session = null) : Lightbox
+    /*public static function create($session = null) : Lightbox
     {
         
         $json   =  self::fixJSON(parent::create($session));
@@ -35,7 +40,7 @@ class Lightbox extends MomaRestORM
         
         return $jd->decode($json, Lightbox::class);
         
-    }
+    }*/
     
     /**
      *
@@ -44,7 +49,7 @@ class Lightbox extends MomaRestORM
      * @return Lightbox. The lightbox with that specific id
      *
      * */
-    public static function retrieve($id, $session = null) : Lightbox
+    /*public static function retrieve($id, $session = null) : Lightbox
     {
         
         $json   =  self::fixJSON(parent::retrieve($id, $session));
@@ -53,7 +58,7 @@ class Lightbox extends MomaRestORM
         
         return $jd->decode($json, Lightbox::class);
         
-    }
+    }*/
     
     /**
      * Saves all changes made to a given lightbox ( made by the use of setters methods ) or saves a new one if no properties are provided.
@@ -61,10 +66,10 @@ class Lightbox extends MomaRestORM
      * @return Lightbox. The lightbox itself ( with all attributes saved to the db ).
      *
      **/
-    public function update($session = null) : bool
+    public function update() : bool
     {
         
-        $jsonLightbox   =   parent::update($session);
+        $jsonLightbox   =   parent::update();
         
         return true;
         
@@ -78,10 +83,10 @@ class Lightbox extends MomaRestORM
      * @return true | false. Tells wether the operation was successfull or not.
      *
      **/
-    public static function delete($id, $session = null) : bool
+    public function delete() : bool
     {
         
-        parent::delete($id, $session);
+        parent::delete();
         
         return true;
         
@@ -98,10 +103,10 @@ class Lightbox extends MomaRestORM
     public function setDescription($description) : Lightbox
     {
         
-        $this->attributes['description']    =   $description;
-        $this->attributes['lastpdate_date'] =   date('Y-m-d h:i:s');
+        $this->_data['attributes']['description']    =   $description;
+        $this->_data['attributes']['lastpdate_date'] =   date('Y-m-d h:i:s');
         
-        if (!in_array("attributes", $this->changedProperties))  $this->changedProperties[]  =   "attributes";
+        if (!in_array("attributes", $this->_changedProperties))  $this->_changedProperties[]  =   "attributes";
         
         return $this;
         
@@ -117,7 +122,7 @@ class Lightbox extends MomaRestORM
     public function getDescription() : string
     {
         
-        return $this->attributes['description'];
+        return $this->_data['attributes']['description'];
         
     }
     
@@ -133,10 +138,10 @@ class Lightbox extends MomaRestORM
     {
         
         // Verificare il formato della data ?
-        $this->attributes['subject_date']   =   $date;
-        $this->attributes['lastpdate_date'] =   date('Y-m-d h:i:s');
+        $this->_data['attributes']['subject_date']   =   $date;
+        $this->_data['attributes']['lastpdate_date'] =   date('Y-m-d h:i:s');
         
-        if (!in_array("attributes", $this->changedProperties))  $this->changedProperties[]  =   "attributes";
+        if (!in_array("attributes", $this->_changedProperties))  $this->_changedProperties[]  =   "attributes";
         
         return $this;
         
@@ -152,7 +157,7 @@ class Lightbox extends MomaRestORM
     public function getSubjectDate() : string
     {
         
-        return $this->attributes['subject_date'];
+        return $this->_data['attributes']['subject_date'];
         
     }
     
@@ -168,10 +173,10 @@ class Lightbox extends MomaRestORM
     {
         
         // Verificare se la categoria è di 3 lettere maiuscole ?
-        $this->attributes['category']       =   $category;
-        $this->attributes['lastpdate_date'] =   date('Y-m-d h:i:s');
+        $this->_data['attributes']['category']       =   $category;
+        $this->_data['attributes']['lastpdate_date'] =   date('Y-m-d h:i:s');
         
-        if (!in_array("attributes", $this->changedProperties))  $this->changedProperties[]  =   "attributes";
+        if (!in_array("attributes", $this->_changedProperties))  $this->_changedProperties[]  =   "attributes";
         
         return $this;
         
@@ -187,7 +192,7 @@ class Lightbox extends MomaRestORM
     public function getCategory() : string
     {
         
-        return $this->attributes['category'];
+        return $this->_data['attributes']['category'];
         
     }
     
@@ -202,10 +207,10 @@ class Lightbox extends MomaRestORM
     public function setText($text) : Lightbox
     {
         
-        $this->attributes['text']           =   $text;
-        $this->attributes['lastpdate_date'] =   date('Y-m-d h:i:s');
+        $this->_data['attributes']['text']           =   $text;
+        $this->_data['attributes']['lastpdate_date'] =   date('Y-m-d h:i:s');
         
-        if (!in_array("attributes", $this->changedProperties))  $this->changedProperties[]  =   "attributes";
+        if (!in_array("attributes", $this->_changedProperties))  $this->_changedProperties[]  =   "attributes";
         
         return $this;
         
@@ -221,7 +226,7 @@ class Lightbox extends MomaRestORM
     public function getText() : string
     {
         
-        return $this->attributes['text'];
+        return $this->_data['attributes']['text'];
         
     }
     
@@ -236,9 +241,9 @@ class Lightbox extends MomaRestORM
     public function addItem($itemId) : Lightbox
     {
         
-        array_push($this->relationships['items']['data'],array("type"  => "item", "id"    =>  $itemId));
+        array_push($this->_data['relationships']['items']['data'],array("type"  => "item", "id"    =>  $itemId));
         
-        if (!in_array("relationships", $this->changedProperties))  $this->changedProperties[]  =   "relationships";
+        if (!in_array("relationships", $this->_changedProperties))  $this->_changedProperties[]  =   "relationships";
         
         return $this;
         
@@ -258,11 +263,11 @@ class Lightbox extends MomaRestORM
         foreach ( $itemsToBeAdded as $item )
         {
             
-            array_push($this->relationships['items']['data'], array("type"  => "item", "id"    =>  $item));
+            array_push($this->_data['relationships']['items']['data'], array("type"  => "item", "id"    =>  $item));
             
         }
         
-        if (!in_array("relationships", $this->changedProperties))  $this->changedProperties[]  =   "relationships";
+        if (!in_array("relationships", $this->_changedProperties))  $this->_changedProperties[]  =   "relationships";
         
         return $this;
         
@@ -279,8 +284,8 @@ class Lightbox extends MomaRestORM
     public function removeItem($itemId) : Lightbox
     {
         
-        $this->relationships['items']['data'] = MomaUTIL::removeElementWithValue($this->relationships['items']['data'], "id", $itemId);
-        if (!in_array("relationships", $this->changedProperties))  $this->changedProperties[]  =   "relationships";
+        $this->_data['relationships']['items']['data'] = MomaUTIL::removeElementWithValue($this->_data['relationships']['items']['data'], "id", $itemId);
+        if (!in_array("relationships", $this->_changedProperties))  $this->_changedProperties[]  =   "relationships";
         
         return $this;
         
@@ -297,11 +302,11 @@ class Lightbox extends MomaRestORM
         foreach ( $itemsToBeRemoved as $item )
         {
             
-            $this->relationships['items']['data'] = MomaUTIL::removeElementWithValue($this->relationships['items']['data'], "id", $item);
+            $this->_data['relationships']['items']['data'] = MomaUTIL::removeElementWithValue($this->_data['relationships']['items']['data'], "id", $item);
             
         }
         
-        if (!in_array("relationships", $this->changedProperties))  $this->changedProperties[]  =   "relationships";
+        if (!in_array("relationships", $this->_changedProperties))  $this->_changedProperties[]  =   "relationships";
         
         return $this;
         
@@ -310,7 +315,7 @@ class Lightbox extends MomaRestORM
     public function hasItem($itemId) : bool
     {
         
-        return MomaUTIL::searchElementWithValue($this->relationships['items']['data'], "id", $itemId);
+        return MomaUTIL::searchElementWithValue($this->_data['relationships']['items']['data'], "id", $itemId);
         
     }
     
@@ -324,7 +329,7 @@ class Lightbox extends MomaRestORM
     public function getItems() : array
     {
         
-        return $this->relationships['items']['data'];
+        return $this->_data['relationships']['items']['data'];
         
     }
     
@@ -338,7 +343,7 @@ class Lightbox extends MomaRestORM
     public function getId() : int
     {
         
-        return intval($this->attributes['id']);
+        return intval($this->_data['attributes']['id']);
         
     }
     
@@ -350,9 +355,9 @@ class Lightbox extends MomaRestORM
     public function empty() : Lightbox
     {
         
-        $this->relationships['items']['data']   =   array();
+        $this->_data['relationships']['items']['data']   =   array();
         
-        if (!in_array("relationships", $this->changedProperties))  $this->changedProperties[]  =   "relationships";
+        if (!in_array("relationships", $this->_changedProperties))  $this->_changedProperties[]  =   "relationships";
         
         return $this;
         
@@ -366,7 +371,7 @@ class Lightbox extends MomaRestORM
     public function isEmpty() : bool
     {
         
-        return (count($this->relationships['items']['data']) == 0) ? true : false;
+        return (count($this->_data['relationships']['items']['data']) == 0) ? true : false;
         
     }
     
@@ -381,8 +386,11 @@ class Lightbox extends MomaRestORM
      * */
     protected static function fixJSON($json) : String
     {
-        
-        $array      =   json_decode($json,true);
+        if (is_array($json)) {
+            $array = $json;
+        } else {
+            $array = json_decode($json, true);
+        }
         
         $lightbox   =   array();
         
@@ -391,7 +399,6 @@ class Lightbox extends MomaRestORM
         $lightbox['included']           =   $array['included'];
         $lightbox['attributes']         =   $array['data']['attributes'];
         $lightbox['relationships']      =   $array['data']['relationships'];
-        $lightbox['changedProperties']  =   array();
         
         return json_encode($lightbox);
         

@@ -22,15 +22,25 @@ abstract class MomaRestORM
      * Their purpose is to provide a fixed entity structure when converting the into object of a specific class.
      *
      * */
-    protected   $meta;
-    protected   $links;
-    protected   $included;
-    protected   $attributes;
-    protected   $relationships;
-    protected   $changedProperties;
+    protected   $_changedProperties;
+    protected   $_data;
+    protected   $_session;
     protected static $_endpoint;
 
     private     $requestType    =   "GET";
+
+    /**
+     * Constructor
+     */
+    public function __construct($api_response, $session = null)
+    {
+        $this->_changedProperties = array();
+        $this->_api_response = $api_response;
+        $this->_data = json_decode($api_response, true);
+        if (!empty($session)) {
+            $this->_session = $session;
+        }
+    }
     
     /**
      *
@@ -41,12 +51,16 @@ abstract class MomaRestORM
      * @return  response. The response from server in JSON format
      *
      **/
-    protected static function create($session = null)
+    public static function create($session = null)
     {
-        if ($session === null) {
-            $bearer_token = Session::$bearerToken;
-        } else {
+        if (!empty($session)) {
             $bearer_token = $session->getBearerToken();
+        } else {
+            $bearer_token = Session::$bearerToken;
+        }
+
+        if (empty($bearer_token)) {
+            throw new \MomaSDK\Exceptions\ResourceCreationErrorException('empty bearer token');
         }
 
         $type       =   preg_replace("/\/rest\//", "", static::$_endpoint);
@@ -84,7 +98,7 @@ abstract class MomaRestORM
         
         if (!isset($decodedResponse['errors'][0])) {
             
-            return $response;
+            return new static($response, $session);
             
         } else {
             
@@ -115,10 +129,14 @@ abstract class MomaRestORM
      **/
     public static function retrieve($id, $session = null)
     {
-        if ($session === null) {
-            $bearer_token = Session::$bearerToken;
-        } else {
+        if (!empty($session)) {
             $bearer_token = $session->getBearerToken();
+        } else {
+            $bearer_token = Session::$bearerToken;
+        }
+
+        if (empty($bearer_token)) {
+            throw new \MomaSDK\Exceptions\ResourceNotFoundException('empty bearer token');
         }
 
         $request =  new Request(\MomaSDK\MomaPIX::$apiURL.static::$_endpoint.'/'.$id);
@@ -142,7 +160,7 @@ abstract class MomaRestORM
         
         if (!isset($decodedResponse['errors'][0])) {
             
-            return $response;
+            return new static($response, $session);
             
         } else {
             
@@ -173,17 +191,17 @@ abstract class MomaRestORM
      * @return  response. The response from server in JSON format
      *
      **/
-    public function update($session = null)
+    public function update()
     {
-        if ($session === null) {
-            $bearer_token = Session::$bearerToken;
+        if (!empty($this->_session)) {
+            $bearer_token = $this->_session->getBearerToken();
         } else {
-            $bearer_token = $session->getBearerToken();
+            $bearer_token = Session::$bearerToken;
         }
         
         $type       =   preg_replace("/\/rest\//","",static::$_endpoint);
         
-        if (is_array($this->changedProperties) and count($this->changedProperties) == 1 and in_array("relationships",$this->changedProperties))
+        if (is_array($this->_changedProperties) and count($this->_changedProperties) == 1 and in_array("relationships",$this->_changedProperties))
         {
             
             /**
@@ -193,13 +211,13 @@ abstract class MomaRestORM
              * - Setto endpoint specifico
              * 
              **/
-            $finalEndpoint  =   \MomaSDK\MomaPIX::$apiURL.static::$_endpoint."/".$this->attributes['id']."/relationships/items";
+            $finalEndpoint  =   \MomaSDK\MomaPIX::$apiURL.static::$_endpoint."/".$this->_data['attributes']['id']."/relationships/items";
             
-            $postFields     =   $this->relationships['items'];
+            $postFields     =   $this->_data['relationships']['items'];
             
             
         } 
-        else if (is_array($this->changedProperties) and count($this->changedProperties) > 0)
+        else if (is_array($this->_changedProperties) and count($this->_changedProperties) > 0)
         {
             
             /**
@@ -209,16 +227,16 @@ abstract class MomaRestORM
              * - Setto endpoint generico
              *
              **/
-            $finalEndpoint  =   \MomaSDK\MomaPIX::$apiURL.static::$_endpoint."/".$this->attributes['id'];
+            $finalEndpoint  =   \MomaSDK\MomaPIX::$apiURL.static::$_endpoint."/".$this->_data['attributes']['id'];
             
             $postFields     =   array (
                 
                 "data" => array (
                     
                     "type"          =>  $type,
-                    "id"            =>  $this->attributes['id'],
-                    "attributes"    =>  $this->attributes,
-                    "relationships" =>  $this->relationships
+                    "id"            =>  $this->_data['attributes']['id'],
+                    "attributes"    =>  $this->_data['attributes'],
+                    "relationships" =>  $this->_data['relationships']
                     
                 )
             );
@@ -254,13 +272,15 @@ abstract class MomaRestORM
      * @return  response. The response from server in JSON format
      *
      **/
-    public static function delete($id, $session = null)
+    public function delete()
     {
-        if ($session === null) {
-            $bearer_token = Session::$bearerToken;
+        if (!empty($this->_session)) {
+            $bearer_token = $this->_session->getBearerToken();
         } else {
-            $bearer_token = $session->getBearerToken();
+            $bearer_token = Session::$bearerToken;
         }
+
+        $id = $this->_data['attributes']['id'];
 
         $request = new Request(\MomaSDK\MomaPIX::$apiURL.static::$_endpoint."/".$id);
         

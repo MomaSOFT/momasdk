@@ -1,8 +1,5 @@
 <?php
-
 namespace MomaSDK;
-
-use Karriere\JsonDecoder\JsonDecoder;
 
 class Lightboxes
 {
@@ -38,18 +35,25 @@ class Lightboxes
         
         $response = $request->getResponse();
         
-        $jd  =   new JsonDecoder(false,true);
-        
-        $lightboxes  =   self::fixJSON($response);
-        
-        return $jd->decodeMultiple($lightboxes, Lightbox::class);
-        
+        $lightboxes_response = self::fixJSON($response);
+
+        $lightboxes_data = json_decode($lightboxes_response, true);
+
+        return array_map(
+            function ($lightbox_data) use ($session) {
+                return new Lightbox($lightbox_data, $session);
+            },
+            $lightboxes_data
+        );
     }
     
     private function fixJSON($json) : string
     {
-        
-        $array        =  json_decode($json,true);
+        if (is_array($json)) {
+            $array = $json;
+        } else {
+            $array = json_decode($json,true);
+        }
         
         $index        =  0;
         $lightboxes   =  array();

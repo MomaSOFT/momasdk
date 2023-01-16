@@ -268,7 +268,6 @@ class LightboxTest extends TestCase
     * */
    public function testDeleteLightbox()
    {
-       
        /** Setting environment variables */
        MomaPIX::setApiKey("1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ");
        MomaPIX::setApiURL("http://sandbox.my.momapix.com/testme");
@@ -277,14 +276,31 @@ class LightboxTest extends TestCase
        $session    =   new Session();
        $session    ->  connect("client1", "client1");
        
-       /** Creating a new lightbox*/
-       Lightbox::delete(self::$_id);
+       $lightbox   =   Lightbox::retrieve(self::$_id);
+       $lightbox->delete(self::$_id);
 
-       Lightbox::delete(self::$_id2, $session);
+       $lightbox   =   Lightbox::retrieve(self::$_id);
+   }
+
+   /**
+    * 
+    * @expectedException   \MomaSDK\Exceptions\ResourceNotFoundException
+    * 
+    * */
+   public function testDeleteLightboxUsingSession()
+   {
+       /** Setting environment variables */
+       MomaPIX::setApiKey("1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ");
+       MomaPIX::setApiURL("http://sandbox.my.momapix.com/testme");
        
-       Lightbox::retrieve(self::$_id);
+       /** Logging in as a test client */
+       $session    =   new Session();
+       $session    ->  connect("client1", "client1");
        
-       Lightbox::retrieve(self::$_id2, $session);
+       $lightbox_using_session = Lightbox::retrieve(self::$_id2, $session);
+       $lightbox_using_session->delete();
+
+       $lightbox_using_session   =   Lightbox::retrieve(self::$_id2);
    }
    
    public function testGetAllLightboxes()
