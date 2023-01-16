@@ -28,7 +28,8 @@ abstract class MomaRestORM
     protected   $attributes;
     protected   $relationships;
     protected   $changedProperties;
-    
+    protected static $_endpoint;
+
     private     $requestType    =   "GET";
     
     /**
@@ -40,19 +41,24 @@ abstract class MomaRestORM
      * @return  response. The response from server in JSON format
      *
      **/
-    protected static function create($endpoint)
+    protected static function create($session = null)
     {
+        if ($session === null) {
+            $bearer_token = Session::$bearerToken;
+        } else {
+            $bearer_token = $session->getBearerToken();
+        }
+
+        $type       =   preg_replace("/\/rest\//", "", static::$_endpoint);
         
-        $type       =   preg_replace("/\/rest\//","",$endpoint);
-        
-        $request    =  new Request(\MomaSDK\MomaPIX::$apiURL.$endpoint);
+        $request    =  new Request(\MomaSDK\MomaPIX::$apiURL.static::$_endpoint);
         
         $headers    =   array (
             
             "Apikey:  ".               \MomaSDK\MomaPIX::$apiKey,
             "Accept:  ".               \MomaSDK\MomaPIX::$acceptType,
             "Content-Type:  ".         \MomaSDK\MomaPIX::$contentType,
-            "Authorization: Bearer ".  Session::$bearerToken
+            "Authorization: Bearer ".  $bearer_token
             
         );
         
@@ -104,22 +110,25 @@ abstract class MomaRestORM
      * Enable children classes to retrieve a certain entity of their own, such as lightbox with a given id.
      *
      * @param   id.       The entity id
-     * @param   endpoint. The complete endpoint url to be contacted
-     *
      * @return  response. The response from server in JSON format
      *
      **/
-    public static function retrieve($id,$endpoint)
+    public static function retrieve($id, $session = null)
     {
-        
-        $request =  new Request(\MomaSDK\MomaPIX::$apiURL.$endpoint.$id);
+        if ($session === null) {
+            $bearer_token = Session::$bearerToken;
+        } else {
+            $bearer_token = $session->getBearerToken();
+        }
+
+        $request =  new Request(\MomaSDK\MomaPIX::$apiURL.static::$_endpoint.'/'.$id);
         
         $headers    =   array (
             
             "Apikey:  ".               \MomaSDK\MomaPIX::$apiKey,
             "Accept:  ".               \MomaSDK\MomaPIX::$acceptType,
             "Content-Type:  ".         \MomaSDK\MomaPIX::$contentType,
-            "Authorization: Bearer ".  Session::$bearerToken
+            "Authorization: Bearer ".  $bearer_token
             
         );
         
@@ -139,14 +148,13 @@ abstract class MomaRestORM
             
             switch ($decodedResponse['errors'][0]['code']) {
                 
-                case "1002":
+                case 1002:
                     
                     throw new \MomaSDK\Exceptions\ResourceNotFoundException();
                     
                     break;
                     
                 default:
-                    
                     throw new \Exception($decodedResponse['errors'][0]['title']);
                     
             }
@@ -162,14 +170,18 @@ abstract class MomaRestORM
      * Enable children classes to update a certain entity with all changed properties, such as a lightbox description or content.
      *
      * @param   id.       The entity id
-     * @param   endpoint. The endpoint url to be contacted
-     *
      * @return  response. The response from server in JSON format
      *
      **/
-    public function update($endpoint) {
+    public function update($session = null)
+    {
+        if ($session === null) {
+            $bearer_token = Session::$bearerToken;
+        } else {
+            $bearer_token = $session->getBearerToken();
+        }
         
-        $type       =   preg_replace("/\/rest\//","",$endpoint);
+        $type       =   preg_replace("/\/rest\//","",static::$_endpoint);
         
         if (is_array($this->changedProperties) and count($this->changedProperties) == 1 and in_array("relationships",$this->changedProperties))
         {
@@ -181,7 +193,7 @@ abstract class MomaRestORM
              * - Setto endpoint specifico
              * 
              **/
-            $finalEndpoint  =   \MomaSDK\MomaPIX::$apiURL.$endpoint."/".$this->attributes['id']."/relationships/items";
+            $finalEndpoint  =   \MomaSDK\MomaPIX::$apiURL.static::$_endpoint."/".$this->attributes['id']."/relationships/items";
             
             $postFields     =   $this->relationships['items'];
             
@@ -197,7 +209,7 @@ abstract class MomaRestORM
              * - Setto endpoint generico
              *
              **/
-            $finalEndpoint  =   \MomaSDK\MomaPIX::$apiURL.$endpoint."/".$this->attributes['id'];
+            $finalEndpoint  =   \MomaSDK\MomaPIX::$apiURL.static::$_endpoint."/".$this->attributes['id'];
             
             $postFields     =   array (
                 
@@ -220,7 +232,7 @@ abstract class MomaRestORM
                 "Apikey:  ".               \MomaSDK\MomaPIX::$apiKey,
                 "Accept:  ".               \MomaSDK\MomaPIX::$acceptType,
                 "Content-Type:  ".         \MomaSDK\MomaPIX::$contentType,
-                "Authorization: Bearer ".  Session::$bearerToken
+                "Authorization: Bearer ".  $bearer_token
             )
         );
         
@@ -239,22 +251,25 @@ abstract class MomaRestORM
      * Enable children classes to delete an entity of their own identifying it by an id.
      *
      * @param   id.       The entity id
-     * @param   endpoint. The endpoint url to be contacted
-     *
      * @return  response. The response from server in JSON format
      *
      **/
-    public static function delete($id,$endpoint)
+    public static function delete($id, $session = null)
     {
-        
-        $request = new Request(\MomaSDK\MomaPIX::$apiURL.$endpoint."/".$id);
+        if ($session === null) {
+            $bearer_token = Session::$bearerToken;
+        } else {
+            $bearer_token = $session->getBearerToken();
+        }
+
+        $request = new Request(\MomaSDK\MomaPIX::$apiURL.static::$_endpoint."/".$id);
         
         $request  ->  setRequestHeader(
             array (
                 "Apikey:  ".               \MomaSDK\MomaPIX::$apiKey,
                 "Accept:  ".               \MomaSDK\MomaPIX::$acceptType,
                 "Content-Type:  ".         \MomaSDK\MomaPIX::$contentType,
-                "Authorization: Bearer ".  Session::$bearerToken
+                "Authorization: Bearer ".  $bearer_token
             )
         );
         

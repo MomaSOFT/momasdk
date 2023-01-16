@@ -15,8 +15,10 @@ namespace MomaSDK;
 
 use Karriere\JsonDecoder\JsonDecoder;
 
-class Lightbox extends MomaRestORM  {
-    
+class Lightbox extends MomaRestORM
+{
+    protected static $_endpoint = '/rest/lightbox';
+
     /**
      *
      * Creates a new empty lightbox with default parameters. The lightbox will belong to logged in user.
@@ -24,10 +26,10 @@ class Lightbox extends MomaRestORM  {
      * @return Lightbox The lightbox itself
      *
      * */
-    public static function create($endpoint = "/rest/lightbox") : Lightbox
+    public static function create($session = null) : Lightbox
     {
         
-        $json   =  self::fixJSON(parent::create($endpoint));
+        $json   =  self::fixJSON(parent::create($session));
         
         $jd     =  new JsonDecoder(false,true);
         
@@ -42,10 +44,10 @@ class Lightbox extends MomaRestORM  {
      * @return Lightbox. The lightbox with that specific id
      *
      * */
-    public static function retrieve($id,$endpoint = '/rest/lightbox/') : Lightbox
+    public static function retrieve($id, $session = null) : Lightbox
     {
         
-        $json   =  self::fixJSON(parent::retrieve($id,$endpoint));
+        $json   =  self::fixJSON(parent::retrieve($id, $session));
         
         $jd     =  new JsonDecoder(false,true);
         
@@ -59,10 +61,10 @@ class Lightbox extends MomaRestORM  {
      * @return Lightbox. The lightbox itself ( with all attributes saved to the db ).
      *
      **/
-    public function update($endpoint = "/rest/lightbox") : bool
+    public function update($session = null) : bool
     {
         
-        $jsonLightbox   =   parent::update($endpoint);
+        $jsonLightbox   =   parent::update($session);
         
         return true;
         
@@ -76,10 +78,10 @@ class Lightbox extends MomaRestORM  {
      * @return true | false. Tells wether the operation was successfull or not.
      *
      **/
-    public static function delete($id,$endpoint = "/rest/lightbox") : bool
+    public static function delete($id, $session = null) : bool
     {
         
-        parent::delete($id, $endpoint);
+        parent::delete($id, $session);
         
         return true;
         

@@ -13,13 +13,12 @@ require 'vendor/autoload.php';
 
 class LightboxTest extends TestCase
 {
-   
-    // Useful to store lightbox id in order to delete previously created ones and leaving the testme installation as it was at first setup
-   public static $_id;
+   // Useful to store lightbox id in order to delete previously created ones and leaving the testme installation as it was at first setup
+   protected static $_id;
+   protected static $_id2;
     
    public function testCreateNewLightbox()
    {
-        
         MomaPIX::setApiKey("1n29BMfN7EtaPqTzO6D9RIqryZSSiLsJ");
         MomaPIX::setApiURL("http://sandbox.my.momapix.com/testme");
         
@@ -31,7 +30,10 @@ class LightboxTest extends TestCase
         self::$_id  =   $lightbox->getId();
         
         $this->assertInternalType("int", $lightbox->getId());
-        
+
+        $lightbox_using_session = Lightbox::create($session);
+        self::$_id2 =   $lightbox_using_session->getId();
+        $this->assertInternalType("int", $lightbox_using_session->getId());
    }
    
    public function testRetrieveLightbox()
@@ -50,6 +52,8 @@ class LightboxTest extends TestCase
        
        $this->assertEquals(self::$_id, $lightbox->getId());
        
+       $lightbox_using_session = Lightbox::retrieve(self::$_id2, $session);
+       $this->assertEquals(self::$_id2, $lightbox_using_session->getId());
    }
    
    /**
@@ -69,7 +73,6 @@ class LightboxTest extends TestCase
        
        /** Creating a new lightbox*/
        $lightbox   =   Lightbox::retrieve("1000");
-       
    }
    
    public function testSetLightboxDescription()
@@ -89,7 +92,12 @@ class LightboxTest extends TestCase
        $lightbox   ->  update();
        
        $this->assertEquals($lightbox->getDescription(),"Nuova descrizione");
+
+       $lightbox_using_session   =   Lightbox::retrieve(self::$_id2, $session);
+       $lightbox_using_session   ->  setDescription("Nuova descrizione 2");
+       $lightbox_using_session   ->  update();
        
+       $this->assertEquals($lightbox_using_session->getDescription(),"Nuova descrizione 2");
    }
    
    public function testSetLightboxSubjectDate()
@@ -271,9 +279,12 @@ class LightboxTest extends TestCase
        
        /** Creating a new lightbox*/
        Lightbox::delete(self::$_id);
+
+       Lightbox::delete(self::$_id2, $session);
        
        Lightbox::retrieve(self::$_id);
        
+       Lightbox::retrieve(self::$_id2, $session);
    }
    
    public function testGetAllLightboxes()
@@ -289,9 +300,10 @@ class LightboxTest extends TestCase
        
        /** Creating a new lightbox*/
        $lightboxes = Lightboxes::getAllLightboxes();
+       $this->assertEquals(count($lightboxes), 11);
        
-       $this->assertEquals(count($lightboxes),11);
-       
+       $lightboxes_using_session = Lightboxes::getAllLightboxes($session);
+       $this->assertEquals(count($lightboxes_using_session), 11);
    }
    
 }

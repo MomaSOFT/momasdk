@@ -7,19 +7,25 @@ use Karriere\JsonDecoder\JsonDecoder;
 class Lightboxes
 {
     
-    public static function getAllLightboxes()
+    public static function getAllLightboxes($session = null)
     {
         
         $endpoint    =   "/rest/lightbox";
         
         $request     =   new Request(\MomaSDK\MomaPIX::$apiURL.$endpoint);
+
+        if ($session === null) {
+            $bearer_token = Session::$bearerToken;
+        } else {
+            $bearer_token = $session->getBearerToken();
+        }
         
         $headers     =   array (
             
             "Apikey:  ".               \MomaSDK\MomaPIX::$apiKey,
             "Accept:  ".               \MomaSDK\MomaPIX::$acceptType,
             "Content-Type:  ".         \MomaSDK\MomaPIX::$contentType,
-            "Authorization: Bearer ".  Session::$bearerToken
+            "Authorization: Bearer ".  $bearer_token
             
         );
         
