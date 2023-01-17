@@ -329,7 +329,7 @@ class Lightbox extends MomaRestORM
     public function getItems() : array
     {
         
-        return $this->_data['relationships']['items']['data'];
+        return (array) $this->_data['relationships']['items']['data'];
         
     }
     
