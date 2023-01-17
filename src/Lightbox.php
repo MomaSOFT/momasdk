@@ -122,7 +122,7 @@ class Lightbox extends MomaRestORM
     public function getDescription() : string
     {
         
-        return $this->_data['attributes']['description'];
+        return (string) $this->_data['attributes']['description'];
         
     }
     
@@ -226,7 +226,7 @@ class Lightbox extends MomaRestORM
     public function getText() : string
     {
         
-        return $this->_data['attributes']['text'];
+        return (string) $this->_data['attributes']['text'];
         
     }
     
