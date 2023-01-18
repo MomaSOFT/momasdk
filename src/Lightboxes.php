@@ -33,18 +33,24 @@ class Lightboxes
         // Provo a fare una POST senza parametri
         $request ->  execute();
         
-        $response = $request->getResponse();
+        $lightboxes_response = $request->getResponse();
         
-        $lightboxes_response = self::fixJSON($response);
+        //$lightboxes_response = self::fixJSON($response);
 
         $lightboxes_data = json_decode($lightboxes_response, true);
 
-        return array_map(
-            function ($lightbox_data) use ($session) {
-                return new Lightbox($lightbox_data, $session);
-            },
-            $lightboxes_data
-        );
+        if (array_key_exists('data', $lightboxes_data)) {
+            $lightboxes = array_map(
+                function ($lightbox_data) use ($session) {
+                    return new Lightbox($lightbox_data, $session);
+                },
+                $lightboxes_data['data']
+            );
+        } else {
+            $lightboxes = array();
+        }
+
+        return $lightboxes;
     }
     
     private function fixJSON($json) : string

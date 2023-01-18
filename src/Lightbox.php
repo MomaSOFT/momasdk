@@ -157,7 +157,7 @@ class Lightbox extends MomaRestORM
     public function getSubjectDate() : string
     {
         
-        return $this->_data['attributes']['subject_date'];
+        return (string) $this->_data['attributes']['subject_date'];
         
     }
     
@@ -192,7 +192,7 @@ class Lightbox extends MomaRestORM
     public function getCategory() : string
     {
         
-        return $this->_data['attributes']['category'];
+        return (string) $this->_data['attributes']['category'];
         
     }
     
@@ -392,13 +392,28 @@ class Lightbox extends MomaRestORM
             $array = json_decode($json, true);
         }
         
-        $lightbox   =   array();
+        $lightbox   =   $array; //array();
         
-        $lightbox['meta']               =   $array['meta'];
-        $lightbox['links']              =   $array['links'];
-        $lightbox['included']           =   $array['included'];
-        $lightbox['attributes']         =   $array['data']['attributes'];
-        $lightbox['relationships']      =   $array['data']['relationships'];
+        //$lightbox['meta']               =   $array['meta'];
+        //$lightbox['links']              =   $array['links'];
+        //$lightbox['included']           =   $array['included'];
+        if (
+            !array_key_exists('attributes', $lightbox) && 
+            is_array($array['data']) &&
+            array_key_exists('attributes', $lightbox['data'])
+        ) {
+            $lightbox['attributes'] = $array['data']['attributes'];
+            unset($lightbox['data']['attributes']);
+        }
+        if (
+            !array_key_exists('relationships', $lightbox) && 
+            is_array($array['data']) &&
+            array_key_exists('relationships', $lightbox['data'])
+        ) {
+            $lightbox['relationships'] = $array['data']['relationships'];
+            unset($lightbox['data']['relationships']);
+        }
+        //$lightbox['relationships']      =   $array['data']['relationships'];
         
         return json_encode($lightbox);
         
