@@ -26,9 +26,9 @@ abstract class MomaRestORM
     protected   $_data;
     protected   $_session;
     protected static $_endpoint;
-
+    
     private     $requestType    =   "GET";
-
+    
     /**
      * Constructor
      */
@@ -37,6 +37,7 @@ abstract class MomaRestORM
         $this->_changedProperties = array();
         $this->_api_response = $api_response;
         $this->_data = json_decode($api_response, true);
+        
         if (!empty($session)) {
             $this->_session = $session;
         }
@@ -53,16 +54,17 @@ abstract class MomaRestORM
      **/
     public static function create($session = null)
     {
+        
         if (!empty($session)) {
             $bearer_token = $session->getBearerToken();
         } else {
             $bearer_token = Session::$bearerToken;
         }
-
+        
         if (empty($bearer_token)) {
             throw new \MomaSDK\Exceptions\ResourceCreationErrorException('empty bearer token');
         }
-
+        
         $type       =   preg_replace("/\/rest\//", "", static::$_endpoint);
         
         $request    =  new Request(\MomaSDK\MomaPIX::$apiURL.static::$_endpoint);
@@ -83,8 +85,6 @@ abstract class MomaRestORM
                 array (
                     "data" => array (
                         "type"          => $type,
-                        "attributes"    => null,
-                        "relationships" => null
                     )
                 )
                 )
@@ -95,6 +95,24 @@ abstract class MomaRestORM
         $response = $request->getResponse();
         
         $decodedResponse  = json_decode($response,true);
+        
+        if ( preg_match("/lightbox/",static::$_endpoint) ) {
+            
+            if ( !array_key_exists("included",$decodedResponse  ) ) {
+                
+                $decodedResponse['included'] = array();
+                
+            }
+            
+            if ( !array_key_exists("relationships",$decodedResponse['data']  ) ) {
+                
+                $decodedResponse['data']['relationships'] = array('items' => array ('data' => array()));
+                
+            }
+            
+            $response = json_encode($decodedResponse);
+            
+        }
         
         if (!isset($decodedResponse['errors'][0])) {
             
@@ -112,7 +130,7 @@ abstract class MomaRestORM
                 default:
                     
                     throw new \Exception();
-                
+                    
             }
             
         }
@@ -129,16 +147,17 @@ abstract class MomaRestORM
      **/
     public static function retrieve($id, $session = null)
     {
+        
         if (!empty($session)) {
             $bearer_token = $session->getBearerToken();
         } else {
             $bearer_token = Session::$bearerToken;
         }
-
+        
         if (empty($bearer_token)) {
             throw new \MomaSDK\Exceptions\ResourceNotFoundException('empty bearer token');
         }
-
+        
         $request =  new Request(\MomaSDK\MomaPIX::$apiURL.static::$_endpoint.'/'.$id);
         
         $headers    =   array (
@@ -157,6 +176,24 @@ abstract class MomaRestORM
         $response =  $request->getResponse();
         
         $decodedResponse  = json_decode($response,true);
+        
+        if ( preg_match("/lightbox/",static::$_endpoint) ) {
+            
+            if ( !array_key_exists("included",$decodedResponse ) ) {
+                
+                $decodedResponse['included'] = array();
+                
+            }
+            
+            if ( !array_key_exists("relationships",$decodedResponse['data']  ) ) {
+                
+                $decodedResponse['data']['relationships'] = array( "items" => array( "data" => array() ));
+                
+            }
+            
+            $response = json_encode($decodedResponse);
+            
+        }
         
         if (!isset($decodedResponse['errors'][0])) {
             
@@ -193,6 +230,7 @@ abstract class MomaRestORM
      **/
     public function update()
     {
+        
         if (!empty($this->_session)) {
             $bearer_token = $this->_session->getBearerToken();
         } else {
@@ -206,17 +244,17 @@ abstract class MomaRestORM
             
             /**
              * Aggiorno solo le relationships dell'entità:
-             * 
+             *
              * - Setto POST FIELDS
              * - Setto endpoint specifico
-             * 
+             *
              **/
             $finalEndpoint  =   \MomaSDK\MomaPIX::$apiURL.static::$_endpoint."/".$this->_data['attributes']['id']."/relationships/items";
             
             $postFields     =   $this->_data['relationships']['items'];
             
             
-        } 
+        }
         else if (is_array($this->_changedProperties) and count($this->_changedProperties) > 0)
         {
             
@@ -229,17 +267,41 @@ abstract class MomaRestORM
              **/
             $finalEndpoint  =   \MomaSDK\MomaPIX::$apiURL.static::$_endpoint."/".$this->_data['attributes']['id'];
             
-            $postFields     =   array (
+            switch ( static::$_endpoint ) {
                 
-                "data" => array (
+                case '/rest/lightbox':
+                    
+                    $postFields     =   array (
+                    
+                    "data" => array (
+                    
+                    "type"          =>  $type,
+                    "id"            =>  $this->_data['attributes']['id'],
+                    "attributes"    =>  array("description" => $this->_data['attributes']['description']),
+                    "relationships" =>  $this->_data['relationships']
+                    
+                    )
+                    
+                    );
+                    
+                    break;
+                    
+                default:
+                    
+                    $postFields     =   array (
+                    
+                    "data" => array (
                     
                     "type"          =>  $type,
                     "id"            =>  $this->_data['attributes']['id'],
                     "attributes"    =>  $this->_data['attributes'],
                     "relationships" =>  $this->_data['relationships']
                     
-                )
-            );
+                    )
+                    );
+                    
+            }
+            
             
         }
         
@@ -252,10 +314,11 @@ abstract class MomaRestORM
                 "Content-Type:  ".         \MomaSDK\MomaPIX::$contentType,
                 "Authorization: Bearer ".  $bearer_token
             )
-        );
+            );
         
         $request ->  setRequestType("PATCH");
         $request ->  setPostFields(json_encode($postFields));
+        
         $request ->  execute();
         
         $response =   $request->getResponse();
@@ -279,9 +342,9 @@ abstract class MomaRestORM
         } else {
             $bearer_token = Session::$bearerToken;
         }
-
+        
         $id = $this->_data['attributes']['id'];
-
+        
         $request = new Request(\MomaSDK\MomaPIX::$apiURL.static::$_endpoint."/".$id);
         
         $request  ->  setRequestHeader(
@@ -291,7 +354,7 @@ abstract class MomaRestORM
                 "Content-Type:  ".         \MomaSDK\MomaPIX::$contentType,
                 "Authorization: Bearer ".  $bearer_token
             )
-        );
+            );
         
         $request ->   setRequestType("DELETE");
         $request ->   execute();

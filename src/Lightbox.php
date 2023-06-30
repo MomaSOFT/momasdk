@@ -18,7 +18,7 @@ use Karriere\JsonDecoder\JsonDecoder;
 class Lightbox extends MomaRestORM
 {
     protected static $_endpoint = '/rest/lightbox';
-
+    
     public function __construct($api_response, $session = null)
     {
         $api_response = self::fixJSON($api_response);
@@ -32,15 +32,15 @@ class Lightbox extends MomaRestORM
      *
      * */
     /*public static function create($session = null) : Lightbox
-    {
-        
-        $json   =  self::fixJSON(parent::create($session));
-        
-        $jd     =  new JsonDecoder(false,true);
-        
-        return $jd->decode($json, Lightbox::class);
-        
-    }*/
+     {
+     
+     $json   =  self::fixJSON(parent::create($session));
+     
+     $jd     =  new JsonDecoder(false,true);
+     
+     return $jd->decode($json, Lightbox::class);
+     
+     }*/
     
     /**
      *
@@ -50,15 +50,15 @@ class Lightbox extends MomaRestORM
      *
      * */
     /*public static function retrieve($id, $session = null) : Lightbox
-    {
-        
-        $json   =  self::fixJSON(parent::retrieve($id, $session));
-        
-        $jd     =  new JsonDecoder(false,true);
-        
-        return $jd->decode($json, Lightbox::class);
-        
-    }*/
+     {
+     
+     $json   =  self::fixJSON(parent::retrieve($id, $session));
+     
+     $jd     =  new JsonDecoder(false,true);
+     
+     return $jd->decode($json, Lightbox::class);
+     
+     }*/
     
     /**
      * Saves all changes made to a given lightbox ( made by the use of setters methods ) or saves a new one if no properties are provided.
@@ -69,9 +69,15 @@ class Lightbox extends MomaRestORM
     public function update() : bool
     {
         
-        $jsonLightbox   =   parent::update();
+        $jsonLightbox   =   parent::update($endpoint);
         
-        return true;
+        $response = json_decode($jsonLightbox,true);
+        
+        if ( is_array($response) and array_key_exists("errors",$response)) {
+            
+            return false;
+            
+        } else return true;
         
     }
     
@@ -86,9 +92,15 @@ class Lightbox extends MomaRestORM
     public function delete() : bool
     {
         
-        parent::delete();
+        $jsonResponse = parent::delete();
         
-        return true;
+        $response = json_decode($jsonResponse,true);
+        
+        if ( is_array($response) and array_key_exists("errors",$response) ) {
+            
+            return false;
+            
+        } else return true;
         
     }
     
@@ -241,7 +253,8 @@ class Lightbox extends MomaRestORM
     public function addItem($itemId) : Lightbox
     {
         
-        array_push($this->_data['relationships']['items']['data'],array("type"  => "item", "id"    =>  $itemId));
+        array_push($this->_data['relationships']['items']['data'],array("type"  => "item", "id"    =>  preg_replace("/\..+$/","",$itemId)));
+        //$this->_data['relationships']['items']['data'][] = array("type"  => "item", "id"    =>  $itemId);
         
         if (!in_array("relationships", $this->_changedProperties))  $this->_changedProperties[]  =   "relationships";
         
@@ -263,7 +276,7 @@ class Lightbox extends MomaRestORM
         foreach ( $itemsToBeAdded as $item )
         {
             
-            array_push($this->_data['relationships']['items']['data'], array("type"  => "item", "id"    =>  $item));
+            array_push($this->_data['data']['relationships']['items']['data'], array("type"  => "item", "id"    =>  $item));
             
         }
         
@@ -284,6 +297,8 @@ class Lightbox extends MomaRestORM
     public function removeItem($itemId) : Lightbox
     {
         
+        $itemId = preg_replace("/\..+$/","",$itemId);
+        
         $this->_data['relationships']['items']['data'] = MomaUTIL::removeElementWithValue($this->_data['relationships']['items']['data'], "id", $itemId);
         if (!in_array("relationships", $this->_changedProperties))  $this->_changedProperties[]  =   "relationships";
         
@@ -292,9 +307,9 @@ class Lightbox extends MomaRestORM
     }
     
     /**
-     * 
+     *
      * Removes given items set from the lightbox. Remember to call the save method to make changes persistent.
-     * 
+     *
      * */
     public function removeItems($itemsToBeRemoved) : Lightbox
     {
@@ -302,6 +317,7 @@ class Lightbox extends MomaRestORM
         foreach ( $itemsToBeRemoved as $item )
         {
             
+            $item = preg_replace("/\..+$/","",$itemId);
             $this->_data['relationships']['items']['data'] = MomaUTIL::removeElementWithValue($this->_data['relationships']['items']['data'], "id", $item);
             
         }
@@ -348,9 +364,9 @@ class Lightbox extends MomaRestORM
     }
     
     /**
-     * 
+     *
      * Empties a lightbox
-     * 
+     *
      * */
     public function empty() : Lightbox
     {
@@ -398,25 +414,25 @@ class Lightbox extends MomaRestORM
         //$lightbox['links']              =   $array['links'];
         //$lightbox['included']           =   $array['included'];
         if (
-            !array_key_exists('attributes', $lightbox) && 
+            !array_key_exists('attributes', $lightbox) &&
             is_array($array['data']) &&
             array_key_exists('attributes', $lightbox['data'])
-        ) {
-            $lightbox['attributes'] = $array['data']['attributes'];
-            unset($lightbox['data']['attributes']);
-        }
-        if (
-            !array_key_exists('relationships', $lightbox) && 
-            is_array($array['data']) &&
-            array_key_exists('relationships', $lightbox['data'])
-        ) {
-            $lightbox['relationships'] = $array['data']['relationships'];
-            unset($lightbox['data']['relationships']);
-        }
-        //$lightbox['relationships']      =   $array['data']['relationships'];
-        
-        return json_encode($lightbox);
-        
+            ) {
+                $lightbox['attributes'] = $array['data']['attributes'];
+                unset($lightbox['data']['attributes']);
+            }
+            if (
+                !array_key_exists('relationships', $lightbox) &&
+                is_array($array['data']) &&
+                array_key_exists('relationships', $lightbox['data'])
+                ) {
+                    $lightbox['relationships'] = $array['data']['relationships'];
+                    unset($lightbox['data']['relationships']);
+                }
+                //$lightbox['relationships']      =   $array['data']['relationships'];
+                
+                return json_encode($lightbox);
+                
     }
     
 }
